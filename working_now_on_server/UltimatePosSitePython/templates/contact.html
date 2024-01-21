@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Cashier Me</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="icon">
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="apple-touch-icon">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Google Fonts -->
+  <!-- Vendor CSS Files -->
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/aos/aos.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" >
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/bootstrap/css/bootstrap.min.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/bootstrap-icons/bootstrap-icons.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ url_for('static' , filename="assets/vendor/boxicons/css/boxicons.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">    <link href="{{ url_for('static' , filename="assets/vendor/glightbox/css/glightbox.min.css")}}" rel="stylesheet" >
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/remixicon/remixicon.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="{{ url_for('static' , filename="assets/vendor/swiper/swiper-bundle.min.css")}}" rel="stylesheet" >
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('static' , filename="assets/css/style.css")}}" rel="stylesheet" >
+
+  <!-- =======================================================
+  * Template Name: Bootslander - v4.6.0
+  * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  {% include 'header.html' %}
+  <main id="main">
+      <input id="get_currentuser_lang" value="{{ session['language'] }}" style="display: none">
+      <!-- ======= Breadcrumbs Section ======= -->
+      <section id="contact" class="contact">
+          <div class="container" style="margin-top:50px">
+
+              <div class="section-title" data-aos="fade-up">
+                  <h2>{{ gettext("Contact") }}</h2>
+                  <p>{{ gettext("Contact Us") }}</p>
+              </div>
+              <div class="row">
+                  <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
+                      <div class="info">
+                          <div class="address">
+                              <i class="bi bi-geo-alt"></i>
+                              <h4>{{ gettext("Location:") }}</h4>
+                              {% if session['country_code'] == "SAU"  %}
+                              <p>{{ gettext("Adham Trading Center - Al Madinah Al Munawarah Rd - Ar Ruwais - Saudi Arabia") }} </p>
+                              {% endif %}
+                              {% if session['country_code'] == "MYS" or session['country_code']== "GLB"%}
+                              <p>
+                                  {{ gettext("D5-15 One South, Persiaran Serdang Perdana 43300 Seri Kembangan, Selangor") }}
+                              </p>
+                              {% endif %}
+                              {% if session['country_code'] == "TUR"%}
+                              <p>
+                                  {{ gettext("Ve Tic. A.Ş Şti. MALL OF İSTANBUL, THE OFFICE, KAT:14/113 ZİYA GÖKALP MAH. SÜLEYMAN DEMİREL BULVARI NO:7E BAŞAKŞEHİR") }}
+                              </p>
+                              {% endif %}
+                              {% if session['country_code'] == "IND"%}
+                              <p>
+                                  {{ gettext("No.823/4, 2nd Floor, Chaitra Complex 13th Cross, 7th Block, Jayanagar west, Bangalore-560070") }}
+                              </p>
+                              {% endif %}
+                              {% if session['country_code'] == "EGY"%}
+                              <p>
+                                   40 شارع محي الدين ابو العز   الدقي - الجيزة - الدور السادس
+                              </p>
+                              {% endif %}
+                          </div>
+
+                          <div class="email">
+                              <i class="bi bi-envelope"></i>
+                              <h4>{{ gettext("Email:") }}</h4>
+                              {% if session['country_code'] == "SAU"  %}
+                              <p>{{ gettext("info@cashierme.com") }}</p>
+                              {% endif %}
+                              {% if session['country_code'] == "MYS" or session['country_code']== "GLB"%}
+                              <p>{{ gettext("info@ultimate-kl.com") }}</p>
+                              {% endif %}
+                              {% if session['country_code'] == "TUR"%}
+                              <p>{{ gettext("info.tr@cashierme.com") }}</p>
+                              {% endif %}
+                              {% if session['country_code'] == "IND"%}
+                              <p>{{ gettext("info@ultimatetek.in") }}</p>
+                              {% endif %}
+                              {% if session['country_code'] == "EGY"%}
+                              <p>marketing@ultimate-eg.net</p>
+                              {% endif %}
+
+                          </div>
+
+                          <div class="phone">
+                              <i class="bi bi-phone"></i>
+                              <h4>{{ gettext("Call:") }}</h4>
+                              {% if session['country_code'] == "SAU"  %}
+                              <p>{{ gettext("+ 966126523216 "  ) }}</p>
+                              {% endif %}
+                              {% if session['country_code'] == "MYS" or session['country_code']== "GLB"%}
+                              <p>{{ gettext("+603 8940 6975"  ) }}</p>
+                              {% endif %}
+                              {% if session['country_code'] == "TUR"%}
+                              <p>{{ gettext("+902128032598 , +905059999337 "  ) }}</p>
+                              {% endif %}
+                              {% if session['country_code'] == "IND"%}
+                              <p>{{ gettext("+91 9901947050, +91 80 26711618"  ) }}</p>
+                              {% endif %}
+                              {% if session['country_code'] == "EGY"%}
+                              <p>01017298882</p>
+                              <p>01018686629</p>
+                              {% endif %}
+                          </div>
+                      </div>
+                  </div>
+
+
+                  <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
+                      <form action="/send_email" method="post">
+                          <div class="alert alert-success" role="alert" id="success_send" style="display:none">Your message has been sent Successfully</div>
+                          <div class="alert alert-danger" role="alert" id="failed_send" style="display:none">can,t send your message now please try again </div>
+                          <div class="row">
+                              <div class="col-md-6 form-group">
+                                  <input type="text" name="name" class="form-control" id="name" placeholder="{{ gettext("Your Name") }}" required>
+                              </div>
+                              <div class="col-md-6 form-group mt-3 mt-md-0">
+                                  <input type="email" class="form-control" name="email" id="email" placeholder="{{ gettext("Your Email") }}" required>
+                              </div>
+                          </div>
+                          <div class="form-group mt-3">
+                              <input type="text" class="form-control" name="subject" id="subject" placeholder="{{ gettext("Subject") }}" required>
+                          </div>
+                          <div class="form-group mt-3">
+                              <textarea class="form-control" name="message" id="message" rows="5" placeholder="{{ gettext("Message") }}" required></textarea>
+                          </div>
+                          <br/>
+                          {{ recaptcha }}
+                          <div class="text-center"><button type="button" onclick="submit_end_email()" class="btn btn-success">{{ gettext("Send Message") }}</button>  <img id="dasdadadfdsfdsfsdf" src="static/assets/img/Hourglass.gif" style="display:none"></div>
+                          <script>
+                              function submit_end_email() {
+                                  const name = document.getElementById("name").value;
+                                  const email = document.getElementById("email").value;
+                                  const subject = document.getElementById("subject").value;
+                                  const message = document.getElementById("message").value;
+                                  const recaptcha_res = document.getElementById("g-recaptcha-response").value;
+                                  if (recaptcha_res != ''){
+                                      $.ajax({
+                                          type: "POST",
+                                          url: "/send_email/"+ name +"/"+ email+ "/"+ subject + "/" + message ,
+                                          success: function(data) {
+                                              if(data == "ok"){
+                                                  $("#success_send").show()
+                                                  $("#name").val("")
+                                                  $("#email").val("")
+                                                  $("#subject").val("")
+                                                  $("#message").val("")
+                                              } if(data == "failed"){
+                                                  $("#failed_send").show()
+                                                  $("#success_send").show()
+                                                  $("#name").val("")
+                                                  $("#email").val("")
+                                                  $("#subject").val("")
+                                                  $("#message").val("")
+                                              }
+                                          },
+                                          beforeSend: function () {
+                                              $("#dasdadadfdsfdsfsdf").show();
+                                          },
+                                          complete: function () {
+                                              $("#dasdadadfdsfdsfsdf").hide();
+                                          }})
+
+
+                                  }
+
+
+                              };
+
+                          </script>
+                      </form>
+                  </div>
+
+                  </div>
+
+              </div>
+          </section>
+     <!-- End Contact Section -->
+  </main><!-- End #main -->
+  {% extends 'footer.html' %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</body>
+</html>

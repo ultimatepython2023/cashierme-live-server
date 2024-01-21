@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+
+</head>
+
+<body>
+{% block message %}
+    {% if current_user.subscription_status == 'Canceled' or current_user.subscription_status == 'Delete'  %}
+    <div class="alert alert-danger">
+        <form action="/reactive_subscription" method="post">
+            {% if current_user.subscription_status == 'Canceled' %}
+                {{ gettext("Your subscription is set to cancel on") }}<span style="font-weight:bold">{{ current_user.expire_db }}</span>.{{ gettext("After this date yoy cannot access your application") }}
+            {% elif current_user.subscription_status == 'Delete' %}
+                {{ gettext('Your account is set to be deleted within date of') }} <span style="font-weight:bold">{{ current_user.delete_account_at }}</span>.  {{ gettext("days on the date of this action. This action will delete all your data with us under your responsibility.") }}
+            {% endif %}
+            <input type="submit" class="btn btn-success" value="{{ gettext('reactive_account') }}">
+        </form>
+    </div>
+    {% endif %}
+{% endblock %}
+</body>
+</html>

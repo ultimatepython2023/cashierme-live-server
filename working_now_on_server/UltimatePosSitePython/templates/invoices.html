@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Cashier Me</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="icon">
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="apple-touch-icon">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" >
+    <!-- Google Fonts -->
+  <!-- Vendor CSS Files -->
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/aos/aos.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" >
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/bootstrap/css/bootstrap.min.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/bootstrap-icons/bootstrap-icons.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ url_for('static' , filename="assets/vendor/boxicons/css/boxicons.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">    <link href="{{ url_for('static' , filename="assets/vendor/glightbox/css/glightbox.min.css")}}" rel="stylesheet" >
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/remixicon/remixicon.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="{{ url_for('static' , filename="assets/vendor/swiper/swiper-bundle.min.css")}}" rel="stylesheet" >
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('static' , filename="assets/css/style.css")}}" rel="stylesheet" >
+    <link href="{{ url_for('static' , filename="assets/css/invoices.css")}}" rel="stylesheet" >
+        <link href="{{ url_for('static', filename="css/paging.css") }}" rel="stylesheet" type="text/css" />
+
+
+
+
+    <!-- =======================================================
+    * Template Name: Bootslander - v4.6.0
+    * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+<body>
+  <!-- ======= Header ======= -->
+  {% include 'header.html' %}
+
+  <main id="main">
+      <input  id="get_currentuser_lang" value="{{ session['language'] }}" style="display: none">
+      <input type="hidden" id="countryCodeId" value="{{ current_user.country_code_id }}" >
+
+<style>
+    .overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999999;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 20px;
+  width: 25%;
+  position: relative;
+    margin-top:300px;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close_payment {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close_payment:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .popup{
+    width: 70%;
+  }
+}
+</style>
+ <div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>
+{#            <img src="{{ url_for('static', filename='assets/img/uposNav.png') }}" class="img-fluid animated" alt="" >#}
+            Cashierme</h2>
+        <div class="alert alert-danger" id="alert_card_message" style="display:none"></div>
+		<a class="close_payment" href="#">&times;</a>
+		<div class="content">
+
+                        <div class="row">
+                            <div class="form-group mt-3">
+                                <label for="Card_Number">{{ gettext("Kart Numarası") }}</label><span
+                                    style="color:red">*</span>
+                                <input class="form-control creditCardText" type="text"
+                                       name="Card_Number" id="Card_Number"
+                                       onkeyup="getBin();"
+                                       placeholder="0000 0000 0000 0000"
+                                       autocomplete="off" maxlength="19" required>
+                            </div>
+                            <script>
+                                function getBin(){
+                                    var x = document.getElementById("Card_Number");
+                                    var index = x.value.lastIndexOf(' ');
+                                    var test = x.value.substr(index + 1);
+                                        if (test.length === 4){
+                                           x.value = x.value + ' ';
+                                        }
+                                }
+
+                            </script>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="Card_Name">{{ gettext("Kart Üzerindeki Ad Soyad") }}</label><span
+                                style="color:red">*</span>
+                            <input class="form-control" type="text"
+                                   name="Card_Name" id="Card_Name"
+                                   placeholder="" autocomplete="off"
+                                   maxlength="40" required>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <div class="row" style="display: flex;">
+
+                                <div class="col-5 col-md-4 pr-4">
+                                    <label id="Card_Expiry_Label"
+                                           for="expirymonth">Son
+                                        Kullanma Tarihi</label>
+                                    <select class="form-control m-input pr-2"
+                                            name="expirymonth" id="expirymonth" required>
+                                        <option id="Card_Expiry_Month_Label"
+                                                selected hidden disabled
+                                                value="" >
+                                            Ay
+                                        </option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                </div>
+                                <div class="col-5 col-md-4">
+                                    <label id="Card_Expiry_Label"
+                                           for="expirymonth"></label>
+                                    <select class="form-control m-input"
+                                            name="expiryyear" id="expiryyear" required>
+                                        <option id="Card_Expiry_Year_Label"
+                                                selected hidden disabled
+                                                value="" >
+                                            Yıl
+                                        </option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                        <option value="2026">2026</option>
+                                        <option value="2027">2027</option>
+                                        <option value="2028">2028</option>
+                                        <option value="2029">2029</option>
+                                        <option value="2030">2030</option>
+                                        <option value="2031">2031</option>
+                                        <option value="2032">2032</option>
+                                        <option value="2033">2033</option>
+                                        <option value="2034">2034</option>
+                                        <option value="2035">2035</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <br/>
+                            <label for="Card_CvC">CVC</label>
+                            <input class="form-control m-input jp-card-invalid"
+                                   type="text" name="Card_CvC" id="Card_CvC"
+                                   value="362" placeholder="" autocomplete="off" required>
+                        </div>
+                        <br/>
+                        <img class="center"
+                             src="{{ url_for('static', filename="assets/img/payments.png") }}"/>
+                        <br/>
+                        <div class="m-form__actions pt-1 pb-3">
+                            <div class="row ml-0 mr-0">
+                                <div class="col-12 text-center flip sm-text-center">
+                                    <img  id="image_reload" src="static/assets/img/reload.gif" style="display:none">
+                                    <button href="javascript:void(0);"
+                                       class="btn btn-warning btn-block"
+                                       style="font-weight: 600;"
+                                       onclick="renew_turkish_subscription(); ">
+                                        <span id="paymentButtonAmount">{{ current_user.price }}</span>
+                                        <span id="paymentButtonCurrency">TRY</span>
+                                        <span id="paymentButton">ÖDEME YAP</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+
+		</div>
+	</div>
+</div>
+
+      <!-- ======= Breadcrumbs Section ======= -->
+      <section id="contact" class="contact" >
+          <div class="container" style="margin-top:50px ">
+              <div class="section-title" data-aos="fade-up">
+                  <h2>{{ gettext("Invoices") }}</h2>
+                  <p>{{ gettext("Invoices") }}</p>
+              </div>
+              <div class="row">
+                  <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100" >
+                      <ul style="list-style-type:none;">
+                          <li><a class="nav-link scrollto " href="/dashboard" style="font-family: Cairo">{{ gettext("Dashboard") }}</a></li>
+                          <li><a class="nav-link scrollto" href="/profile" style="font-family: Cairo">{{ gettext("Profile") }}</a></li>
+                          <li><a class="nav-link scrollto" href="/invoices" style="font-family: Cairo">{{ gettext("Invoices") }}</a></li>
+                          {% if current_user.country_code_id == 'SAU' and current_user.subscription_type == 'Enterprise'%}
+                              <li><a class="nav-link scrollto" href="/change_credit_card" style="font-family: Cairo">
+                                  {% if session['language'] == 'en' %}
+                                      {{ gettext("Change credit card") }}
+                                  {% else %}
+                                      تغيير البطاقة الائتمانية
+                                  {% endif %}
+                              </a></li>
+                          {%endif%}
+                          {% if current_user.db_status != "pending" %}
+                          <li><a class="nav-link scrollto" href="https://cpanel.cashierme.com/signin?id={{ current_user.business_name }}" style="font-family: Cairo">{{ gettext("Control Panel Access Link :") }}</a></li>
+                          {% endif %}
+                          <li><a class="nav-link scrollto " href="/logout" style="font-family: Cairo">{{ gettext("Logout") }}</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-lg-8 mt-auto mt-lg-0" data-aos="fade-left" data-aos-delay="200">
+                      {% include 'error_message.html' %}
+
+                      <div class="custom-models">
+                          <div id="myModal_cancel_subscription" class="modal-cancel">
+                              <div class="modal-content-cancel">
+                                  <span class="close-popup-cancel" id="close-popup-cancel">&times;</span>
+{##}
+{#                                  <div class="content_text">#}
+{##}
+{#                                      <input type="radio" name="cancel_subscription" id="cancel_sub_radio" value="cancel" onchange="changeDescription('cancel')" checked="checked" />#}
+{#                                      <label for="cancel_subscription">{{ gettext('Cancel') }}</label>#}
+{##}
+{##}
+{#                                      <input type="radio" name="cancel_subscription" id="delete_sub_radio" onchange="changeDescription('delete')"  value="delete"/>#}
+{#                                      <label for="cancel_subscription">{{ gettext('Delete') }}</label>#}
+{##}
+{#                                      <div class="cancel" id="cancel_account_div">#}
+{#                                          <h5 class="text-center">{{ gettext("We regret that you will cancel your subscription with Cashierme Please confirm by clicking on the button below") }}</h5>#}
+{#                                          <h5 class="text-center">{{ gettext("The subscription will remain active until the next renewal date") }}</h5>#}
+{#                                          <h4 class="text-center fw-bold"> {{ expire_date  }} </h4>#}
+{#                                          <h5 class="text-center">{{ gettext("During this period, you can also cancel the decision to cancel the subscription.") }}</h5>#}
+{#                                      </div>#}
+{##}
+{#                                      <div class="delete" id="delete_account_div" style="display:none">#}
+{#                                          {% if session['language'] == 'ar' %}#}
+{#                                              <h5 class="text-center">سيتم ايقاف حسابك الان في حال كنت متأكدا من هذا القرار الرجاء التأكيد بالضغط على الزر أدناه</h5>#}
+{#                                              <h5 class="text-center">سيبقى الحساب فعالاحتي ميعاد التجديد القادم</h5>#}
+{#                                              <h4 class="text-center fw-bold"> {{ expire_date  }} </h4>#}
+{##}
+{##}
+{#                                              <h5> بعدها سيتم حذف بياناتك نهائيا#}
+{#                                                  كما يمكنك خلال هذه الفترة التراجع عن قرار حذف الحساب  </h5>#}
+{##}
+{##}
+{#                                          {% elif session['language'] == 'en' %}#}
+{#                                          {% elif session['language'] == 'tr' %}#}
+{#                                          {% else %}#}
+{#                                          {% endif %}#}
+{#                                      </div>#}
+{##}
+{#                                  </div>#}
+{##}
+{##}
+{#                                  <div class="buttons">#}
+{#                                      <button class="btn btn-danger" id="confirm_cancel" onclick="confirmToCancel_Subscription()">{{ gettext("Confirm") }}</button>#}
+{#                                      <button class="btn btn-primary" id="cancel_subscription" onclick="closeCancelSubscription()">{{ gettext("Cancel") }}</button>#}
+{#                                  </div>#}
+                              </div>
+                          </div>
+                          <div id="myModal_alert_subscription" class="modal-notifications">
+                              <div class="modal-content-notifications">
+                                  <span class="close-popup-alert" id="close-popup-alert">&times;</span>
+                                      {% if data == True  %}
+                                          {% if current_user.plan_type == 'Monthly'%}
+                                                  <div class="message text-center">
+                                                      {{ gettext("You have been successfully subscribed to the Annual plan .it will be activated when you renew your subscription to the current plan in ") }}<span style="font-weight:bold">{{ expire_date }}</span>
+                                                  </div>
+                                          {% endif %}
+                                          {% if current_user.plan_type == 'yearly'%}
+                                              <div class="message text-center">
+                                                  {{ gettext("You have been successfully subscribed to the Monthly plan .it will be activated when you renew your subscription to the current plan in ") }}<span style="font-weight:bold">{{ expire_date }}</span>
+                                              </div>
+                                          {% endif %}
+                                              <div class="buttons">
+                                              <button type="button" id="btn22_anuualy" class="btn btn-danger" onclick="cancel_subscription_annualy()">{{ gettext("Cancel subscription") }}</button>
+                                          </div>
+                                      {% endif %}
+                                      {% if remove_pos == True  %}
+                                          <div class="message text-center" >{{ gettext("your pos set to remove on") }} {{ expire_date }} </div>
+                                          <div class="buttons">
+                                              <button type="button" id="btn33annualy" class="btn btn-danger" onclick="cancel_subscription_annualy()">{{ gettext("Cancel remove Pos") }}</button>
+                                          </div>
+                                       {% endif %}
+                                  </div>
+                              </div>
+                          </div>
+                          <div id="myModal" class="modal">
+                              <div class="modal-content">
+                                  <span class="close" id="close-popup">&times;</span>
+                              <p style="color:#20c997;cursor:pointer;" id="models_popup_links" onclick="models_popup_links()">
+                                  <i class="fa fa-home"></i>{{ gettext("Change Plan") }}
+                                  <span id="links_Addpos" style="display:none"> / {{ gettext("Add more Pos") }}</span>
+                                  <span id="links_Remove" style="color:red;display: none"> / {{ gettext("Remove pos") }}</span>
+                                  <span id="links_upgrade_subscription" style="display:none"> / {{ gettext("Change to This Plan") }}</span>
+                              </p>
+                                  <table class="table table-striped ">
+                                      <tbody>
+                                      {% if current_user.subscription_type == 'Demo' %}
+                                      <tr {% if  current_user.subscription_type == 'Demo' %} style="border:3px solid greenyellow;border-radius:10px"{% endif %}>
+                                          <td><h3>{{ gettext("Free Trail") }}</h3>
+                                              <p>
+                                                 {% if current_user.country_code_id == "SAU"  %}
+                                                      {{ gettext(" 2 * SAR 0 per month") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "TUR"   %}
+                                                      {{ gettext("2 * TL 0 per month") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "MYS"   %}
+                                                      {{ gettext("2 * MYR 0 per month") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "IND"   %}
+                                                      {{ gettext("2 * INR 0 per month") }}
+                                                   {% endif %}
+                                                {% if current_user.country_code_id == "GLB"   %}
+                                                      {{ gettext("2 * USD 0 per month") }}
+                                                   {% endif %}
+                                                  {% if current_user.country_code_id == "EGY"   %}
+                                                  {{ gettext("2 * EGP 0 per month") }}
+                                                  {% endif %}
+                                              </p>
+                                          </td>
+                                          <td>
+                                              {% if  current_user.subscription_type == 'Demo' %}
+                                                  <span class="dot"></span><span style="float:left;color:darkgreen"> </span>
+                                              {% endif %}
+                                          </td>
+                                      </tr>
+                                      {% endif %}
+                                      <tr {% if  current_user.plan_type == 'Monthly' %} style="border:3px solid greenyellow"{% endif %}>
+                                          <td><h3>{{ gettext("Monthly") }}</h3>
+                                                 {% if current_user.country_code_id == "SAU"  %}
+                                                      {{ gettext("SAR") }} {{ monthly_price }} {{ gettext("per month") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "TUR"   %}
+                                                      {{ gettext("TL") }} {{ monthly_price }} {{ gettext("per month") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "MYS"   %}
+                                                      {{ gettext("MYR") }} {{ monthly_price }} {{ gettext("per month") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "IND"   %}
+                                                      {{ gettext("INR") }} {{ monthly_price }} {{ gettext("per month") }}
+                                                   {% endif %}
+                                              {% if current_user.country_code_id == "GLB"  %}
+                                                  {{ gettext("USD") }} {{ monthly_price }} {{ gettext("per month") }}
+                                              {% endif %}
+                                              {% if current_user.country_code_id == "EGY"  %}
+                                              {{ gettext("EGP") }} {{ monthly_price }} {{ gettext("per month") }}
+                                              {% endif %}
+                                          </td>
+                                          <td class="text-center">
+                                              {% if not current_user.plan_type == 'Monthly' and current_user.subscription_type == 'Enterprise' %}
+                                                  <button class="btn btn-success" onclick="subscription_to_Monthly()" id="subscription_button_monthly" style="margin-top:30px;float:left">{{ gettext("Change to This Plan") }}</button>
+                                                  <select name="pos_num" id="pos_num_Tomonthly" onchange="calculation_price_Monthly()" required style="display: none">
+                                                      {% for data in get_all_pos_no_monthly if data.pos_no >1 %}
+                                                          <option value="{{ data.pos_no_code }}" {% if current_user.stores_number == data.pos_no_code  %} selected {% endif %}>{{ data.pos_no_code }}</option>
+                                                      {% endfor %}
+                                                  </select>
+                                                  <span style="display: none;font-weight:bold;font-size:18px" id="pos_text">
+                                                    {% if current_user.country_code_id == "SAU"  %}
+                                                       {{ gettext("point of sale * ") }}{{ monthly_price }} {{ gettext("SAR") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "TUR"   %}
+                                                      {{ gettext("point of sale * ") }}{{ monthly_price }}{{ gettext("TL") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "MYS"   %}
+                                                      {{ gettext("point of sale * ") }}{{ monthly_price }} {{ gettext("MYR") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "IND"   %}
+                                                      {{ gettext("point of sale * ") }} {{ monthly_price }} {{ gettext("INR") }}
+                                                   {% endif %}
+                                                    {% if current_user.country_code_id == "GLB"   %}
+                                                      {{ gettext("point of sale * ") }} {{ monthly_price }} {{ gettext("USD") }}
+                                                   {% endif %}
+                                                       {% if current_user.country_code_id == "EGY"   %}
+                                                      {{ gettext("point of sale * ") }} {{ monthly_price }} {{ gettext("EGP") }}
+                                                   {% endif %}
+                                                  </span>
+                                                  <p style="display:none;font-size:20px" id="price_text_month">{{ gettext("Payment") }}: <sup style="font-size: 15px" >
+                                                    {% if current_user.country_code_id == "SAU"  %}
+                                                          {{ gettext("SAR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "TUR"   %}
+                                                          {{ gettext("TL") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "MYS"   %}
+                                                          {{ gettext("MYR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "IND"   %}
+                                                          {{ gettext("INR") }}
+                                                       {% endif %}
+                                                      {% if current_user.country_code_id == "GLB"   %}
+                                                          {{ gettext("USD") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "EGY"   %}
+                                                      {{ gettext("EGP") }}
+                                                      {% endif %}
+                                                  </sup> <strong id="get_price_monthly">0</strong> / {{gettext("Month")}}<span style="font-size:10px;margin-right:10px">   {{ gettext("Tax included") }}</span></p>
+                                                  <button type="button" class="btn btn-danger" id="cancel_button_monthly" onclick="cancel_order()" style="display: none;float:left;margin-left:20px">
+                                                      {{ gettext("Cancel") }}</button>
+                                                  <button type="button" id="confirm_button_monthly" class="btn btn-success" onclick="confirm_button_monthly()" style="display: none;float:left;margin-left:20px">
+                                                      {{ gettext("Confirm") }}</button>
+                                              {% endif %}
+
+                                              {% if  current_user.plan_type == 'Monthly' %}
+                                                  <span class="dot"></span>
+                                                  <button class="btn btn-success" onclick="AddMorePos_button()" id="AddMorePos_button" style="margin-top:30px;float:left">{{ gettext("Add more Pos") }}</button>
+                                                  <button class="btn btn-danger" onclick="RemovePos_button()" id="RemoveMorePos_button" style="margin-top:30px;float:left;margin-left:10px">{{ gettext("Remove pos") }}</button>
+
+                                                  <select name="pos_num" id="upgrade_pos_num" onchange="upgrade_pos_calculation_price()"  style="display: none">
+                                                       {% for data in get_package_toupgrade_monthly %}
+                                                            <option value="{{ data.pos_no_code }}">{{ data.pos_no_code }}</option>
+                                                        {% endfor %}
+                                                  </select>
+                                                  <span id="current_pos_text" style="font-weight:bold;font-size:16px;display: none">{{ gettext("Current pos") }} <span style="font-weight:bold;font-size:30px;color:red">{{ current_user.stores_number }}</span> <span style="font-weight:bold;font-size:30px;color:red"> - </span></span>
+                                                  <select name="remove_pos_num" id="remove_pos_num"   style="display: none">
+                                                      <option value="" disabled selected hidden>{{ gettext("--Select POS NO You Want To Remove--") }}</option>
+                                                      {% for data in get_package_removePOS_monthly  %}
+                                                           <option value="{{ data.pos_no_code }}">{{ data.pos_no_code }}</option>
+                                                      {% endfor %}
+                                                  </select>
+                                                  <span style="display: none;font-weight:bold;font-size:18px" id="Add_pos_text">
+                                                   {% if current_user.country_code_id == "SAU"  %}
+                                                       {{ gettext("point of sale * ") }}{{ monthly_price }} {{ gettext("SAR") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "TUR"   %}
+                                                      {{ gettext("point of sale * ") }}{{ monthly_price }} {{ gettext("TL") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "MYS"   %}
+                                                      {{ gettext("point of sale * ") }}{{ monthly_price }} {{ gettext("MYR") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "IND"   %}
+                                                      {{ gettext("point of sale * ") }} {{ monthly_price }} {{ gettext("INR") }}
+                                                   {% endif %}
+                                                    {% if current_user.country_code_id == "GLB"   %}
+                                                      {{ gettext("point of sale * ") }} {{ monthly_price }} {{ gettext("USD") }}
+                                                   {% endif %}
+                                                        {% if current_user.country_code_id == "EGY"   %}
+                                                      {{ gettext("point of sale * ") }} {{ monthly_price }} {{ gettext("EGP") }}
+                                                   {% endif %}
+
+                                                  </span>
+
+                                                  <p style="display:none;font-size:20px" id="Add_price_text">{{ gettext("Total") }}: <sup style="font-size: 15px" >
+                                                           {% if current_user.country_code_id == "SAU"  %}
+                                                          {{ gettext("SAR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "TUR"   %}
+                                                          {{ gettext("TL") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "MYS"   %}
+                                                          {{ gettext("MYR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "IND"   %}
+                                                          {{ gettext("INR") }}
+                                                       {% endif %}
+                                                      {% if current_user.country_code_id == "GLB"   %}
+                                                          {{ gettext("USD") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "EGY"   %}
+                                                      {{ gettext("EGP") }}
+                                                      {% endif %}
+                                                  </sup> <strong id="Add_get_price">0</strong> / {{gettext("Month")}}<span style="font-size:10px;margin-right:10px">   {{ gettext("Tax included") }}</span></p>
+                                                  <span style="display:none;font-size:20px" id="current_price_text">{{ gettext("Current Payment") }}: <sup style="font-size: 15px" >
+
+                                                      {% if current_user.country_code_id == "SAU"  %}
+                                                          {{ gettext("SAR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "TUR"   %}
+                                                          {{ gettext("TL") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "MYS"   %}
+                                                          {{ gettext("MYR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id== "IND"   %}
+                                                          {{ gettext("INR") }}
+                                                       {% endif %}
+                                                      {% if current_user.country_code_id == "GLB"   %}
+                                                          {{ gettext("USD") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "EGY"   %}
+                                                          {{ gettext("EGP") }}
+                                                      {% endif %}
+                                                  </sup> <strong id="get_now_price" style="color:lightseagreen;font-size:30px;font-weight:bold">0</strong> <span style="font-size:10px;margin-right:10px">   {{ gettext("Tax included") }}</span> <img  id="reloading_image_gif" src="static/assets/img/reload.gif" style="display:none"></span>
+
+                                                  <button type="button" class="btn btn-danger" id="cancel_Addpos_button" onclick="cancel_order()" style="display: none;float:left;margin-left:20px">
+                                                      {{ gettext("Cancel") }}</button>
+                                                  <button type="button" id="confirm_Addpos_button" class="btn btn-success" onclick="upgrade_pos_confirm_order()" style="display: none;float:left;margin-left:20px">
+                                                      {{ gettext("Confirm Payment") }}</button>
+                                                    <br/>
+                                                  <button type="button" class="btn btn-danger" id="cancel_Removepos_button" onclick="cancel_order()" style="display: none;float:left;margin-left:20px">
+                                                      {{ gettext("Cancel") }}</button>
+                                                  <button type="button" id="confirm_Removepos_button" class="btn btn-success" onclick="upgrade_pos_confirm_order_remove()" style="display: none;float:left;margin-left:20px">
+                                                      {{ gettext("Confirm") }}</button>
+                                              {% endif %}
+                                              {% if not current_user.plan_type == 'Monthly' and current_user.plan_type != 'yearly' %}
+                                              <a href="/enterprise_order_page/login/Monthly" class="btn btn-success" style="margin-top:30px;float:left">{{ gettext("subscription") }}</a>
+                                              {% endif %}
+                                          </td>
+                                      </tr>
+
+
+                                      <tr {% if  current_user.plan_type == 'yearly' %}style="border:3px solid greenyellow"{% endif %}>
+                                          <td><h3>{{ gettext("Annualy") }}</h3>
+                                                  {% if current_user.country_code_id == "SAU"  %}
+                                                      {{ gettext("SAR") }} {{ annually_price }} {{ gettext("per month") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "TUR"   %}
+                                                      {{ gettext("TL") }} {{ annually_price }} {{ gettext("per month") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "MYS"   %}
+                                                      {{ gettext("MYR") }} {{ annually_price }} {{ gettext("per month") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "IND"   %}
+                                                      {{ gettext("INR") }} {{ annually_price }} {{ gettext("per month") }}
+                                                   {% endif %}
+                                              {% if current_user.country_code_id == "GLB"  %}
+                                                  {{ gettext("USD") }} {{ annually_price }} {{ gettext("per month") }}
+                                              {% endif %}
+                                              {% if current_user.country_code_id == "EGY"  %}
+                                              {{ gettext("EGP") }} {{ annually_price }} {{ gettext("per month") }}
+                                              {% endif %}
+                                          </td>
+                                          <td class="text-center">
+                                              {% if  current_user.plan_type == 'yearly' %}
+                                                  <span class="dot"></span><span style="float:left;color:darkgreen"></span>
+                                                  <button class="btn btn-success" onclick="AddMorePos_button_annualy()" id="AddMorePos_button_annualy" style="margin-top:30px;float:left">{{ gettext("Add more Pos") }}</button>
+                                                  <button class="btn btn-danger" onclick="RemovePos_button_annualy()" id="RemoveMorePos_button_annualy" style="margin-top:30px;float:left;margin-left:10px">{{ gettext("Remove pos") }}</button>
+                                              {% endif %}
+                                              {% if not current_user.plan_type == 'yearly' and current_user.subscription_type == 'Demo' %}
+                                                  <a href="/enterprise_order_page/login/yearly" class="btn btn-success" style="margin-top:30px;float:left">{{ gettext("subscription") }}</a>
+                                              {% endif %}
+                                              {% if not current_user.plan_type == 'yearly' and current_user.subscription_type == 'Enterprise' %}
+                                               <button class="btn btn-success" onclick="subscription()" id="subscription_button" style="margin-top:30px;float:left">{{ gettext("Change to This Plan") }}</button>
+                                                  <select name="pos_num" id="pos_num" onchange="calculation_price_annualy_subscription()" required style="display: none">
+                                                      {% for data in get_all_pos_no_yearly if data.pos_no >1  %}
+                                                          <option value="{{ data.pos_no_code }}" {% if current_user.stores_number == data.pos_no_code  %} selected {% endif %}>{{ data.pos_no_code }}</option>
+                                                      {% endfor %}
+                                                  </select>
+                                                <span style="display: none;font-weight:bold;font-size:18px" id="pos_text">
+                                                    {% if current_user.country_code_id == "SAU"  %}
+                                                       {{ gettext("point of sale * ") }}{{ annually_price }} {{ gettext("SAR") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "TUR"   %}
+                                                      {{ gettext("point of sale * ") }}{{ annually_price }} {{ gettext("TL") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "MYS"   %}
+                                                      {{ gettext("point of sale * ") }}{{ annually_price }} {{ gettext("MYR") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "IND"   %}
+                                                      {{ gettext("point of sale * ") }} {{ annually_price }} {{ gettext("INR") }}
+                                                   {% endif %}
+                                                    {% if current_user.country_code_id == "GLB"   %}
+                                                      {{ gettext("point of sale * ") }} {{ annually_price }} {{ gettext("USD") }}
+                                                   {% endif %}
+                                                     {% if current_user.country_code_id == "EGY"   %}
+                                                      {{ gettext("point of sale * ") }} {{ annually_price }} {{ gettext("EGP") }}
+                                                   {% endif %}
+                                                </span>
+                                                  <p style="display:none;font-size:20px" id="price_text">{{ gettext("Total") }}: <sup style="font-size: 15px" >
+                                                     {% if session['country_code'] == "SAU"  %}
+
+                                                          {{ gettext("SAR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id== "TUR"   %}
+                                                          {{ gettext("TL") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "MYS"   %}
+                                                          {{ gettext("MYR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "IND"   %}
+                                                          {{ gettext("INR") }}
+                                                       {% endif %}
+                                                      {% if current_user.country_code_id == "GLB"   %}
+                                                          {{ gettext("USD") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "EGY"   %}
+                                                      {{ gettext("EGP") }}
+                                                      {% endif %}
+                                                  </sup> <strong id="get_price">0</strong> / {{gettext("Year")}}<span style="font-size:10px;margin-right:10px">   {{ gettext("Tax included") }}</span></p>
+                                                  <span style="display:none;font-size:20px" id="current_price_text_annualy">{{ gettext("Current Payment") }}: <sup style="font-size: 15px" >
+
+                                                     {% if current_user.country_code_id == "SAU"  %}
+                                                          {{ gettext("SAR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "TUR"   %}
+                                                          {{ gettext("TL") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "MYS"   %}
+                                                          {{ gettext("MYR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "IND"   %}
+                                                          {{ gettext("INR") }}
+                                                       {% endif %}
+                                                      {% if current_user.country_code_id == "GLB"   %}
+                                                          {{ gettext("USD") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "EGY"   %}
+                                                          {{ gettext("EGP") }}
+                                                      {% endif %}
+
+
+                                                  </sup> <strong id="get_now_price_annualy" style="color:lightseagreen;font-size:30px;font-weight:bold">0</strong> <span style="font-size:10px;margin-right:10px">   {{ gettext("Tax included") }}</span> <img  id="reloading_image_gif_annual" src="static/assets/img/reload.gif" style="display:none"></span>
+                                                  <button type="button" class="btn btn-danger" id="cancel_button" onclick="cancel_order()" style="display: none;float:left;margin-left:20px">
+                                                      {{ gettext("Cancel") }}</button>
+                                                  <button type="button" id="confirm_button" class="btn btn-success" onclick="confirm_order()" style="display: none;float:left;margin-left:20px">
+                                                      {{ gettext("Confirm") }}</button>
+                                              {% endif %}
+                                          {% if current_user.plan_type == 'yearly' %}
+                                              <select name="pos_num" id="upgrade_pos_num_annualy" onchange="upgrade_pos_calculation_price_annualy()"  style="display: none">
+                                                     {% for data in get_package_toupgrade_annualy %}
+                                                         <option value="{{ data.pos_no_code }}">{{ data.pos_no_code }}</option>
+                                                     {% endfor %}
+                                              </select>
+                                              <span id="current_pos_text_annualy" style="font-weight:bold;font-size:16px;display: none">{{ gettext("Current pos") }} <span style="font-weight:bold;font-size:30px;color:red">{{ current_user.stores_number }}</span> <span style="font-weight:bold;font-size:30px;color:red"> - </span></span>
+                                              <select name="remove_pos_num" id="remove_pos_num_annualy"   style="display: none">
+                                                  <option value="" disabled selected hidden>{{ gettext("--Select POS NO You Want To Remove--") }}</option>
+                                                  {% for data in get_package_removePOS_annualy %}
+                                                      <option value="{{ data.pos_no_code }}">{{ data.pos_no_code }}</option>
+                                                  {% endfor %}
+                                              </select>
+                                              <span style="display: none;font-weight:bold;font-size:18px" id="Add_pos_text_annualy">
+                                                    {% if current_user.country_code_id == "SAU"  %}
+                                                       {{ gettext("point of sale * ") }}{{ annually_price }} {{ gettext("SAR") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "TUR"   %}
+                                                      {{ gettext("point of sale * ") }}{{ annually_price }} {{ gettext("TL") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "MYS"   %}
+                                                      {{ gettext("point of sale * ") }}{{ annually_price }} {{ gettext("MYR") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "IND"   %}
+                                                      {{ gettext("point of sale * ") }} {{ annually_price }} {{ gettext("INR") }}
+                                                   {% endif %}
+                                                    {% if current_user.country_code_id == "GLB"   %}
+                                                      {{ gettext("point of sale * ") }} {{ annually_price }} {{ gettext("USD") }}
+                                                   {% endif %}
+                                                  {% if current_user.country_code_id == "EGY"   %}
+                                                      {{ gettext("point of sale * ") }} {{ annually_price }} {{ gettext("EGP") }}
+                                                   {% endif %}
+                                              </span>
+                                              <p style="display:none;font-size:20px" id="Add_price_text_annualy">{{ gettext("Total") }}: <sup style="font-size: 15px" >
+
+                                                   {% if current_user.country_code_id == "SAU"  %}
+                                                          {{ gettext("SAR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "TUR"   %}
+                                                          {{ gettext("TL") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "MYS"   %}
+                                                          {{ gettext("MYR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "IND"   %}
+                                                          {{ gettext("INR") }}
+                                                       {% endif %}
+                                                      {% if current_user.country_code_id == "GLB"   %}
+                                                          {{ gettext("USD") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "EGY"   %}
+                                                      {{ gettext("EGP") }}
+                                                      {% endif %}
+
+                                              </sup> <strong id="Add_get_price_annualy">0</strong> / {{gettext("Year")}}<span style="font-size:10px;margin-right:10px">   {{ gettext("Tax included") }}</span></p>
+                                              <span style="display:none;font-size:20px" id="current_price_text_annualy">{{ gettext("Current Payment") }}: <sup style="font-size: 15px" >
+
+                                                   {% if current_user.country_code_id == "SAU"  %}
+                                                          {{ gettext("SAR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id== "TUR"   %}
+                                                          {{ gettext("TL") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "MYS"   %}
+                                                          {{ gettext("MYR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "IND"   %}
+                                                          {{ gettext("INR") }}
+                                                       {% endif %}
+                                                  {% if current_user.country_code_id== "GLB"   %}
+                                                      {{ gettext("USD") }}
+                                                  {% endif %}
+                                                   {% if current_user.country_code_id== "EGY"   %}
+                                                      {{ gettext("EGP") }}
+                                                  {% endif %}
+                                              </sup> <strong id="get_now_price_annualy" style="color:lightseagreen;font-size:30px;font-weight:bold">0</strong> <span style="font-size:10px;margin-right:10px">   {{ gettext("Tax included") }}</span> <img  id="reloading_image_gif" src="static/assets/img/reload.gif" style="display:none"></span>
+                                              <button type="button" class="btn btn-danger" id="cancel_Addpos_button_annualy" onclick="cancel_order()" style="display: none;float:left;margin-left:20px">
+                                                  {{ gettext("Cancel") }}</button>
+                                              <button type="button" id="confirm_Addpos_button_annualy" class="btn btn-success" onclick="upgrade_pos_confirm_order_annualy()" style="display: none;float:left;margin-left:20px">
+                                                  {{ gettext("Confirm Payment") }}</button>
+                                              <br/>
+                                              <button type="button" class="btn btn-danger" id="cancel_Removepos_button_annualy" onclick="cancel_order()" style="display: none;float:left;margin-left:20px">{{ gettext("Cancel") }}</button>
+                                              <button type="button" id="confirm_Removepos_button_annualy" class="btn btn-success" onclick="upgrade_pos_confirm_order_remove_annualy()" style="display: none;float:left;margin-left:20px">{{ gettext("Confirm") }}</button>
+                                          {% endif  %}
+                                          </td>
+                                      </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                     <div class="alert alert-success" id="success_process_message"  style="display:none">{{ gettext("Congratulations, the operation was successfully completed To show your invoice please ") }}<span id="span_create_link"></span></div>
+                          <div class="alert alert-danger" id="alert_enough_money"  style="display:none">{{ gettext("Sorry, you cannot complete the process. Please make sure you have enough credit and try again ") }}</div>
+                          <div class="alert alert-danger" id="alert_not_process"  style="display:none">{{ gettext("Sorry, the process cannot be completed now, please try again later ") }}</div>
+                      {% if get_days < 1 %}
+                          <div class="alert alert-danger" id="renew_subscription_message" style="display:none"></div>
+
+                          <div class="alert alert-danger" id="end_subscription">
+
+                              {{ gettext("Sorry, Your subscription has expired, to renew") }}
+                              {% if current_user.country_code_id == "IND" or current_user.country_code_id == "SAU" %}
+                                  <img  id="image_reload" src="static/assets/img/reload.gif" style="display:none">
+                                  <a onclick="renewSubscription()" class="renewSubscription" id="renewButton">{{ gettext("Click here") }}</a>
+                              {% endif %}
+                          </div>
+                      {% endif %}
+                      <div class="invoice col-lg-12" data-aos="fade-left" data-aos-delay="200">
+                          <div class="current-package">
+                                  {% if notification_no %}
+                                  <a  id="notification_click" style="float:left;margin-top:25px">
+                                      <span id="notification_click" style="font-weight: bold;font-size:15px;color:red">{% if notification_no %}{{ notification_no }}{% endif %}</span><sub> <i class='fa fa-exclamation-circle' id="alert_fonrOwssem" style='font-size:25px'></i></sub>
+                                  </a>
+                                  {% endif %}
+                                  <h3 style="display:inline-block;">{{ gettext("Current Plan") }}</h3>
+                                  <hr/>
+                                  {% if current_user.plan_type == 'Monthly'%}
+                                      <div class="alert-success" style="margin-bottom:20px;border-radius:10px;display:none" id="message_success">
+                                          <div class="message" style="width:95%;margin:auto;font-size:20px">
+                                              {{ gettext("You have been successfully subscribed to the Annual plan .it will be activated when you renew your subscription to the current plan in ") }}<span style="font-weight:bold">{{ expire_date }}</span>
+                                          </div>
+                                      </div>
+                                  {% endif %}
+                                  {% if current_user.plan_type == 'yearly'%}
+                                      <div class="alert-success" style="margin-bottom:20px;border-radius:10px;display:none" id="message_success_annualyToMonthly">
+                                          <div class="message" style="width:95%;margin:auto;font-size:20px">
+                                              {{ gettext("You have been successfully subscribed to the Mothly plan .it will be activated when you renew your subscription to the current plan in ") }}<span style="font-weight:bold">{{ expire_date }}</span>
+                                          </div>
+                                      </div>
+                                  {% endif %}
+{#                                  {% if current_user.subscription_type == 'Enterprise'%}#}
+{#                                      {% if current_user.subscription_status != '' %}#}
+{#                                      <div class="alert-danger" style="margin-bottom:20px;border-radius:10px" id="message_danger">#}
+{#                                          <div class="message" style="width:95%;margin:auto;font-size:20px">#}
+{#                                              {{ gettext("Your subscription is set to cancel on") }}<span style="font-weight:bold">{{ expire_date }}</span>.{{ gettext("After this date yoy cannot access your application") }}#}
+{#                                          </div>#}
+{#                                      </div>#}
+{#                                          {% endif %}#}
+{#                                  {% endif %}#}
+                          {% if payment_message_error %}
+                              <div class="alert alert-danger"  >
+                                          {{ payment_message_error }}
+                                      </div>
+
+                          {% endif %}
+
+                                  {% if current_user.plan_type == 'Monthly'%}
+                                      <div class="alert-danger" style="margin-bottom:20px;border-radius:10px;display:none" id="message_danger_remove_pos">
+                                          <div class="message" style="width:95%;margin:auto;font-size:25px;">
+                                              {{ gettext("Your Point of sale is set to remove on") }}<span style="font-weight:bold">{{ expire_date }}</span>
+                                          </div>
+                                      </div>
+
+                                      <div class="alert-success" style="margin-bottom:20px;border-radius:10px;display:none" id="message_success_add_pos">
+                                          <div class="message" style="width:95%;margin:auto;font-size:20px">
+                                              {{ gettext("Your Process has been successfully") }}
+                                          </div>
+                                      </div>
+                                 {% endif %}
+                                  {% if current_user.plan_type == 'yearly'%}
+                                      <div class="alert-danger" style="margin-bottom:20px;border-radius:10px;display:none" id="message_danger_remove_pos_annualy">
+                                          <div class="message" style="width:95%;margin:auto;font-size:25px;">
+                                              {{ gettext("Your Point of sale is set to remove on") }}<span style="font-weight:bold">{{ expire_date }}</span>
+                                          </div>
+                                      </div>
+                                      <div class="alert-success" style="margin-bottom:20px;border-radius:10px;display:none" id="message_success_add_pos">
+                                          <div class="message" style="width:95%;margin:auto;font-size:20px">
+                                              {{ gettext("Your Process has been successfully") }}<span style="font-weight:bold"></span>
+                                          </div>
+                                      </div>
+                                  {% endif %}
+
+                              <table class="table ">
+                                  <tbody>
+                                  <tr>
+                                      <td>  <h4>{% if current_user.subscription_type == 'Demo' %}{{ gettext("Free Trial") }}{% endif %}
+                                          {% if current_user.subscription_type == 'Enterprise' %}
+                                              {% if current_user.plan_type == 'Monthly'%}
+                                                  {{ gettext("Monthly") }}
+                                              {% endif %}
+                                              {% if current_user.plan_type == 'yearly'%}
+                                                  {{ gettext("Annualy") }}
+                                              {% endif %}
+                                          {% endif %}
+                                          </h4></td>
+                                          <td id="td-button" >
+                                              {% if get_days > 0 and current_user.account_type != "Test" %}
+                                                  <button id="myBtn"  class="btn btn-success">{{ gettext("Change Plan") }}</button>
+                                              {% endif %}
+{#                                              {% if current_user.subscription_status != ''  and get_days > 0 %}#}
+{#                                                  <form action="/reactive_subscription" method="post">#}
+{#                                                      <input type="submit" id="reactive_subscription"  class="btn btn-success" value="{{ gettext("Reactivate account") }}">#}
+{#                                                  </form>#}
+{#                                              {% endif %}#}
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>{{ gettext("Payment") }}</td>
+                                      <td>
+                                          {% if current_user.subscription_type == 'Demo' %}
+                                              <p>
+                                                     {% if current_user.country_code_id == "SAU"  %}
+                                                      {{ gettext("SAR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "TUR"   %}
+                                                          {{ gettext("TL") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id== "MYS"   %}
+                                                          {{ gettext("MYR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id == "IND"   %}
+                                                          {{ gettext("INR") }}
+                                                       {% endif %}
+                                                  {% if current_user.country_code_id == "GLB"   %}
+                                                      {{ gettext("USD") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "EGY"   %}
+                                                  {{ gettext("EGP") }}
+                                                  {% endif %}
+                                                  <span style="font-weight:bold;font-size:20px">{{ gettext("0") }}</span> {{ gettext("per month") }} </p>
+                                              <p>
+                                                     {% if current_user.country_code_id  == "SAU"  %}
+
+                                                       {{ gettext("SAR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id  == "TUR"   %}
+                                                          {{ gettext("TL") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id  == "MYS"   %}
+                                                          {{ gettext("MYR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id  == "IND"   %}
+                                                          {{ gettext("INR") }}
+                                                       {% endif %}
+                                                  {% if current_user.country_code_id  == "GLB"   %}
+                                                      {{ gettext("USD") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id  == "EGY"   %}
+                                                  {{ gettext("EGP") }}
+                                                  {% endif %}
+                                                  <span style="font-weight:bold;font-size:20px">{{ gettext("0 * 2") }} </span>{{ gettext("point of sale") }}</p>
+                                          {% endif %}
+
+                                          {% if current_user.subscription_type == 'Enterprise' and current_user.plan_type == 'Monthly' %}
+                                          <p>
+                                                 {% if current_user.country_code_id  == "SAU"  %}
+                                                   {{ gettext("SAR") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id  == "TUR"   %}
+                                                      {{ gettext("TL") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id == "MYS"   %}
+                                                      {{ gettext("MYR") }}
+                                                  {% endif %}
+                                                  {% if current_user.country_code_id  == "IND"   %}
+                                                      {{ gettext("INR") }}
+                                                   {% endif %}
+                                              {% if current_user.country_code_id == "GLB"   %}
+                                                  {{ gettext("USD") }}
+                                              {% endif %}
+                                              {% if current_user.country_code_id == "EGY"   %}
+                                              {{ gettext("EGP") }}
+                                              {% endif %}
+                                          <span style="font-weight:bold">
+                                          {{ current_user.price }}
+                                          </span>{{ gettext("per month") }}<span style="font-size:10px;margin-right:10px">   {{ gettext("Tax included") }}</span></p>
+                                              <p>
+                                                    {% if current_user.country_code_id  == "SAU"  %}
+                                                       {{ gettext("SAR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id  == "TUR"   %}
+                                                          {{ gettext("TL") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id  == "MYS"   %}
+                                                          {{ gettext("MYR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id  == "IND"   %}
+                                                          {{ gettext("INR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id  == "GLB"   %}
+                                                          {{ gettext("USD") }}
+                                                      {% endif %}
+                                                  {% if current_user.country_code_id  == "EGY"   %}
+                                                  {{ gettext("EGP") }}
+                                                  {% endif %}
+                                                  <span style="font-weight:bold;font-size:20px"> {{ monthly_price }} * <span id="pos_monthly_no">{{ current_user.stores_number }}</span> </span>{{ gettext("point of sale") }}</p>
+                                          {% endif %}
+                                          {% if current_user.subscription_type == 'Enterprise' and current_user.plan_type == 'yearly' %}
+                                              <p><span style="font-weight:bold"> {{ current_user.price }}
+                                                     {% if current_user.country_code_id  == "SAU"  %}
+                                                       {{ gettext("SAR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id  == "TUR"   %}
+                                                          {{ gettext("TL") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id  == "MYS"   %}
+                                                          {{ gettext("MYR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id  == "IND"   %}
+                                                          {{ gettext("INR") }}
+                                                       {% endif %}
+                                                      {% if current_user.country_code_id  == "GLB"   %}
+                                                          {{ gettext("USD") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id  == "EGY"   %}
+                                                          {{ gettext("EGP") }}
+                                                      {% endif %}
+                                              </span>{{ gettext("per Year *") }}<span style="font-size:10px;margin-right:10px">   {{ gettext("Tax included") }}</span></p>
+                                              <p>   {% if current_user.country_code_id  == "SAU"  %}
+                                                          {{ gettext("SAR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id  == "TUR"   %}
+                                                          {{ gettext("TL") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id  == "MYS"   %}
+                                                          {{ gettext("MYR") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id  == "IND"   %}
+                                                          {{ gettext("INR") }}
+                                                       {% endif %}
+                                                      {% if current_user.country_code_id  == "GLB"   %}
+                                                          {{ gettext("USD") }}
+                                                      {% endif %}
+                                                      {% if current_user.country_code_id  == "EGY"   %}
+                                                      {{ gettext("EGP") }}
+                                                      {% endif %}
+                                                  <span style="font-weight:bold;font-size:20px"> {{ annually_price }} * <span id="pos_annualy_no">{{ current_user.stores_number }}</span> </span>{{ gettext("point of sale") }}</p>
+                                          {% endif %}
+                                      </td>
+                                  </tr>
+                                  <tr>
+                                      <td>{{ gettext("Next payment") }}</td>
+                                      <td>
+                                          <p>
+                                              <span style="font-weight: bold;font-size:20px" >{{ expire_date }}</span>
+                                              <br>
+                                              <span style="font-weight: bold;font-size:20px"><span style="font-weight: bold;font-size:20px" >
+                                                  {% if get_days < 1 %}
+                                                  0
+                                                  {% else %}
+                                                  {{ get_days }}
+                                                  {% endif %}
+                                              </span>{{ gettext("days") }}  {{ gettext("is remmining") }} {% if current_user.account_type == "Test" %}<sub class="free-sub">{{ gettext("Free Trial") }}</sub> {% endif %}
+                                          </p>
+                                      </td>
+                                  </tr>
+                                  </tbody>
+                              </table>
+                          <style>
+                              .free-sub{
+                                  color:greenyellow;
+                              }
+                          </style>
+
+{#                          {% if current_user.subscription_type == 'Enterprise' and current_user.subscription_status == '' and get_days > 0 and current_user.account_type != "Test"%}#}
+{#                          <button type="button" class="btn btn-danger" id="cancel_sub_button">{{ gettext("Cancel Your Subscription \ Delete Your Account ") }}</button>#}
+{#                          {% endif %}#}
+
+                          </div>
+                      </div>
+                      <br/>
+                      <div class="pagination">
+                          <div class="input-container">
+                              <i class="fa fa-search icon"></i>
+                              <input type="text" name="search" placeholder="Search" class="input-field" onKeyUp="dropdatabases_function()" id="search_with_name" >
+                          </div>
+
+                          <div class="invoices-span" style="display:none">
+                              <p id="all_pages" style="display: none"></p>
+                              <i class="far fa-file-invoice-dollar"></i>
+                          </div>
+                      </div>
+                      <table class="table table-striped " id="invoices_table">
+                          <thead class="text-center">
+                          <tr id="show_head">
+                          <th>{{ gettext("Invoice No") }}</th>
+                          <th>{{ gettext("Date") }}</th>
+                          <th>{{ gettext("POS NO") }}</th>
+                          <th>{{ gettext("Company") }}</th>
+                          <th>{{ gettext("Subscription Type") }}</th>
+                          <th>{{ gettext("Expiration") }}</th>
+                          <th>{{ gettext("Price") }}</th>
+                          </tr>
+{#                          <th>{{ gettext("View") }}</th>#}
+                          </thead>
+                          <tbody class="text-center" id="data-container">
+                          {% for data in get_invoice_data  %}
+                             <tr id="id_{{ data.id }}" onclick="window.location.href='/view_invoice/{{ data.id }}'">
+                                  <td>{{ data.id }}</td>
+                                  <td>{{ data.order_date.strftime('%Y-%m-%d') }}</td>
+                                  <td>{{ data.stores_number }}</td>
+                                  <td>{{ data.business_name }}</td>
+                                  <td>{% if data.sub_type == 'yearly'%}{{ gettext("Anuualy") }}{% endif %}{% if data.sub_type == 'Monthly'%}{{ gettext("Monthly") }}{% endif %}
+                                  </td>
+                                  <td>{{ data.expire_db.strftime('%Y-%m-%d') }}</td>
+                                  <td>
+                                        {% if current_user.country_code_id  == "SAU"  %}
+                                      {{ gettext("SAR") }}
+                                  {% endif %}
+                                  {% if current_user.country_code_id  == "TUR"   %}
+                                      {{ gettext("TL") }}
+                                  {% endif %}
+                                  {% if current_user.country_code_id  == "MYS"   %}
+                                      {{ gettext("MYR") }}
+                                  {% endif %}
+                                  {% if current_user.country_code_id  == "IND"   %}
+                                      {{ gettext("INR") }}
+                                   {% endif %}
+                                      {% if current_user.country_code_id  == "GLB"   %}
+                                          {{ gettext("USD") }}
+                                      {% endif %}
+                                      {% if current_user.country_code_id  == "EGY"   %}
+                                      {{ gettext("EGP") }}
+                                      {% endif %}
+
+                                      {{ data.amount }}</td>
+                                 </td>
+{#                                 <td>  <a href="/view_invoice/{{ data.id }}" class="btn btn-primary" style="font-size:10px">{{ gettext("View") }}</a>#}
+                                 </td>
+                              </tr>
+                          {% endfor %}
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+          </section>
+          <div class="col-lg-12" id="divBlockLoader" style=" position:fixed;
+           display:none;
+
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            text-align: center;
+            opacity: 0.7;
+            z-index: 99;
+            background-color:#eff0f5
+            ">
+    <img  id="loading-image" src="{{ url_for("static", filename="assets/img/loading2.gif") }}" style="position: relative;
+
+                                                                                       margin-top:300px;
+                                                                                      width:200px;
+                                                                                      text-align: center;"/>
+</div>
+
+      <!-- End Contact Section -->
+  </main><!-- End #main -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="{{ url_for('static', filename="assets/js/jquery.table.hpaging.js") }}"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#invoices_table").hpaging({ "limit": 10 });
+    });
+    $("#pglmt").change(function () {
+        var lmt = $("#pglmt").val();
+        $("#customerTable").hpaging("newLimit", lmt);
+    });
+</script>
+  <script src="{{ url_for('static', filename="assets/js/invoices.js") }}"></script>
+{#  <script src="{{ url_for('static', filename="assets/js/pagination.js") }}"></script>#}
+
+
+  {% extends 'footer.html' %}
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+.customStyleVideo{
+    text-align:center;
+    width:100%;
+    height:315px
+}
+.customTextVideo{
+    text-align:center;
+    color:#010483
+}
+.customEmptyVideo{
+    text-align:center;
+    width:100%;
+    height:315px;
+    background-color: #eeefef
+
+}

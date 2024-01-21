@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Cashier Me</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="icon">
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="apple-touch-icon">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Google Fonts -->
+    <!-- Vendor CSS Files -->
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/aos/aos.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/bootstrap/css/bootstrap.min.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/bootstrap-icons/bootstrap-icons.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/boxicons/css/boxicons.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/glightbox/css/glightbox.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/remixicon/remixicon.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="{{ url_for('static' , filename="assets/vendor/swiper/swiper-bundle.min.css")}}" rel="stylesheet" >
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('static' , filename="assets/css/style.css")}}" rel="stylesheet" >
+</head>
+
+<body>
+{% block footer %}
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-info">
+                            <img class="img-fluid animated" alt="" src="{{ url_for('static', filename="assets/img/upos-footer1.png")}}"  >
+
+                            {% if session['country_code'] == "SAU"  %}
+                            <p>
+                                {{ gettext("Ultimate Solutions Corporation ")}}
+                                <br/>
+                                {{ gettext("C.R. 4030182217 ") }}
+                                <br/>
+                                {{ gettext(" Adham Trading Center - Al Madinah Al Munawarah Rd Ar Ruwais - Saudi Arabia") }}
+                            </p>
+                            {% endif %}
+
+                           {% if session['country_code'] == "MYS" or  session['country_code'] == "GLB" %}
+
+                            <p>
+                                {{ gettext("Ultimate Solutions Corporation ")}}
+                                <br/>
+                                {{ gettext("D5-15 One South, Persiaran Serdang Perdana 43300 Seri Kembangan, Selangor") }}
+                            </p>
+                            {% endif %}
+
+                           {% if session['country_code'] == "TUR"%}
+                            <p>
+                                {{ gettext("Ultimate Solutions Bilgisayar Yazılım San")}}
+                                <br/>
+                                {{ gettext("Ve Tic. A.Ş. Şti. MALL OF İSTANBUL, THE OFFICE, KAT:14/113 ZİYA GÖKALP MAH. SÜLEYMAN DEMİREL BULVARI NO:7E BAŞAKŞEHİR") }}
+                            </p>
+                            {% endif %}
+                            {% if session['country_code'] == "IND"%}
+                            <p>
+                                {{ gettext("Ultimate Tek solutions Pvt Ltd ")}}
+                                <br/>
+                                {{ gettext("No.823/4, 2nd Floor, Chaitra Complex 13th Cross, 7th Block, Jayanagar west, Bangalore-560070") }}
+                            </p>
+                            {% endif %}
+
+                            {% if session['country_code'] == "EGY"%}
+                            <p>
+                                شركة الحلول النهائية لتقنية المعلومات
+
+                                <br/>
+                                سجل تجاري: 107875
+                                <br/>
+                                40 شارع محي الدين ابو العز   الدقي - الجيزة - الدور السادس
+                            </p>
+                            {% endif %}
+
+
+                            <div class="social-links mt-3">
+                                {% if session['country_code'] == "IND" %}
+                                    <a href="https://twitter.com/tek_ultimate" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                    <a href="https://www.facebook.com/UltimatetekSolution" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                    <a href="https://www.instagram.com/ultimatetek_solutions/" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                    {#                                    <a href="https://www.youtube.com/c/UltimateSolutionseg" class="youtube"><i class="bx bxl-youtube"></i></a>#}
+                                    <a href="https://www.linkedin.com/company/ultimatetek/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                                {% elif session['country_code'] == "TUR"  %}
+                                    <a href="https://twitter.com/CashiermeTr" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                    <a href="https://www.facebook.com/cashierme.tr/" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                    <a href="https://www.instagram.com/cashierme.tr/" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                    {#                                <a href="https://www.youtube.com/c/UltimateSolutionseg" class="youtube"><i class="bx bxl-youtube"></i></a>#}
+                                    <a href="https://www.linkedin.com/company/cashiermetr/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                                {% elif session['country_code'] == "EGY"  %}
+                                    <a href="https://twitter.com/ultimateERPegy" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                    <a href="https://www.facebook.com/ultimateERPegy" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                    <a href="https://www.instagram.com/ultimateerpegy" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                    <a href="https://www.youtube.com/c/UltimateSolutionseg" class="youtube"><i class="bx bxl-youtube"></i></a>
+                                    <a href="https://www.linkedin.com/company/ultimateerpegy/mycompany" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                                {% elif session['country_code'] != "TUR" or session['country_code'] != "IND" or session['country_code'] != 'EGY'%}
+                                    <a href="https://twitter.com/ultimateERPeg" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                    <a href="https://www.facebook.com/ultimateERPeg" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                    <a href="https://ultimate-eg.net/www.instagram.com/ultimateerpeg" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                    <a href="https://www.youtube.com/c/UltimateSolutionseg" class="youtube"><i class="bx bxl-youtube"></i></a>
+                                    <a href="https://www.linkedin.com" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>{{ gettext("Useful Links") }}</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/">{{ gettext("Home") }}</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/home#features">{{ gettext("Features") }}</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/pricing">{{ gettext("Pricing") }}</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/contact">{{ gettext("Contact") }}</a></li>
+{#                            <li><i class="bx bx-chevron-right"></i> <a  href="/about">{{ gettext("Our Products") }}</a></li>#}
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>{{ gettext("Links") }}</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/about_us">{{ gettext("About Us") }}</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/terms_conditions">{{ gettext("Terms and Conditions") }}</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="/privacy_policy">{{ gettext("Privacy policy") }}</a></li>
+
+                            {% if session['country_code'] == "EGY"%}
+                            <li><i class="bx bx-chevron-right"></i> <a href="/return_policy">سياسة الارجاع</a></li>
+                            {%else%}
+                            <li><i class="bx bx-chevron-right"></i> <a href="/return_policy">{{ gettext("Return Policy ") }}</a></li>
+                            {%endif%}
+                            {% if session['country_code'] == "IND" %}
+                                <li><i class="bx bx-chevron-right"></i> <a href="https://ultimatetek.in/">{{ gettext("Ultimate Solutions Portal") }}</a></li
+                            {% else %}
+                            <li><i class="bx bx-chevron-right"></i> <a href="https://ultimatesolutionsportal.com/?country=sa&lang=ar">{{ gettext("Ultimate Solutions Portal") }}</a></li>
+                             {% endif %}
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>{{ gettext("Contact") }}</h4>
+                           {% if session['country_code'] == "SAU"  %}
+                                 <strong>{{ gettext("Phone:") }}</strong> + 966126523216
+                                <br>
+                                <strong>{{ gettext("Email:") }}</strong> info@cashierme.com
+                                <br>
+                                <strong>{{ gettext("Fax:") }}</strong> + 966126578264
+                                <br>
+                                <strong>{{ gettext("Mobile:") }}</strong>+ 966581880681
+                                <br>
+                           {% endif %}
+                          {% if session['country_code'] == "MYS" or  session['country_code'] == "GLB" %}
+
+                                <strong>{{ gettext("Phone:") }}</strong> +603 8940 6975
+                                <br>
+                                <strong>{{ gettext("Email:") }}</strong> info@ultimate-kl.com
+                                <br>
+                          {% endif %}
+                          {% if session['country_code'] == "TUR"%}
+                                 <strong>{{ gettext("Phone:") }}</strong> 00902128032598
+                                <br>
+                                <strong>{{ gettext("Email:") }}</strong> info.tr@cashierme.com
+                                <br>
+                                <strong>{{ gettext("Mobile:") }}</strong>++905059999337
+                              <br/>
+                          {% endif %}
+                         {% if session['country_code'] == "IND"%}
+                             <strong>{{ gettext("Phone:") }}</strong>
+                                <br>
+                                <strong>{{ gettext("Email:") }}</strong> info@ultimatetek.in
+                                <br>
+                                <strong>{{ gettext("Mobile:") }}</strong>+91 9901947050, +91 80 26711618
+                             <br/>
+                         {% endif %}
+                        {% if session['country_code'] == "EGY"  %}
+                        <strong>{{ gettext("Phone:") }}</strong>  1017298882 20+ <br/>
+                                                                  1018686629 20+
+                        <br>
+                        <strong>{{ gettext("Email:") }}</strong> marketing@ultimate-eg.net
+                        <br>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>2021</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/ -->
+                Developed by
+                <a href="https://ultimatesolutionsportal.com">Ultimate Solutions</a>
+                {% if session['country_code']=="TUR" %}
+                    <img class="center" src="{{ url_for('static', filename="assets/img/footer_logos.png")}}" style="width:20%"/>
+                {% else %}
+                    <img class="center" src="{{ url_for('static', filename="assets/img/payments.png")}}" />
+
+                {% endif %}
+                <input type="text" id="checkCountry" value="{{ session['country_code'] }}" style="display: none">
+            </div>
+        </div>
+    </footer>
+<!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<div id="preloader"></div>
+<!-- Vendor JS Files --> 
+<script src="{{ url_for('static', filename="assets/vendor/aos/aos.js" ) }}"></script>
+<script src="{{ url_for('static', filename="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" ) }}"></script>
+<script src="{{ url_for('static' , filename="assets/vendor/glightbox/js/glightbox.min.js" )}}"></script>
+<script src="{{ url_for('static' , filename="assets/vendor/purecounter/purecounter.js" )}}" async></script>
+<script src="{{ url_for('static' , filename="assets/vendor/swiper/swiper-bundle.min.js" )}}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename="assets/js/main.js") }}"></script>
+<script src="{{ url_for('static', filename="assets/js/language.js") }}"></script>
+<script src="{{ url_for('static', filename="assets/js/index.js") }}"></script>
+<script src="{{ url_for('static', filename="assets/js/android2.js") }}"></script>
+<script src="{{ url_for('static', filename="assets/js/ios1.js") }}"></script>
+
+
+{% endblock %}
+</body> 
+</html>

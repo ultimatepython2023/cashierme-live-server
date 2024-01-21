@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 class="text-center" style="background-color:#007aff;font-family:Cairo;text-align:center;">Cashier Me </h1>
+<table class="table" style="font-family: Cairo, sans-serif;border-collapse: collapse;width: 100%">
+    <tbody>
+    <td style="border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;width:35%">
+        <h3 class="text-center">{{ gettext("Billing Information") }}</h3>
+        <p>{{ gettext("Name:") }}{{ name }}</p>
+        <p>{{ gettext("Address:") }}{{ address }} - {{ city }} </p>
+        <p>{{ gettext("Country:") }}{{ country }}</p>
+        <p>{{ gettext("Zip/code:") }}{{ zip }}</p>
+    </td>
+    <td style="border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;width:35%">
+        <h3 class="text-center" style="margin-top:-70px">{{ gettext("Payment Details") }}</h3>
+        <p>{{ gettext("Invoice Number:") }}{{ invoice_num }}</p>
+        <p>{{ gettext("Date:") }}{{ invoice_date }}</p>
+    </td>
+    <td style="width:30%;border: 1px solid #dddddd">
+        <img src="https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl={{ img_data }}&choe=UTF-8" title="Link to Google.com"/>
+    </td>
+    </tbody>
+</table>
+<hr>
+<table class="table" style="font-family: Cairo, sans-serif;border-collapse: collapse; width: 100%" >
+    <thead>
+    <tr class="text-center">
+        <th style="border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px">{{ gettext("POS NO") }}</th>
+        <th style="border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px">{{ gettext("Company") }}</th>
+        <th style="border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px">{{ gettext("Domain") }}</th>
+        <th style="border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px">{{ gettext("Subscription Type") }}</th>
+        <th style="border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px">{{ gettext("Expiration") }}</th>
+        <th style="border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px">{{ gettext("Price") }}</th>
+    </tr>
+    </thead>
+    <tbody class="text-center" style="font-family: Cairo, sans-serif;
+        border-collapse: collapse;
+        width: 100%;">
+
+    <tr>
+        <td style="border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px">
+            {{ package }}
+        </td>
+        <td style="border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px">
+            {{ company }}
+        </td>
+        <td style="border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px">
+            {{ domain }}
+        </td>
+        <td style="border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px">
+            {% if subscription == 'yearly'%}{{ gettext("Anuualy") }}{% endif %}{% if subscription == 'Monthly'%}{{ gettext("Monthly") }}{% endif %}
+        </td>
+        <td style="border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px">
+            {{ expire }}
+        </td>
+        <td style="border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px">
+            <span style="font-size:10px">
+                      {% if session['country_code'] == "SAU"   %}
+                          {{ gettext("SAR") }}
+                      {% endif %}
+                {% if session['country_code'] == "TUR"   %}
+                    {{ gettext("TL") }}
+                {% endif %}
+                {% if session['country_code'] == "MYS"   %}
+                    {{ gettext("MYR") }}
+                {% endif %}
+                {% if session['country_code'] == "IND"   %}
+                    {{ gettext("INR") }}
+                {% endif %}
+                {% if session['country_code'] == "GLB"   %}
+                    {{ gettext("USD") }}
+                {% endif %}
+                {% if session['country_code'] == "EGY"   %}
+                    {{ gettext("EGP") }}
+                {% endif %}
+
+            </span>
+
+            {{ price }}
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div class="total" style="text-align: right;font-family: Cairo">
+    <p style="font-family: Cairo">{{ gettext("Subtotal :") }}<span style="font-size:16px">
+            {% if session['country_code'] == "SAU"   %}
+                {{ gettext("SAR") }}
+            {% endif %}
+        {% if session['country_code'] == "TUR"   %}
+            {{ gettext("TL") }}
+        {% endif %}
+        {% if session['country_code'] == "MYS"   %}
+            {{ gettext("MYR") }}
+        {% endif %}
+        {% if session['country_code'] == "IND"   %}
+            {{ gettext("INR") }}
+        {% endif %}
+        {% if session['country_code'] == "GLB"   %}
+            {{ gettext("USD") }}
+        {% endif %}
+        {% if session['country_code'] == "EGY"   %}
+            {{ gettext("EGP") }}
+        {% endif %}
+
+    </span>{{ price }}</p>
+    <h3 style="font-family: Cairo">{{ gettext("Total :") }}<span style="font-size:20px">
+             {% if session['country_code'] == "SAU"   %}
+                 {{ gettext("SAR") }}
+             {% endif %}
+        {% if session['country_code'] == "TUR"   %}
+            {{ gettext("TL") }}
+        {% endif %}
+        {% if session['country_code'] == "MYS"   %}
+            {{ gettext("MYR") }}
+        {% endif %}
+        {% if session['country_code'] == "IND"   %}
+            {{ gettext("INR") }}
+        {% endif %}
+        {% if session['country_code'] == "GLB"   %}
+            {{ gettext("USD") }}
+        {% endif %}
+        {% if session['country_code'] == "EGY"   %}
+            {{ gettext("EGP") }}
+        {% endif %}
+
+    </span>{{ price }}<span style="font-size:16px">{{ gettext("Tax included") }}</span></h3>
+</div>
+<br/>
+<hr>
+<br/>
+{#<h3 style="font-family: Cairo">{{ gettext("Login Details") }}</h3>#}
+{#<p style="font-family: Cairo">{{ gettext("Email:") }} : {{ email }}</p>#}
+{#<p style="font-family: Cairo">{{ gettext("Password:") }} : {{ password }}</p>#}
+<p style="font-family: Cairo">{{ gettext("To login to your UltimateDokkan account:") }}<a href="{{ domain }}">{{ gettext("(Click here!)") }}</a></p>
+<p>{{ gettext("To login to your UPOS control panel:") }}<a href="https://test.cashierme.com/invoices">{{ gettext("Click here!") }}</a></p>
+
+
+
+</body>
+</html>

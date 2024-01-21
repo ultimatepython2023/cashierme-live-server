@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+
+  <!-- ======= Header ======= -->
+  {% include 'header.html' %}
+
+
+  <main id="main">
+      <input type="hidden"  id="db_status" value="">
+
+      <input id="get_currentuser_lang" value="{{ session['language'] }}" style="display: none">
+      <!-- ======= Breadcrumbs Section ======= -->
+      <section id="contact" class="contact">
+          <div class="container" style="margin-top:50px ">
+              <div class="section-title" data-aos="fade-up">
+                  <h2>{{ gettext("Dashboard") }}</h2>
+                  <p>{{ gettext("Dashboard") }}</p>
+              </div>
+              <div class="row">
+                  <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
+                      <img src="{{ url_for('static', filename='assets/img/upos.png') }}" class="img-fluid animated" alt="">
+                  </div>
+                  <div class="col-lg-8 " data-aos="fade-left" data-aos-delay="200" style="">
+                      <div class="col-md-7 alert alert-success"  id="waitMessage">
+                          <div class="row">
+                              <div class="col-md-12" style="text-align: center">
+                                  {{ gettext("Your request is being processed please wait..") }}
+                                  <button onclick="check_account_created()" class="btn btn-default btn-sm" style="border: 1px solid #b4b4b4">   <span class="fa fa-refresh" style="display: inline-block;"></span> </button>
+                                  <span style="   position: absolute;
+                                text-align: left;
+                                margin-right: 20%;">
+                              </span>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-7 alert alert-danger" style="display:none;" id="errorMessage">
+                                  {{ gettext("An error occurred while executing your request, please . ") }} <a href="/contact">{{gettext("contact us")}}</a>
+                      </div>
+                      <p>{{ gettext("Hello") }}      <span style="font-weight: bold;font-size:20px" id="cs_name">{{ name }}</span></p>
+                      <p>{{ gettext("Welcome To Application") }}  <span style="font-weight:  bold;font-size:20px"><a href="https://ultimatesolutionsportal.com/?country=sa&lang=ar">Cashier Me</a></span>   </p>
+                      <p>{{ gettext("POS NO") }} :
+                          <br>
+                          <span style="font-weight: bold;font-size:20px" id="cs_package">{{ package }} {{ gettext("Point of Sale") }}</span>
+                      </p>
+
+                      <p>{{ gettext("Next Renewal Date :") }}
+                          <br/>
+                          <span style="font-weight: bold;font-size:20px" id="cs_expire_date">{{ expire_date }}</span>
+                      </p>
+                      <input type="hidden" name="reg_code" id="reg_code" value="{{ reg_code }}">
+
+                  </div>
+              </div>
+          </div>
+      </section>
+     <!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <script src="{{ url_for('static', filename="assets/js/android2.js") }}"></script>
+  <script src="{{ url_for('static', filename="assets/js/ios1.js") }}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+      localStorage.setItem("cs_name",document.getElementById('cs_name').value)
+      localStorage.setItem("cs_package",document.getElementById('cs_package').value)
+      localStorage.setItem("cs_expire_date",document.getElementById('cs_expire_date').value)
+  </script>
+
+  <script src="{{ url_for('static', filename="assets/js/dashboard.js") }}"></script>
+
+  {% extends 'footer.html' %}
+
+
+
+
+</body>
+</html>

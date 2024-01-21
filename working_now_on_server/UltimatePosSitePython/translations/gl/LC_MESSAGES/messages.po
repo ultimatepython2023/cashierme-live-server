@@ -1,0 +1,3508 @@
+# Galician translations for PROJECT.
+# Copyright (C) 2024 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2024-01-18 21:50+0200\n"
+"PO-Revision-Date: 2024-01-18 21:51+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: gl\n"
+"Language-Team: gl <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: app.py:1136 app.py:1914 app.py:2107 templates/dashboard.html:140
+msgid "User No :"
+msgstr ""
+
+#: app.py:1136 app.py:1914 app.py:2107
+msgid "password :"
+msgstr ""
+
+#: app.py:1136 app.py:1915 app.py:2107
+msgid "Registration Code For Application:"
+msgstr ""
+
+#: app.py:1136
+msgid "Application Expire in:"
+msgstr ""
+
+#: app.py:1620 app.py:2335
+#: malaysia_subscription/upgrade_demo_to_enterprise.py:146
+msgid "Congratulations, your subscription has been upgraded"
+msgstr ""
+
+#: app.py:1645 app.py:1664 app.py:2682
+#: malaysia_subscription/enterprise_subscription.py:166
+#: malaysia_subscription/upgrade_demo_to_enterprise.py:171
+msgid ""
+"The process cannot be completed, please try another payment card if you "
+"want to back pricing page"
+msgstr ""
+
+#: app.py:1649 app.py:1653 app.py:1657
+#: malaysia_subscription/upgrade_demo_to_enterprise.py:175
+#: malaysia_subscription/upgrade_demo_to_enterprise.py:179
+#: malaysia_subscription/upgrade_demo_to_enterprise.py:183
+msgid "cannot process your request now please try again letter"
+msgstr ""
+
+#: app.py:1916 app.py:2107
+msgid "Update Subscription in:"
+msgstr ""
+
+#: app.py:2493 app.py:2658 malaysia_subscription/enterprise_subscription.py:142
+#: turkish_subscription/enterprise_subscription.py:42
+#: turkish_subscription/turkey_demo_to_enterprise.py:32
+msgid ""
+"The process has been completed successfully. Please check your email for "
+"registration information. "
+msgstr ""
+
+#: app.py:2773
+msgid "Please Check your email to change password you have "
+msgstr ""
+
+#: app.py:2777
+msgid "invalid email !!!!"
+msgstr ""
+
+#: app.py:2800
+msgid "Your Token is Expired Please Try again !!!!!"
+msgstr ""
+
+#: app.py:2836
+msgid "Password not Matched"
+msgstr ""
+
+#: app.py:2839
+msgid "invalid Code !!!!!"
+msgstr ""
+
+#: app.py:2878 app.py:2911
+msgid "Invalid Email Or Password"
+msgstr ""
+
+#: app.py:3003
+msgid "password not Matched"
+msgstr ""
+
+#: app.py:3007
+msgid "Invalid Old Password"
+msgstr ""
+
+#: sqs_system/sqs_requests_receive.py:122
+msgid "Contact Already Exists!!"
+msgstr ""
+
+#: templates/about_page.html:46 templates/about_page.html:47
+#: templates/footer.html:124 templates/pricing.html:463
+msgid "About Us"
+msgstr ""
+
+#: templates/about_page.html:53
+msgid " Ultimatetek Solutions :"
+msgstr ""
+
+#: templates/about_page.html:56
+msgid ""
+"is a special corporation in the production, development and marketing ERP"
+" solutions for the global market."
+msgstr ""
+
+#: templates/about_page.html:59
+msgid " Ultimate Solutions:"
+msgstr ""
+
+#: templates/about_page.html:60
+msgid ""
+"is a specialized corporation in the production, development and marketing"
+" ERP solutions for the global market."
+msgstr ""
+
+#: templates/about_page.html:70
+msgid "Vision:"
+msgstr ""
+
+#: templates/about_page.html:74
+msgid ""
+"To be the businessmen absolute trust and users culture of professional "
+"distinction."
+msgstr ""
+
+#: templates/about_page.html:83
+msgid "Absolute Trust:"
+msgstr ""
+
+#: templates/about_page.html:85
+msgid ""
+" Corporation was expanded due to the clients trust for meeting their "
+"needs professionally so that its solutions achieve strong administrative "
+"and organizational work for the organization. It also gives businessmen "
+"confidence in their effective success in and to make use of new "
+"opportunities."
+msgstr ""
+
+#: templates/about_page.html:90
+msgid ""
+"Ultimate Solution Corporation was expanded due to the clients trust for "
+"meeting their needs professionally so that its solutions achieve strong "
+"administrative and organizational work for the organization. It also "
+"gives businessmen confidence in their effective success in and to make "
+"use of new opportunities."
+msgstr ""
+
+#: templates/about_page.html:98
+msgid "Our Competencies:"
+msgstr ""
+
+#: templates/about_page.html:100
+msgid ""
+"Ultimatetek Solutions team work are software development experts, "
+"professional in the implementation of accounting and specialized "
+"software, specialists in market studies and  client’s requirements and "
+"competent staff specialized in services provision in different technical "
+"and assistant jobs."
+msgstr ""
+
+#: templates/about_page.html:105
+msgid ""
+"Ultimate Solutions team work are software development experts, "
+"professional in the implementation of accounting and specialized "
+"software, specialists in market studies and  client’s requirements and "
+"competent staff specialized in services provision in different technical "
+"and assistant jobs."
+msgstr ""
+
+#: templates/about_page.html:114
+msgid " Our Ethics"
+msgstr ""
+
+#: templates/about_page.html:117
+msgid ""
+" Corporation works according to professional principles and civilized "
+"moral values. Our ethics policy is translated by all of our staff in our "
+"offices, branches and agents because our moral values are personal "
+"principles, work methods and business relations"
+msgstr ""
+
+#: templates/about_page.html:124
+msgid ""
+"Ultimate Solutions Corporation works according to professional principles"
+" and civilized moral values. Our ethics policy is translated by all of "
+"our staff in our offices, branches and agents because our moral values "
+"are personal principles, work methods and business relations"
+msgstr ""
+
+#: templates/about_page.html:135
+msgid "Software Updates"
+msgstr ""
+
+#: templates/about_page.html:137
+msgid ""
+"Ultimatetek Solutions depends on in-depth studies and ongoing research "
+"about business practices in the market, quality procedures, organizations"
+" structuring, labor legislations, new technology, clients’ requests and "
+"others to be the most important resources for the development of software"
+" and release updates with new additions and work environment by the "
+"virtue of use license agreement."
+msgstr ""
+
+#: templates/about_page.html:144
+msgid ""
+"Ultimate Solutions depends on in-depth studies and ongoing research about"
+" business practices in the market, quality procedures, organizations "
+"structuring, labor legislations, new technology, clients’ requests and "
+"others to be the most important resources for the development of software"
+" and release updates with new additions and work environment by the "
+"virtue of use license agreement."
+msgstr ""
+
+#: templates/about_page.html:154
+msgid "Our success partners"
+msgstr ""
+
+#: templates/about_page.html:156
+msgid "Our Clients:"
+msgstr ""
+
+#: templates/about_page.html:160
+msgid ""
+"\n"
+"                                                        Ultimatetek "
+"Solutions Corporation is proud in many of clients in different activities"
+" and business sectors.\n"
+"                                                        - Our systems are"
+" used by our clients in different sectors such as industrial production, "
+"projects, transportation, restaurants, hotels and others of specialized "
+"and service systems. In addition to their use the main business systems "
+"in financial and administrative areas.\n"
+"                                                        - Our clients are"
+" in many countries such as Saudi Arabia, Gulf countries, Egypt, Sudan, "
+"Yemen, Algeria, Turkey, Kenya, Somalia, Djibouti, China and other "
+"countries around the world.\n"
+"                                                        - Our clients "
+"carry out their business obligations in an organized method; and as a "
+"result of our systems performance they achieve quick and satisfactory "
+"outcomes which gave them an advantage in their business management and "
+"growth.\n"
+"                                                        - Our clients "
+"achieved significant shifts by using our systems to control their "
+"organizational performance, expand their business, and open many "
+"branches. Therefore, our clients’ success stories are famous in the "
+"business community.\n"
+"                                                    "
+msgstr ""
+
+#: templates/about_page.html:181
+msgid ""
+"\n"
+"                                                        Ultimate "
+"Solutions Corporation is proud in many of clients in different activities"
+" and business sectors.\n"
+"                                                        - Our systems are"
+" used by our clients in different sectors such as industrial production, "
+"projects, transportation, restaurants, hotels and others of specialized "
+"and service systems. In addition to their use the main business systems "
+"in financial and administrative areas.\n"
+"                                                        - Our clients are"
+" in many countries such as Saudi Arabia, Gulf countries, Egypt, Sudan, "
+"Yemen, Algeria, Turkey, Kenya, Somalia, Djibouti, China and other "
+"countries around the world.\n"
+"                                                        - Our clients "
+"carry out their business obligations in an organized method; and as a "
+"result of our systems performance they achieve quick and satisfactory "
+"outcomes which gave them an advantage in their business management and "
+"growth.\n"
+"                                                        - Our clients "
+"achieved significant shifts by using our systems to control their "
+"organizational performance, expand their business, and open many "
+"branches. Therefore, our clients’ success stories are famous in the "
+"business community.\n"
+"                                                    "
+msgstr ""
+
+#: templates/change_credit_card.html:45 templates/change_credit_card.html:46
+#: templates/change_credit_card.html:52 templates/dashboard.html:56
+#: templates/delete_account.html:45 templates/delete_account.html:46
+#: templates/delete_account.html:52 templates/header.html:92
+#: templates/invoices.html:246 templates/profile.html:45
+#: templates/profile.html:46 templates/profile.html:52
+msgid "Profile"
+msgstr ""
+
+#: templates/change_credit_card.html:51 templates/dashboard.html:49
+#: templates/dashboard.html:50 templates/dashboard.html:55
+#: templates/delete_account.html:51 templates/header.html:91
+#: templates/invoices.html:245 templates/profile.html:51
+#: templates/success_subscription_demo.html:18
+#: templates/success_subscription_demo.html:19
+msgid "Dashboard"
+msgstr ""
+
+#: templates/change_credit_card.html:53 templates/dashboard.html:57
+#: templates/delete_account.html:53 templates/header.html:93
+#: templates/invoices.html:239 templates/invoices.html:240
+#: templates/invoices.html:247 templates/profile.html:53
+msgid "Invoices"
+msgstr ""
+
+#: templates/change_credit_card.html:58 templates/dashboard.html:61
+#: templates/delete_account.html:57 templates/invoices.html:251
+#: templates/profile.html:57
+msgid "Change credit card"
+msgstr ""
+
+#: templates/change_credit_card.html:65 templates/dashboard.html:68
+#: templates/dashboard.html:136 templates/delete_account.html:64
+#: templates/header.html:94 templates/invoices.html:258
+#: templates/profile.html:64
+msgid "Control Panel Access Link :"
+msgstr ""
+
+#: templates/change_credit_card.html:67 templates/dashboard.html:70
+#: templates/delete_account.html:66 templates/header.html:95
+#: templates/invoices.html:260 templates/profile.html:66
+msgid "Logout"
+msgstr ""
+
+#: templates/change_credit_card.html:73 templates/invoices.html:814
+#: templates/invoices.html:826
+msgid "Your Process has been successfully"
+msgstr ""
+
+#: templates/change_credit_card.html:86
+#: templates/enterprise_subscription.html:278 templates/profile.html:90
+#: templates/profile.html:92 templates/subscriptions.html:79
+#: templates/upgrade_to_enterprise_subscription.html:265
+msgid "Name"
+msgstr ""
+
+#: templates/change_credit_card.html:91 templates/profile.html:109
+msgid "Country"
+msgstr ""
+
+#: templates/change_credit_card.html:98
+msgid "Current Card"
+msgstr ""
+
+#: templates/change_credit_card.html:115
+msgid "Change "
+msgstr ""
+
+#: templates/contact.html:44 templates/footer.html:117
+#: templates/footer.html:141 templates/header.html:54 templates/index.html:305
+#: templates/pricing.html:456 templates/pricing.html:480
+msgid "Contact"
+msgstr ""
+
+#: templates/contact.html:45 templates/index.html:306
+#: templates/terms_conditions.html:282
+msgid "Contact Us"
+msgstr ""
+
+#: templates/contact.html:52 templates/email_back.html:60
+#: templates/index.html:313
+msgid "Location:"
+msgstr ""
+
+#: templates/contact.html:54 templates/index.html:315
+msgid ""
+"Adham Trading Center - Al Madinah Al Munawarah Rd - Ar Ruwais - Saudi "
+"Arabia"
+msgstr ""
+
+#: templates/contact.html:58 templates/footer.html:51 templates/index.html:319
+#: templates/pricing.html:391
+msgid "D5-15 One South, Persiaran Serdang Perdana 43300 Seri Kembangan, Selangor"
+msgstr ""
+
+#: templates/contact.html:63 templates/index.html:324
+msgid ""
+"Ve Tic. A.Ş Şti. MALL OF İSTANBUL, THE OFFICE, KAT:14/113 ZİYA GÖKALP "
+"MAH. SÜLEYMAN DEMİREL BULVARI NO:7E BAŞAKŞEHİR"
+msgstr ""
+
+#: templates/contact.html:68 templates/footer.html:66 templates/index.html:329
+#: templates/pricing.html:406
+msgid ""
+"No.823/4, 2nd Floor, Chaitra Complex 13th Cross, 7th Block, Jayanagar "
+"west, Bangalore-560070"
+msgstr ""
+
+#: templates/contact.html:80 templates/email_back.html:65
+#: templates/enterprise_payment_result.html:212 templates/footer.html:145
+#: templates/footer.html:156 templates/footer.html:162
+#: templates/footer.html:170 templates/footer.html:179 templates/index.html:341
+#: templates/pricing.html:484 templates/pricing.html:495
+#: templates/pricing.html:501 templates/pricing.html:509
+#: templates/pricing.html:518
+msgid "Email:"
+msgstr ""
+
+#: templates/contact.html:82 templates/index.html:343
+msgid "info@cashierme.com"
+msgstr ""
+
+#: templates/contact.html:85 templates/index.html:346
+msgid "info@ultimate-kl.com"
+msgstr ""
+
+#: templates/contact.html:88 templates/index.html:349
+msgid "info.tr@cashierme.com"
+msgstr ""
+
+#: templates/contact.html:91 templates/index.html:352
+msgid "info@ultimatetek.in"
+msgstr ""
+
+#: templates/contact.html:101 templates/email_back.html:70
+#: templates/index.html:362
+msgid "Call:"
+msgstr ""
+
+#: templates/contact.html:103 templates/index.html:364
+msgid "+ 966126523216 "
+msgstr ""
+
+#: templates/contact.html:106 templates/index.html:367
+msgid "+603 8940 6975"
+msgstr ""
+
+#: templates/contact.html:109 templates/index.html:370
+msgid "+902128032598 , +905059999337 "
+msgstr ""
+
+#: templates/contact.html:112 templates/index.html:373
+msgid "+91 9901947050, +91 80 26711618"
+msgstr ""
+
+#: templates/contact.html:129 templates/index.html:388
+msgid "Your Name"
+msgstr ""
+
+#: templates/contact.html:132 templates/enterprise_subscription.html:293
+#: templates/index.html:391 templates/profile.html:98
+#: templates/upgrade_to_enterprise_subscription.html:279
+msgid "Your Email"
+msgstr ""
+
+#: templates/contact.html:136 templates/index.html:395
+msgid "Subject"
+msgstr ""
+
+#: templates/contact.html:139 templates/index.html:398
+msgid "Message"
+msgstr ""
+
+#: templates/contact.html:143 templates/index.html:402
+msgid "Send Message"
+msgstr ""
+
+#: templates/dashboard.html:96 templates/success_subscription_demo.html:41
+msgid "Hello"
+msgstr ""
+
+#: templates/dashboard.html:98 templates/success_subscription_demo.html:42
+msgid "Welcome To Application"
+msgstr ""
+
+#: templates/dashboard.html:99
+msgid "Your Email :"
+msgstr ""
+
+#: templates/dashboard.html:109 templates/url.html:58
+msgid "Registration Code for Application: "
+msgstr ""
+
+#: templates/dashboard.html:116 templates/enterprise_payment_result.html:108
+#: templates/invoices.html:1036 templates/invoicess.html:46
+#: templates/pdf_report.html:38 templates/success_subscription_demo.html:43
+#: templates/view_invoice.html:83
+msgid "POS NO"
+msgstr ""
+
+#: templates/dashboard.html:118 templates/success_subscription_demo.html:45
+msgid "Point of Sale"
+msgstr ""
+
+#: templates/dashboard.html:121 templates/success_subscription_demo.html:48
+msgid "Next Renewal Date :"
+msgstr ""
+
+#: templates/dashboard.html:132 templates/invoices.html:1001
+msgid "days"
+msgstr ""
+
+#: templates/dashboard.html:132 templates/invoices.html:1001
+msgid "is remmining"
+msgstr ""
+
+#: templates/dashboard.html:136 templates/enterprise_payment_result.html:215
+#: templates/pdf_report.html:167 templates/url.html:65
+msgid "Click here!"
+msgstr ""
+
+#: templates/dashboard.html:143 templates/enterprise_payment_result.html:213
+msgid "Password:"
+msgstr ""
+
+#: templates/delete_account.html:91 templates/invoices.html:328
+msgid "Cancel subscription"
+msgstr ""
+
+#: templates/delete_account.html:95
+msgid "Delete account"
+msgstr ""
+
+#: templates/delete_account.html:98
+msgid ""
+"We regret that you will cancel your subscription with Cashierme Please "
+"confirm by clicking on the button below"
+msgstr ""
+
+#: templates/delete_account.html:99
+msgid "The subscription will remain active until the next renewal date"
+msgstr ""
+
+#: templates/delete_account.html:101
+msgid ""
+"During this period, you can also cancel the decision to cancel the "
+"subscription."
+msgstr ""
+
+#: templates/delete_account.html:106
+msgid ""
+"We regret that you will delete your account with Cashierme. This "
+"procedure will delete all your data with us under your responsibility."
+msgstr ""
+
+#: templates/delete_account.html:107
+msgid ""
+"If you are sure of this decision, please confirm by clicking the Confirm "
+"button below."
+msgstr ""
+
+#: templates/delete_account.html:108
+msgid "You can withdraw this decision within 7 days on"
+msgstr ""
+
+#: templates/delete_account.html:108
+msgid "at"
+msgstr ""
+
+#: templates/delete_account.html:117 templates/invoices.html:454
+#: templates/invoices.html:546 templates/invoices.html:659
+#: templates/invoices.html:743
+msgid "Confirm"
+msgstr ""
+
+#: templates/delete_account.html:118 templates/invoices.html:452
+#: templates/invoices.html:539 templates/invoices.html:544
+#: templates/invoices.html:657 templates/invoices.html:738
+#: templates/invoices.html:742
+msgid "Cancel"
+msgstr ""
+
+#: templates/email_back.html:52
+msgid "Resend Company Information"
+msgstr ""
+
+#: templates/email_back.html:53 templates/email_back.html:132
+msgid "Resend"
+msgstr ""
+
+#: templates/email_back.html:61
+msgid ""
+" Adham Trading Center - Al Madinah Al Munawarah Rd  Ar Ruwais - Saudi "
+"Arabia"
+msgstr ""
+
+#: templates/email_back.html:66
+msgid "info@ultimatedokkan.com"
+msgstr ""
+
+#: templates/email_back.html:71
+msgid "966126523216"
+msgstr ""
+
+#: templates/email_back.html:122
+msgid "Please Insert Your Email"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:59
+#: templates/enterprise_payment_result.html:60
+msgid "Operation status "
+msgstr ""
+
+#: templates/enterprise_payment_result.html:69
+msgid "click me"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:88 templates/invoicess.html:16
+#: templates/pdf_report.html:14 templates/view_invoice.html:63
+msgid "Billing Information"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:89 templates/invoicess.html:17
+#: templates/pdf_report.html:15 templates/view_invoice.html:64
+msgid "Name:"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:90 templates/invoicess.html:18
+#: templates/pdf_report.html:16 templates/view_invoice.html:65
+msgid "Address:"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:91 templates/invoicess.html:19
+#: templates/pdf_report.html:17 templates/view_invoice.html:66
+msgid "Country:"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:92 templates/invoicess.html:20
+#: templates/pdf_report.html:18 templates/view_invoice.html:67
+msgid "Zip/code:"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:95 templates/invoicess.html:26
+#: templates/pdf_report.html:23 templates/view_invoice.html:70
+msgid "Payment Details"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:96 templates/invoicess.html:27
+#: templates/pdf_report.html:24 templates/view_invoice.html:71
+msgid "Invoice Number:"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:97 templates/invoicess.html:28
+#: templates/pdf_report.html:25 templates/view_invoice.html:72
+msgid "Date:"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:109 templates/invoices.html:1037
+#: templates/invoicess.html:49 templates/pdf_report.html:41
+#: templates/view_invoice.html:84
+msgid "Company"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:110 templates/invoicess.html:52
+#: templates/pdf_report.html:44 templates/view_invoice.html:85
+msgid "Domain"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:111 templates/invoices.html:1038
+#: templates/invoicess.html:55 templates/pdf_report.html:47
+#: templates/view_invoice.html:86
+msgid "Subscription Type"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:112 templates/invoices.html:1039
+#: templates/invoicess.html:58 templates/pdf_report.html:50
+#: templates/view_invoice.html:87
+msgid "Expiration"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:113 templates/invoices.html:1040
+#: templates/invoicess.html:61 templates/pdf_report.html:53
+#: templates/view_invoice.html:88
+msgid "Price"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:129
+#: templates/enterprise_payment_result.html:209 templates/invoices.html:1051
+#: templates/invoicess.html:86 templates/pdf_report.html:79
+#: templates/pricing.html:144 templates/view_invoice.html:104
+msgid "Anuualy"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:129
+#: templates/enterprise_payment_result.html:209 templates/invoices.html:383
+#: templates/invoices.html:837 templates/invoices.html:1051
+#: templates/invoicess.html:86 templates/pdf_report.html:79
+#: templates/pricing.html:148 templates/view_invoice.html:104
+msgid "Monthly"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:137
+#: templates/enterprise_payment_result.html:164
+#: templates/enterprise_payment_result.html:186
+#: templates/enterprise_subscription.html:848 templates/invoices.html:385
+#: templates/invoices.html:413 templates/invoices.html:433
+#: templates/invoices.html:476 templates/invoices.html:498
+#: templates/invoices.html:519 templates/invoices.html:558
+#: templates/invoices.html:594 templates/invoices.html:615
+#: templates/invoices.html:636 templates/invoices.html:676
+#: templates/invoices.html:697 templates/invoices.html:719
+#: templates/invoices.html:861 templates/invoices.html:882
+#: templates/invoices.html:905 templates/invoices.html:927
+#: templates/invoices.html:949 templates/invoices.html:968
+#: templates/invoices.html:1056 templates/invoicess.html:98
+#: templates/invoicess.html:125 templates/invoicess.html:146
+#: templates/pdf_report.html:91 templates/pdf_report.html:119
+#: templates/pdf_report.html:140 templates/pricing.html:194
+#: templates/pricing.html:244 templates/pricing.html:298
+#: templates/upgrade_to_enterprise_subscription.html:789
+#: templates/view_invoice.html:112 templates/view_invoice.html:137
+#: templates/view_invoice.html:156
+msgid "SAR"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:140
+#: templates/enterprise_payment_result.html:167
+#: templates/enterprise_payment_result.html:189
+msgid "TRY"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:143
+#: templates/enterprise_payment_result.html:170
+#: templates/enterprise_payment_result.html:192
+#: templates/enterprise_subscription.html:854 templates/invoices.html:391
+#: templates/invoices.html:419 templates/invoices.html:439
+#: templates/invoices.html:482 templates/invoices.html:504
+#: templates/invoices.html:525 templates/invoices.html:564
+#: templates/invoices.html:600 templates/invoices.html:621
+#: templates/invoices.html:642 templates/invoices.html:682
+#: templates/invoices.html:703 templates/invoices.html:725
+#: templates/invoices.html:867 templates/invoices.html:888
+#: templates/invoices.html:911 templates/invoices.html:933
+#: templates/invoices.html:955 templates/invoices.html:974
+#: templates/invoices.html:1062 templates/invoicess.html:104
+#: templates/invoicess.html:131 templates/invoicess.html:152
+#: templates/pdf_report.html:97 templates/pdf_report.html:125
+#: templates/pdf_report.html:146 templates/pricing.html:200
+#: templates/pricing.html:250 templates/pricing.html:304
+#: templates/upgrade_to_enterprise_subscription.html:795
+#: templates/view_invoice.html:118 templates/view_invoice.html:143
+#: templates/view_invoice.html:162
+msgid "MYR"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:146
+#: templates/enterprise_payment_result.html:173
+#: templates/enterprise_payment_result.html:195
+#: templates/enterprise_subscription.html:857 templates/invoices.html:394
+#: templates/invoices.html:422 templates/invoices.html:442
+#: templates/invoices.html:485 templates/invoices.html:507
+#: templates/invoices.html:528 templates/invoices.html:567
+#: templates/invoices.html:603 templates/invoices.html:624
+#: templates/invoices.html:645 templates/invoices.html:685
+#: templates/invoices.html:706 templates/invoices.html:728
+#: templates/invoices.html:870 templates/invoices.html:891
+#: templates/invoices.html:914 templates/invoices.html:936
+#: templates/invoices.html:958 templates/invoices.html:977
+#: templates/invoices.html:1065 templates/invoicess.html:107
+#: templates/invoicess.html:134 templates/invoicess.html:155
+#: templates/pdf_report.html:100 templates/pdf_report.html:128
+#: templates/pdf_report.html:149 templates/pricing.html:203
+#: templates/pricing.html:253 templates/pricing.html:307
+#: templates/upgrade_to_enterprise_subscription.html:798
+#: templates/view_invoice.html:121 templates/view_invoice.html:146
+#: templates/view_invoice.html:165
+msgid "INR"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:149
+#: templates/enterprise_payment_result.html:176
+#: templates/enterprise_payment_result.html:198
+#: templates/enterprise_subscription.html:860 templates/invoices.html:397
+#: templates/invoices.html:425 templates/invoices.html:445
+#: templates/invoices.html:488 templates/invoices.html:510
+#: templates/invoices.html:531 templates/invoices.html:570
+#: templates/invoices.html:606 templates/invoices.html:627
+#: templates/invoices.html:648 templates/invoices.html:688
+#: templates/invoices.html:709 templates/invoices.html:731
+#: templates/invoices.html:873 templates/invoices.html:894
+#: templates/invoices.html:917 templates/invoices.html:939
+#: templates/invoices.html:961 templates/invoices.html:980
+#: templates/invoices.html:1068 templates/invoicess.html:110
+#: templates/invoicess.html:137 templates/invoicess.html:158
+#: templates/pdf_report.html:103 templates/pdf_report.html:131
+#: templates/pdf_report.html:152 templates/pricing.html:206
+#: templates/pricing.html:256 templates/pricing.html:310
+#: templates/upgrade_to_enterprise_subscription.html:801
+#: templates/view_invoice.html:124 templates/view_invoice.html:149
+#: templates/view_invoice.html:168
+msgid "USD"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:152
+#: templates/enterprise_payment_result.html:179
+#: templates/enterprise_payment_result.html:201
+#: templates/enterprise_subscription.html:863 templates/invoices.html:400
+#: templates/invoices.html:428 templates/invoices.html:448
+#: templates/invoices.html:491 templates/invoices.html:513
+#: templates/invoices.html:534 templates/invoices.html:573
+#: templates/invoices.html:609 templates/invoices.html:630
+#: templates/invoices.html:651 templates/invoices.html:691
+#: templates/invoices.html:712 templates/invoices.html:734
+#: templates/invoices.html:876 templates/invoices.html:897
+#: templates/invoices.html:920 templates/invoices.html:942
+#: templates/invoices.html:964 templates/invoices.html:983
+#: templates/invoices.html:1071 templates/invoicess.html:113
+#: templates/invoicess.html:140 templates/invoicess.html:161
+#: templates/pdf_report.html:106 templates/pdf_report.html:134
+#: templates/pdf_report.html:155 templates/pricing.html:209
+#: templates/pricing.html:259 templates/pricing.html:313
+#: templates/upgrade_to_enterprise_subscription.html:804
+#: templates/view_invoice.html:127 templates/view_invoice.html:152
+#: templates/view_invoice.html:171
+msgid "EGP"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:161 templates/invoicess.html:122
+#: templates/pdf_report.html:117 templates/view_invoice.html:136
+msgid "Subtotal :"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:184
+#: templates/enterprise_subscription.html:845 templates/invoicess.html:144
+#: templates/pdf_report.html:138
+#: templates/upgrade_to_enterprise_subscription.html:786
+#: templates/view_invoice.html:155
+msgid "Total :"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:205
+#: templates/enterprise_subscription.html:868 templates/invoices.html:450
+#: templates/invoices.html:515 templates/invoices.html:536
+#: templates/invoices.html:632 templates/invoices.html:655
+#: templates/invoices.html:715 templates/invoices.html:736
+#: templates/invoices.html:924 templates/invoices.html:966
+#: templates/invoicess.html:164 templates/pdf_report.html:158
+#: templates/upgrade_to_enterprise_subscription.html:808
+#: templates/view_invoice.html:174
+msgid "Tax included"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:209 templates/view_invoice.html:176
+msgid "Print Invoice as pdf"
+msgstr ""
+
+#: templates/enterprise_payment_result.html:215 templates/pdf_report.html:167
+#: templates/url.html:65
+msgid "To login to your UPOS control panel:"
+msgstr ""
+
+#: templates/enterprise_subscription.html:131 templates/invoices.html:115
+#: templates/payment_card.html:30
+#: templates/upgrade_to_enterprise_subscription.html:123
+msgid "Kart Numarası"
+msgstr ""
+
+#: templates/enterprise_subscription.html:146 templates/invoices.html:136
+#: templates/payment_card.html:57
+#: templates/upgrade_to_enterprise_subscription.html:133
+msgid "Kart Üzerindeki Ad Soyad"
+msgstr ""
+
+#: templates/enterprise_subscription.html:248
+#: templates/enterprise_subscription.html:249
+#: templates/upgrade_to_enterprise_subscription.html:235
+#: templates/upgrade_to_enterprise_subscription.html:236
+msgid "Billing details"
+msgstr ""
+
+#: templates/enterprise_subscription.html:273 templates/subscriptions.html:74
+#: templates/upgrade_to_enterprise_subscription.html:260
+msgid "You cannot use this email. Please enter another email and try again "
+msgstr ""
+
+#: templates/enterprise_subscription.html:287
+#: templates/enterprise_subscription.html:308
+#: templates/enterprise_subscription.html:318
+#: templates/enterprise_subscription.html:331 templates/subscriptions.html:80
+#: templates/subscriptions.html:99
+msgid "This field must be minlength 8 characters"
+msgstr ""
+
+#: templates/enterprise_subscription.html:302 templates/subscriptions.html:104
+#: templates/upgrade_to_enterprise_subscription.html:289
+msgid "password"
+msgstr ""
+
+#: templates/enterprise_subscription.html:313
+#: templates/upgrade_to_enterprise_subscription.html:295
+msgid "Business Name"
+msgstr ""
+
+#: templates/enterprise_subscription.html:324 templates/subscriptions.html:98
+#: templates/upgrade_to_enterprise_subscription.html:304
+msgid "Company short name (English) "
+msgstr ""
+
+#: templates/enterprise_subscription.html:346
+#: templates/upgrade_to_enterprise_subscription.html:321
+msgid "--Select POS NO--"
+msgstr ""
+
+#: templates/enterprise_subscription.html:347
+#: templates/upgrade_to_enterprise_subscription.html:322
+msgid "2 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:348
+msgid "3 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:349
+#: templates/upgrade_to_enterprise_subscription.html:323
+msgid "4 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:350
+msgid "5 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:351
+#: templates/upgrade_to_enterprise_subscription.html:324
+msgid "6 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:352
+msgid "7 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:353
+#: templates/upgrade_to_enterprise_subscription.html:325
+msgid "8 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:354
+msgid "9 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:355
+#: templates/upgrade_to_enterprise_subscription.html:326
+msgid "10 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:356
+msgid "11 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:357
+#: templates/upgrade_to_enterprise_subscription.html:327
+msgid "12 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:358
+msgid "13 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:359
+#: templates/upgrade_to_enterprise_subscription.html:328
+msgid "14 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:360
+msgid "15 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:361
+#: templates/upgrade_to_enterprise_subscription.html:329
+msgid "16 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:362
+msgid "17 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:363
+#: templates/upgrade_to_enterprise_subscription.html:330
+msgid "18 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:364
+msgid "19 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:365
+#: templates/upgrade_to_enterprise_subscription.html:331
+msgid "20 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:366
+msgid "21 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:367
+#: templates/upgrade_to_enterprise_subscription.html:332
+msgid "22 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:368
+msgid "23 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:369
+#: templates/upgrade_to_enterprise_subscription.html:333
+msgid "24 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:370
+msgid "25 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:371
+#: templates/upgrade_to_enterprise_subscription.html:334
+msgid "26 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:372
+msgid "27 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:373
+#: templates/upgrade_to_enterprise_subscription.html:335
+msgid "28 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:374
+msgid "29 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:375
+#: templates/upgrade_to_enterprise_subscription.html:336
+msgid "30 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:376
+msgid "31 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:377
+#: templates/upgrade_to_enterprise_subscription.html:337
+msgid "32 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:378
+msgid "33 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:379
+#: templates/upgrade_to_enterprise_subscription.html:338
+msgid "34 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:380
+msgid "35 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:381
+#: templates/upgrade_to_enterprise_subscription.html:339
+msgid "36 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:382
+msgid "37 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:383
+#: templates/upgrade_to_enterprise_subscription.html:340
+msgid "38 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:384
+msgid "39 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:385
+#: templates/upgrade_to_enterprise_subscription.html:341
+msgid "40 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:386
+msgid "41 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:387
+#: templates/upgrade_to_enterprise_subscription.html:342
+msgid "42 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:388
+msgid "43 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:389
+#: templates/upgrade_to_enterprise_subscription.html:343
+msgid "44 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:390
+msgid "45 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:391
+#: templates/upgrade_to_enterprise_subscription.html:344
+msgid "46 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:392
+msgid "47 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:393
+#: templates/upgrade_to_enterprise_subscription.html:345
+msgid "48 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:394
+msgid "49 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:395
+#: templates/upgrade_to_enterprise_subscription.html:346
+msgid "50 "
+msgstr ""
+
+#: templates/enterprise_subscription.html:401
+#: templates/upgrade_to_enterprise_subscription.html:352
+msgid "Vat Number"
+msgstr ""
+
+#: templates/enterprise_subscription.html:411
+#: templates/upgrade_to_enterprise_subscription.html:361
+msgid "Commercial Register"
+msgstr ""
+
+#: templates/enterprise_subscription.html:419 templates/profile.html:103
+#: templates/profile.html:105 templates/subscriptions.html:84
+#: templates/upgrade_to_enterprise_subscription.html:368
+msgid "Phone"
+msgstr ""
+
+#: templates/enterprise_subscription.html:426 templates/subscriptions.html:87
+msgid "iletişim numarası zaten var"
+msgstr ""
+
+#: templates/enterprise_subscription.html:428 templates/subscriptions.html:89
+msgid "contact number already exists"
+msgstr ""
+
+#: templates/enterprise_subscription.html:822 templates/profile.html:373
+#: templates/profile.html:375
+#: templates/upgrade_to_enterprise_subscription.html:762
+msgid "City"
+msgstr ""
+
+#: templates/enterprise_subscription.html:828 templates/profile.html:379
+#: templates/profile.html:381
+#: templates/upgrade_to_enterprise_subscription.html:768
+msgid "Street Address"
+msgstr ""
+
+#: templates/enterprise_subscription.html:834 templates/profile.html:385
+#: templates/profile.html:387
+#: templates/upgrade_to_enterprise_subscription.html:775
+msgid "Postcode/Zip"
+msgstr ""
+
+#: templates/enterprise_subscription.html:851 templates/invoices.html:388
+#: templates/invoices.html:416 templates/invoices.html:436
+#: templates/invoices.html:479 templates/invoices.html:501
+#: templates/invoices.html:522 templates/invoices.html:561
+#: templates/invoices.html:597 templates/invoices.html:618
+#: templates/invoices.html:639 templates/invoices.html:679
+#: templates/invoices.html:700 templates/invoices.html:722
+#: templates/invoices.html:864 templates/invoices.html:885
+#: templates/invoices.html:908 templates/invoices.html:930
+#: templates/invoices.html:952 templates/invoices.html:971
+#: templates/invoices.html:1059 templates/invoicess.html:101
+#: templates/invoicess.html:128 templates/invoicess.html:149
+#: templates/pdf_report.html:94 templates/pdf_report.html:122
+#: templates/pdf_report.html:143 templates/pricing.html:197
+#: templates/pricing.html:247 templates/pricing.html:301
+#: templates/upgrade_to_enterprise_subscription.html:792
+#: templates/view_invoice.html:115 templates/view_invoice.html:140
+#: templates/view_invoice.html:159
+msgid "TL"
+msgstr ""
+
+#: templates/enterprise_subscription.html:867 templates/invoices.html:450
+#: templates/invoices.html:515 templates/pricing.html:211
+#: templates/upgrade_to_enterprise_subscription.html:807
+msgid "Month"
+msgstr ""
+
+#: templates/enterprise_subscription.html:867 templates/invoices.html:632
+#: templates/invoices.html:715
+#: templates/upgrade_to_enterprise_subscription.html:807
+msgid "Year"
+msgstr ""
+
+#: templates/enterprise_subscription.html:908
+#: templates/upgrade_to_enterprise_subscription.html:847
+msgid "I agree to the"
+msgstr ""
+
+#: templates/enterprise_subscription.html:910
+#: templates/upgrade_to_enterprise_subscription.html:849
+msgid "terms and conditions"
+msgstr ""
+
+#: templates/enterprise_subscription.html:917
+#: templates/enterprise_subscription.html:926
+msgid "Üye Ol"
+msgstr ""
+
+#: templates/enterprise_subscription.html:924
+#: templates/enterprise_subscription.html:930
+#: templates/upgrade_to_enterprise_subscription.html:855
+#: templates/upgrade_to_enterprise_subscription.html:861
+msgid "Go to payment page "
+msgstr ""
+
+#: templates/enterprise_subscription.html:928
+#: templates/upgrade_to_enterprise_subscription.html:863
+msgid "Subscription"
+msgstr ""
+
+#: templates/error_message.html:13
+msgid "Your subscription is set to cancel on"
+msgstr ""
+
+#: templates/error_message.html:13
+msgid "After this date yoy cannot access your application"
+msgstr ""
+
+#: templates/error_message.html:15
+msgid "Your account is set to be deleted within date of"
+msgstr ""
+
+#: templates/error_message.html:15
+msgid ""
+"days on the date of this action. This action will delete all your data "
+"with us under your responsibility."
+msgstr ""
+
+#: templates/error_message.html:17
+msgid "reactive_account"
+msgstr ""
+
+#: templates/features.html:47 templates/footer.html:115
+#: templates/header.html:49 templates/index.html:136 templates/pricing.html:454
+msgid "Features"
+msgstr ""
+
+#: templates/features.html:48 templates/index.html:137
+msgid "The Features "
+msgstr ""
+
+#: templates/features.html:54 templates/index.html:143
+msgid "ُElectronic Invoice"
+msgstr ""
+
+#: templates/features.html:57 templates/index.html:146
+msgid ""
+"Electronic invoice support with cashier me app for point of sale "
+"management"
+msgstr ""
+
+#: templates/features.html:59 templates/index.html:148
+msgid "Electronic invoice support with ultimate point of sale "
+msgstr ""
+
+#: templates/features.html:65 templates/index.html:154
+msgid "Live Analytic"
+msgstr ""
+
+#: templates/features.html:67 templates/index.html:156
+msgid "More accurate and flexible analytics on all your outlets"
+msgstr ""
+
+#: templates/features.html:72 templates/index.html:161
+msgid "Multiple Outlet"
+msgstr ""
+
+#: templates/features.html:75 templates/index.html:164
+msgid "Easily create and manage more than one outlet"
+msgstr ""
+
+#: templates/features.html:77 templates/index.html:166
+msgid "Create and manage more than one outlets with ease"
+msgstr ""
+
+#: templates/features.html:86 templates/index.html:175
+msgid "Cloud Enabled"
+msgstr ""
+
+#: templates/features.html:88 templates/index.html:177
+msgid "Stores your outlet data on the cloud to be accessed anywhere and anytime"
+msgstr ""
+
+#: templates/features.html:93 templates/index.html:182
+msgid "Detailed Reports"
+msgstr ""
+
+#: templates/features.html:95 templates/index.html:184
+msgid "Detailed reports on everything related to your points of sale"
+msgstr ""
+
+#: templates/features.html:100 templates/index.html:189
+msgid "Hub for Reliability"
+msgstr ""
+
+#: templates/features.html:103
+msgid "Ability to work offline and activate online sync"
+msgstr ""
+
+#: templates/features.html:105 templates/index.html:196
+msgid ""
+"Increase reliability and performance of multiple point-of-sale at your "
+"outlets"
+msgstr ""
+
+#: templates/features.html:116 templates/index.html:211
+msgid "Features That Will Help You!"
+msgstr ""
+
+#: templates/features.html:117 templates/index.html:212
+msgid ""
+"We've built tools that are vital for business to run efficiently and "
+"ensure you can manage your business with ease throughout time"
+msgstr ""
+
+#: templates/features.html:120 templates/index.html:224
+msgid ""
+"Enterprise Support - With a single account, you are able to manage "
+"several outlets' menus, price books, and employees "
+msgstr ""
+
+#: templates/features.html:121 templates/index.html:217
+#: templates/index.html:225
+msgid ""
+"Payment Methods - User-friendly method of accepting payments from your "
+"customers"
+msgstr ""
+
+#: templates/features.html:122 templates/index.html:226
+msgid ""
+"Cloud Enabled - Your outlet data is saved in the cloud and may be "
+"accessed from anywhere at any time"
+msgstr ""
+
+#: templates/features.html:123 templates/index.html:227
+msgid ""
+"Built-in Tax Support - Do taxes make your head spin? Taxes are a breeze "
+"with our method"
+msgstr ""
+
+#: templates/features.html:124 templates/index.html:228
+msgid ""
+"Hub for Reliability - Improve the reliability and performance of your "
+"various point-of-sale outlets"
+msgstr ""
+
+#: templates/footer.html:38 templates/footer.html:49 templates/pricing.html:378
+#: templates/pricing.html:389
+msgid "Ultimate Solutions Corporation "
+msgstr ""
+
+#: templates/footer.html:40 templates/pricing.html:380
+msgid "C.R. 4030182217 "
+msgstr ""
+
+#: templates/footer.html:42 templates/pricing.html:382
+msgid ""
+" Adham Trading Center - Al Madinah Al Munawarah Rd Ar Ruwais - Saudi "
+"Arabia"
+msgstr ""
+
+#: templates/footer.html:57 templates/pricing.html:397
+msgid "Ultimate Solutions Bilgisayar Yazılım San"
+msgstr ""
+
+#: templates/footer.html:59 templates/pricing.html:399
+msgid ""
+"Ve Tic. A.Ş. Şti. MALL OF İSTANBUL, THE OFFICE, KAT:14/113 ZİYA GÖKALP "
+"MAH. SÜLEYMAN DEMİREL BULVARI NO:7E BAŞAKŞEHİR"
+msgstr ""
+
+#: templates/footer.html:64 templates/pricing.html:404
+msgid "Ultimate Tek solutions Pvt Ltd "
+msgstr ""
+
+#: templates/footer.html:112 templates/pricing.html:451
+msgid "Useful Links"
+msgstr ""
+
+#: templates/footer.html:114 templates/header.html:48
+#: templates/pricing.html:453
+msgid "Home"
+msgstr ""
+
+#: templates/footer.html:116 templates/header.html:51
+#: templates/pricing.html:131 templates/pricing.html:132
+#: templates/pricing.html:455
+msgid "Pricing"
+msgstr ""
+
+#: templates/footer.html:122 templates/pricing.html:461
+msgid "Links"
+msgstr ""
+
+#: templates/footer.html:125 templates/pricing.html:464
+msgid "Terms and Conditions"
+msgstr ""
+
+#: templates/footer.html:126 templates/pricing.html:465
+msgid "Privacy policy"
+msgstr ""
+
+#: templates/footer.html:131 templates/pricing.html:470
+msgid "Return Policy "
+msgstr ""
+
+#: templates/footer.html:134 templates/footer.html:136
+#: templates/pricing.html:473 templates/pricing.html:475
+msgid "Ultimate Solutions Portal"
+msgstr ""
+
+#: templates/footer.html:143 templates/footer.html:154
+#: templates/footer.html:160 templates/footer.html:168
+#: templates/footer.html:176 templates/pricing.html:482
+#: templates/pricing.html:493 templates/pricing.html:499
+#: templates/pricing.html:507 templates/pricing.html:515
+msgid "Phone:"
+msgstr ""
+
+#: templates/footer.html:147 templates/pricing.html:486
+msgid "Fax:"
+msgstr ""
+
+#: templates/footer.html:149 templates/footer.html:164
+#: templates/footer.html:172 templates/pricing.html:488
+#: templates/pricing.html:503 templates/pricing.html:511
+msgid "Mobile:"
+msgstr ""
+
+#: templates/header.html:55 templates/help.html:53
+msgid "Help"
+msgstr ""
+
+#: templates/header.html:58
+msgid "Language"
+msgstr ""
+
+#: templates/header.html:85 templates/login.html:45 templates/login.html:46
+#: templates/login.html:83 templates/payment_card.html:15
+#: templates/payment_card.html:16
+msgid "Login"
+msgstr ""
+
+#: templates/header.html:89
+msgid "my account"
+msgstr ""
+
+#: templates/help.html:80
+msgid "CashierMe uygulaması nedir?"
+msgstr ""
+
+#: templates/help.html:82
+msgid "What is the CashierMe app?"
+msgstr ""
+
+#: templates/help.html:84
+msgid "ما هو تطبيق كاشيرمي"
+msgstr ""
+
+#: templates/help.html:90
+msgid "CashierMe uygulamasına nasıl kayıt olabilirim?"
+msgstr ""
+
+#: templates/help.html:92
+msgid "How can I sign up for the CashierMe app?"
+msgstr ""
+
+#: templates/help.html:94
+msgid "كيف يمكنني التسجيل في تطبيق كاشيرمي؟"
+msgstr ""
+
+#: templates/help.html:100
+msgid "Hesabımla ilgili detaylara nasıl ulaşabilirim?"
+msgstr ""
+
+#: templates/help.html:102
+msgid "How can I get details about my account?"
+msgstr ""
+
+#: templates/help.html:104
+msgid "كيف يمكنني الحصول على تفاصيل حول حسابي؟"
+msgstr ""
+
+#: templates/help.html:111
+msgid "Kontrol paneline nasıl giriş yapabilirim?"
+msgstr ""
+
+#: templates/help.html:113
+msgid "How can I login to the control panel?"
+msgstr ""
+
+#: templates/help.html:115
+msgid "كيف يمكنني تسجيل الدخول إلى لوحة التحكم؟"
+msgstr ""
+
+#: templates/help.html:121
+msgid "Raporları nasıl görüntüleyebilirim?"
+msgstr ""
+
+#: templates/help.html:123
+msgid "How can I view reports?"
+msgstr ""
+
+#: templates/help.html:125
+msgid "كيف يمكنني عرض التقارير؟"
+msgstr ""
+
+#: templates/help.html:131
+msgid "Mobil uygulamayı nasıl kullanabilirim?"
+msgstr ""
+
+#: templates/help.html:133
+msgid "How can I use the mobile application?"
+msgstr ""
+
+#: templates/help.html:135
+msgid "كيف يمكنني استخدام تطبيق الهاتف المتحرك؟"
+msgstr ""
+
+#: templates/help.html:141 templates/help.html:169
+msgid "Introduction to the system"
+msgstr ""
+
+#: templates/help.html:145
+msgid "How to subscription and register"
+msgstr ""
+
+#: templates/help.html:149
+msgid "Portal Overview"
+msgstr ""
+
+#: templates/help.html:155
+msgid ""
+"Calculation of tax, discount, method of payment and suspension of the "
+"invoice"
+msgstr ""
+
+#: templates/help.html:159
+msgid "Issuance of sales invoice"
+msgstr ""
+
+#: templates/help.html:163
+msgid " Reports from the site and the application"
+msgstr ""
+
+#: templates/help.html:173
+msgid "An Overview of CashierMe Website"
+msgstr ""
+
+#: templates/help.html:177
+msgid "Registration for a 60 day trail for the CashierMe Customer"
+msgstr ""
+
+#: templates/help.html:183
+msgid "Generating Sale Reports from the CashierMe Control Pannel"
+msgstr ""
+
+#: templates/help.html:187
+msgid "Adding Company Information and Assigning Point of Sale"
+msgstr ""
+
+#: templates/help.html:191
+msgid " Interaction with Sales Tab, Generating Sales Bill & Payment options"
+msgstr ""
+
+#: templates/index.html:15
+msgid "CASHIER ME "
+msgstr ""
+
+#: templates/index.html:18
+msgid "Application To Manage Restaurants, Cafes and retail Stores"
+msgstr ""
+
+#: templates/index.html:20
+msgid "Enjoy Your Free Trail"
+msgstr ""
+
+#: templates/index.html:57 templates/index.html:91 templates/index.html:94
+msgid "Electronic Invoice"
+msgstr ""
+
+#: templates/index.html:58
+msgid "Electronic Invoice "
+msgstr ""
+
+#: templates/index.html:80
+msgid "The E-invoice features includes"
+msgstr ""
+
+#: templates/index.html:82
+msgid "GSTIN of supplier. "
+msgstr ""
+
+#: templates/index.html:83
+msgid "GSTIN of the recipient."
+msgstr ""
+
+#: templates/index.html:84
+msgid "Invoice number given by the supplier."
+msgstr ""
+
+#: templates/index.html:85
+msgid "Date of the invoice generation."
+msgstr ""
+
+#: templates/index.html:86
+msgid "Invoice value."
+msgstr ""
+
+#: templates/index.html:87
+msgid "Number of line items."
+msgstr ""
+
+#: templates/index.html:88
+msgid "Unique IRN/Hash."
+msgstr ""
+
+#: templates/index.html:92
+msgid ""
+"Compatible with the Egyptian Tax Authority and the electronic invoice "
+"system "
+msgstr ""
+
+#: templates/index.html:95
+msgid ""
+"Compliant with the requirements of the Zakat and Tax Authority and "
+"registered in the Authority's list of electronic service providers "
+msgstr ""
+
+#: templates/index.html:116
+msgid "Cashier Me POS"
+msgstr ""
+
+#: templates/index.html:119
+msgid "Restaurants & Cafes  "
+msgstr ""
+
+#: templates/index.html:120
+msgid ""
+"Managing restutations and cafes has become moe seamless and hassle and "
+"free with ultimate point of sale "
+msgstr ""
+
+#: templates/index.html:124
+msgid "Retail Stores"
+msgstr ""
+
+#: templates/index.html:125
+msgid "The system is able to manage multiple branches of retail stores"
+msgstr ""
+
+#: templates/index.html:216
+msgid ""
+"Enterprise Support - With a single account, you can manage multiple "
+"outlets and price lists "
+msgstr ""
+
+#: templates/index.html:219
+msgid ""
+"Cloud Enabled - Your port data is saved on the cloud and you can access "
+"it from anywhere and at any time"
+msgstr ""
+
+#: templates/index.html:220
+msgid ""
+"Built-in Tax Support - Are taxes causing you trouble? Taxes are very easy"
+" with Cashierme"
+msgstr ""
+
+#: templates/index.html:221
+msgid ""
+"Hub for Reliability - The ability to work offline and activate offline "
+"sync to migrate invoices and save data"
+msgstr ""
+
+#: templates/index.html:246
+msgid "Everything your shop needs"
+msgstr ""
+
+#: templates/index.html:247
+msgid ""
+"Cashier Me POS is based on a smart interface that any retail company can "
+"use without difficulty. Because it's extremely flexible, you can "
+"configure Cashier Me POS to meet your precise nee"
+msgstr ""
+
+#: templates/index.html:249
+msgid "Issue printed or electronic receipts"
+msgstr ""
+
+#: templates/index.html:250
+msgid "Keep recording sales even when offline"
+msgstr ""
+
+#: templates/index.html:257
+msgid "Connect a receipt printer, barcode scanner, and cash drawer"
+msgstr ""
+
+#: templates/index.html:269
+msgid "Sales analytics"
+msgstr ""
+
+#: templates/index.html:270
+msgid "Access your reports anytime, anywhere."
+msgstr ""
+
+#: templates/index.html:272
+msgid "View revenue, average sale and profit."
+msgstr ""
+
+#: templates/index.html:273
+msgid "Determine best-selling items and categories."
+msgstr ""
+
+#: templates/index.html:274
+msgid "View complete sales history"
+msgstr ""
+
+#: templates/index.html:275
+msgid "Export sales data to the spreadsheets"
+msgstr ""
+
+#: templates/index.html:289
+msgid "The best way to manage your business"
+msgstr ""
+
+#: templates/index.html:292
+msgid ""
+"Better Service - Streamlined Operations - Simple & Intuitive - Manage "
+"Remotely - Seamless Integration - Stable & Reliable"
+msgstr ""
+
+#: templates/invoices.html:319 templates/invoices.html:778
+msgid ""
+"You have been successfully subscribed to the Annual plan .it will be "
+"activated when you renew your subscription to the current plan in "
+msgstr ""
+
+#: templates/invoices.html:324
+msgid ""
+"You have been successfully subscribed to the Monthly plan .it will be "
+"activated when you renew your subscription to the current plan in "
+msgstr ""
+
+#: templates/invoices.html:332
+msgid "your pos set to remove on"
+msgstr ""
+
+#: templates/invoices.html:334
+msgid "Cancel remove Pos"
+msgstr ""
+
+#: templates/invoices.html:344 templates/invoices.html:846
+msgid "Change Plan"
+msgstr ""
+
+#: templates/invoices.html:345 templates/invoices.html:459
+#: templates/invoices.html:579
+msgid "Add more Pos"
+msgstr ""
+
+#: templates/invoices.html:346 templates/invoices.html:460
+#: templates/invoices.html:580
+msgid "Remove pos"
+msgstr ""
+
+#: templates/invoices.html:347 templates/invoices.html:405
+#: templates/invoices.html:586
+msgid "Change to This Plan"
+msgstr ""
+
+#: templates/invoices.html:353
+msgid "Free Trail"
+msgstr ""
+
+#: templates/invoices.html:356
+msgid " 2 * SAR 0 per month"
+msgstr ""
+
+#: templates/invoices.html:359
+msgid "2 * TL 0 per month"
+msgstr ""
+
+#: templates/invoices.html:362
+msgid "2 * MYR 0 per month"
+msgstr ""
+
+#: templates/invoices.html:365
+msgid "2 * INR 0 per month"
+msgstr ""
+
+#: templates/invoices.html:368
+msgid "2 * USD 0 per month"
+msgstr ""
+
+#: templates/invoices.html:371
+msgid "2 * EGP 0 per month"
+msgstr ""
+
+#: templates/invoices.html:385 templates/invoices.html:388
+#: templates/invoices.html:391 templates/invoices.html:394
+#: templates/invoices.html:397 templates/invoices.html:400
+#: templates/invoices.html:558 templates/invoices.html:561
+#: templates/invoices.html:564 templates/invoices.html:567
+#: templates/invoices.html:570 templates/invoices.html:573
+#: templates/invoices.html:878 templates/invoices.html:924
+msgid "per month"
+msgstr ""
+
+#: templates/invoices.html:413 templates/invoices.html:416
+#: templates/invoices.html:419 templates/invoices.html:422
+#: templates/invoices.html:425 templates/invoices.html:428
+#: templates/invoices.html:476 templates/invoices.html:479
+#: templates/invoices.html:482 templates/invoices.html:485
+#: templates/invoices.html:488 templates/invoices.html:491
+#: templates/invoices.html:594 templates/invoices.html:597
+#: templates/invoices.html:600 templates/invoices.html:603
+#: templates/invoices.html:606 templates/invoices.html:609
+#: templates/invoices.html:676 templates/invoices.html:679
+#: templates/invoices.html:682 templates/invoices.html:685
+#: templates/invoices.html:688 templates/invoices.html:691
+msgid "point of sale * "
+msgstr ""
+
+#: templates/invoices.html:431 templates/invoices.html:856
+msgid "Payment"
+msgstr ""
+
+#: templates/invoices.html:467 templates/invoices.html:667
+msgid "Current pos"
+msgstr ""
+
+#: templates/invoices.html:469 templates/invoices.html:669
+msgid "--Select POS NO You Want To Remove--"
+msgstr ""
+
+#: templates/invoices.html:496 templates/invoices.html:612
+#: templates/invoices.html:694
+msgid "Total"
+msgstr ""
+
+#: templates/invoices.html:516 templates/invoices.html:633
+#: templates/invoices.html:716
+msgid "Current Payment"
+msgstr ""
+
+#: templates/invoices.html:541 templates/invoices.html:740
+msgid "Confirm Payment"
+msgstr ""
+
+#: templates/invoices.html:549 templates/invoices.html:583
+msgid "subscription"
+msgstr ""
+
+#: templates/invoices.html:556 templates/invoices.html:840
+msgid "Annualy"
+msgstr ""
+
+#: templates/invoices.html:751
+msgid ""
+"Congratulations, the operation was successfully completed To show your "
+"invoice please "
+msgstr ""
+
+#: templates/invoices.html:752
+msgid ""
+"Sorry, you cannot complete the process. Please make sure you have enough "
+"credit and try again "
+msgstr ""
+
+#: templates/invoices.html:753
+msgid "Sorry, the process cannot be completed now, please try again later "
+msgstr ""
+
+#: templates/invoices.html:759
+msgid "Sorry, Your subscription has expired, to renew"
+msgstr ""
+
+#: templates/invoices.html:762
+msgid "Click here"
+msgstr ""
+
+#: templates/invoices.html:773
+msgid "Current Plan"
+msgstr ""
+
+#: templates/invoices.html:785
+msgid ""
+"You have been successfully subscribed to the Mothly plan .it will be "
+"activated when you renew your subscription to the current plan in "
+msgstr ""
+
+#: templates/invoices.html:808 templates/invoices.html:821
+msgid "Your Point of sale is set to remove on"
+msgstr ""
+
+#: templates/invoices.html:834 templates/invoices.html:1001
+#: templates/terms_conditions.html:97
+msgid "Free Trial"
+msgstr ""
+
+#: templates/invoices.html:878
+msgid "0"
+msgstr ""
+
+#: templates/invoices.html:899
+msgid "0 * 2"
+msgstr ""
+
+#: templates/invoices.html:899 templates/invoices.html:944
+#: templates/invoices.html:985
+msgid "point of sale"
+msgstr ""
+
+#: templates/invoices.html:966
+msgid "per Year *"
+msgstr ""
+
+#: templates/invoices.html:990
+msgid "Next payment"
+msgstr ""
+
+#: templates/invoices.html:1034
+msgid "Invoice No"
+msgstr ""
+
+#: templates/invoices.html:1035
+msgid "Date"
+msgstr ""
+
+#: templates/invoicess.html:167
+msgid "Login Information"
+msgstr ""
+
+#: templates/invoicess.html:173
+msgid "User No"
+msgstr ""
+
+#: templates/invoicess.html:176 templates/login.html:74
+msgid "Password"
+msgstr ""
+
+#: templates/invoicess.html:179
+msgid "Application Code"
+msgstr ""
+
+#: templates/invoicess.html:182
+msgid "Link"
+msgstr ""
+
+#: templates/login.html:69 templates/profile.html:96
+#: templates/sendEmail_forgetPassword.html:93
+msgid "Email"
+msgstr ""
+
+#: templates/login.html:79
+msgid "Remember me"
+msgstr ""
+
+#: templates/login.html:85
+msgid "Forgot password"
+msgstr ""
+
+#: templates/pdf_report.html:166 templates/url.html:62
+#: templates/view_invoice.html:178
+msgid "To login to your UltimateDokkan account:"
+msgstr ""
+
+#: templates/pdf_report.html:166 templates/view_invoice.html:178
+msgid "(Click here!)"
+msgstr ""
+
+#: templates/pricing.html:170 templates/pricing.html:216
+msgid "30 days trial"
+msgstr ""
+
+#: templates/pricing.html:172 templates/pricing.html:218
+msgid "30 Günlük Deneme"
+msgstr ""
+
+#: templates/pricing.html:174 templates/pricing.html:220
+msgid "تجربة 30 يوم"
+msgstr ""
+
+#: templates/pricing.html:177 templates/pricing.html:223
+msgid "15 days trial"
+msgstr ""
+
+#: templates/pricing.html:180 templates/pricing.html:226
+msgid "60 days trial"
+msgstr ""
+
+#: templates/pricing.html:232
+msgid "Free Trail "
+msgstr ""
+
+#: templates/pricing.html:238
+msgid "Subscripttion"
+msgstr ""
+
+#: templates/pricing.html:285 templates/pricing.html:337
+msgid "per pos monthly:"
+msgstr ""
+
+#: templates/pricing.html:339
+msgid "Paid Annually"
+msgstr ""
+
+#: templates/pricing.html:340
+msgid "Paid Monthly"
+msgstr ""
+
+#: templates/pricing.html:344 templates/pricing.html:345
+msgid "Subscripttion Now"
+msgstr ""
+
+#: templates/pricing.html:349
+msgid "Subscripttion Now1"
+msgstr ""
+
+#: templates/pricing.html:350
+msgid "Subscripttion Now2"
+msgstr ""
+
+#: policy.html:44 policy.html:45 templates/privacy_
+msgid "Privacy Policy"
+msgstr ""
+
+#: policy.html:50 templates/privacy_
+msgid ""
+"This privacy policy sets out how Ultimate Tek Solutions uses and protects"
+" any information that you give when you use this website.\n"
+"                                        Ultimate Tek Solutions is "
+"committed to ensuring that your privacy is protected. In case we ask you "
+"to provide certain information by which you can be identified when using "
+"this website, then you can be assured that it will only be used in "
+"accordance with this privacy statement.\n"
+"                                        This policy is effective from the"
+" date of updating the web page."
+msgstr ""
+
+#: policy.html:57 templates/privacy_
+msgid "Information we collect:"
+msgstr ""
+
+#: policy.html:59 templates/privacy_
+msgid " Name and job title"
+msgstr ""
+
+#: policy.html:60 templates/privacy_
+msgid " Email and mobile number."
+msgstr ""
+
+#: policy.html:61 templates/privacy_
+msgid " Demographic information such as address, postal card...etc."
+msgstr ""
+
+#: policy.html:62 policy.html:157 templates/privacy_
+msgid " Saving your preferences with regard to our Services;"
+msgstr ""
+
+#: policy.html:63 templates/privacy_
+msgid " Other information that’s related to the customer offers..."
+msgstr ""
+
+#: policy.html:69 templates/privacy_
+msgid "Reasons for collecting the information:"
+msgstr ""
+
+#: policy.html:71 templates/privacy_
+msgid " Records and documentary keeping."
+msgstr ""
+
+#: policy.html:72 templates/privacy_
+msgid ""
+" To contact our customers and send them any promotional emails about "
+"offers or new products."
+msgstr ""
+
+#: policy.html:73 templates/privacy_
+msgid " Product and service improvement."
+msgstr ""
+
+#: policy.html:79 templates/privacy_
+msgid "Information security:"
+msgstr ""
+
+#: policy.html:81 templates/privacy_
+msgid ""
+" Your information is highly secured; any unauthorized access will be "
+"prevented from any sort of access to your information."
+msgstr ""
+
+#: policy.html:87 templates/privacy_
+msgid "Links:"
+msgstr ""
+
+#: policy.html:89 templates/privacy_
+msgid ""
+"  This website may contain links to other website with the same interest "
+"that will allow you to visit them, please note that we do not have "
+"control over these websites, therefore we are not responsible for your "
+"privacy or protection of any information that you provide while visiting "
+"such sites."
+msgstr ""
+
+#: policy.html:95 templates/privacy_
+msgid "Information value:"
+msgstr ""
+
+#: policy.html:97 templates/privacy_
+msgid ""
+"  We will not sell, distribute, share or lease your information to any "
+"third party unless we have your full authorization or we are required by "
+"the law to do so. "
+msgstr ""
+
+#: policy.html:98 templates/privacy_
+msgid ""
+"  If the information that you shared is incorrect or incomplete then you "
+"should reach us through email as soon as possible and your information "
+"will be corrected."
+msgstr ""
+
+#: policy.html:109 templates/privacy_
+msgid ""
+"Cashier Me portal products of many products of  Ultimate Solutions "
+"Corporation C.R. 4030182217, which pointed here as (“Company”, “we”, "
+"“us”, “ours”)."
+msgstr ""
+
+#: policy.html:112 templates/privacy_
+msgid ""
+"This privacy policy (“Policy”) will explain how we use the personal data "
+"we collect when you access our website (“Website”) and any of our "
+"services."
+msgstr ""
+
+#: policy.html:113 templates/privacy_
+msgid ""
+"Your privacy is important to us. If you do not agree to the terms of this"
+" Policy, please discontinue your use of our services."
+msgstr ""
+
+#: policy.html:119 templates/privacy_
+msgid "What Data Do We Collect?"
+msgstr ""
+
+#: policy.html:120 templates/privacy_
+msgid ""
+"We collect data from you when you access our website and/or use our "
+"Ultimate Solutions cloud-based Taplet point-of-sale (POS). This includes "
+"all hardware, products, and services offered by the Company via our "
+"website, software applications, and all associated services "
+"(collectively, “Services”)."
+msgstr ""
+
+#: policy.html:121 templates/privacy_
+msgid "Our Company collects the following data:"
+msgstr ""
+
+#: policy.html:122 templates/privacy_
+msgid "Information you give us directly:"
+msgstr ""
+
+#: policy.html:124 templates/privacy_
+msgid ""
+"   Personal identification information you knowingly give us when you "
+"create an account, publish content, make a purchase, or ﬁll any online "
+"forms, including:"
+msgstr ""
+
+#: policy.html:126 templates/privacy_
+msgid "- Personal details such as name, country of residence, etc."
+msgstr ""
+
+#: policy.html:127 templates/privacy_
+msgid "- Contact information such as email address, address, etc."
+msgstr ""
+
+#: policy.html:128 templates/privacy_
+msgid "- Account details such as user name, user ID, password, etc."
+msgstr ""
+
+#: policy.html:129 templates/privacy_
+msgid "- Payment information such as credit card details, bank details, etc."
+msgstr ""
+
+#: policy.html:130 templates/privacy_
+msgid ""
+"- Any other materials you willingly submit to us such as articles, "
+"images, feedback, etc."
+msgstr ""
+
+#: policy.html:132 templates/privacy_
+msgid ""
+" Information you give us directly that does not personally identify you, "
+"including age, gender, zip code, interests, and preferences with respect "
+"to our Services."
+msgstr ""
+
+#: policy.html:133 templates/privacy_
+msgid " Information automatically collected when you access our Services:"
+msgstr ""
+
+#: policy.html:139 templates/privacy_
+msgid "Cookies"
+msgstr ""
+
+#: policy.html:140 templates/privacy_
+msgid ""
+"A browser cookie is a small piece of data that is stored on your device "
+"to help websites remember things about you. When you visit our Website, "
+"we collect standard Internet log information and visitor behavior "
+"information from you through cookies or similar technology. In this "
+"Policy, we say cookies (“Cookies”) to discuss all such technologies. For "
+"further information about cookies, visit allaboutcookies.org."
+msgstr ""
+
+#: policy.html:145 templates/privacy_
+msgid "When do we collect cookies?"
+msgstr ""
+
+#: policy.html:146 templates/privacy_
+msgid ""
+"We collect these cookies when you access our Website and/or use any of "
+"our Services. We also collect these cookies when you interact with our "
+"Services offered through one of our partners."
+msgstr ""
+
+#: policy.html:151 templates/privacy_
+msgid "How do we use cookies?"
+msgstr ""
+
+#: policy.html:152 templates/privacy_
+msgid ""
+"Our Company uses cookies in a range of ways to improve your experience on"
+" our website and offer a more intuitive and satisfying experience, "
+"including:"
+msgstr ""
+
+#: policy.html:154 templates/privacy_
+msgid " Keeping you signed in;"
+msgstr ""
+
+#: policy.html:155 templates/privacy_
+msgid " Protecting your data and account;"
+msgstr ""
+
+#: policy.html:156 templates/privacy_
+msgid " Understanding how you use our Services;"
+msgstr ""
+
+#: policy.html:158 templates/privacy_
+msgid ""
+" Helping us see which features are most popular Counting visitors to a "
+"page;"
+msgstr ""
+
+#: policy.html:159 templates/privacy_
+msgid " Keeping our Services secure"
+msgstr ""
+
+#: policy.html:165 templates/privacy_
+msgid "What types of cookies do we use?"
+msgstr ""
+
+#: policy.html:166 templates/privacy_
+msgid "The cookies we use generally fall into one of the following categories:"
+msgstr ""
+
+#: policy.html:168 templates/privacy_
+msgid ""
+" Functionality: Our Company uses these cookies so that we recognize you "
+"on our website and remember your previously-selected settings and "
+"preferences, such as language and location."
+msgstr ""
+
+#: policy.html:169 templates/privacy_
+msgid ""
+" Advertising: Our Company uses these cookies to collect information about"
+" your visit to our website, the content you viewed, and the links you "
+"followed. This means while accessing our Services, you may view ads based"
+" on your browsing patterns on our website. However, this information will"
+" not be shared with third parties for their marketing purposes."
+msgstr ""
+
+#: policy.html:170 templates/privacy_
+msgid ""
+" Security: We use these cookies to help identify and prevent security "
+"risks."
+msgstr ""
+
+#: policy.html:171 templates/privacy_
+msgid ""
+" Performance: We use these cookies to collect information about how you "
+"interact with our Services so we can improve them."
+msgstr ""
+
+#: policy.html:177 templates/privacy_
+msgid "How can you manage cookies?"
+msgstr ""
+
+#: policy.html:178 templates/privacy_
+msgid ""
+"Most web browsers are set to accept cookies by default. If you prefer to "
+"do so, you can usually remove or reject browser cookies through the "
+"settings on your browser or device. Keep in mind though that removing or "
+"rejecting cookies could affect the availability and functionality of our "
+"Services."
+msgstr ""
+
+#: policy.html:183 templates/privacy_
+msgid "How Do We Collect Your Data?"
+msgstr ""
+
+#: policy.html:184 templates/privacy_
+msgid ""
+"You directly provide Our Company with most of the data we collect. We "
+"collect data and process data when you:"
+msgstr ""
+
+#: policy.html:186 templates/privacy_
+msgid " Register online or place an order for any of our products or services."
+msgstr ""
+
+#: policy.html:187 templates/privacy_
+msgid ""
+"Voluntarily complete a customer survey or provide feedback on any of our "
+"message boards or via email."
+msgstr ""
+
+#: policy.html:188 templates/privacy_
+msgid " Access our Services via your browser’s Cookies."
+msgstr ""
+
+#: policy.html:189 templates/privacy_
+msgid ""
+"Interact with or register to our Services offered through our third-party"
+" affiliates. "
+msgstr ""
+
+#: policy.html:190 templates/privacy_
+msgid " Data shared by other Ultimate Solutions Partners."
+msgstr ""
+
+#: policy.html:191 templates/privacy_
+msgid "Data which falls in the public domain. "
+msgstr ""
+
+#: policy.html:192 templates/privacy_
+msgid ""
+"Data provided by independent third party without infringing any legal "
+"duty to preserve such data. "
+msgstr ""
+
+#: policy.html:198 templates/privacy_
+msgid "How Will We Use Your Data?"
+msgstr ""
+
+#: policy.html:199 templates/privacy_
+msgid ""
+"We do not collect information about you unless the law allows us to do so"
+" and unless we need this information to deliver our Services. In addition"
+" to some of the specific uses this Policy covers, Our Company collects "
+"your data in order to:"
+msgstr ""
+
+#: policy.html:201 templates/privacy_
+msgid "Create and manage your accounts; "
+msgstr ""
+
+#: policy.html:202 templates/privacy_
+msgid " Fulfill and manage your orders;"
+msgstr ""
+
+#: policy.html:203 templates/privacy_
+msgid "Deliver products and services; "
+msgstr ""
+
+#: policy.html:204 templates/privacy_
+msgid " Send administrative information, including by email;"
+msgstr ""
+
+#: policy.html:205 templates/privacy_
+msgid " Send marketing and promotional communications, including by email;"
+msgstr ""
+
+#: policy.html:206 templates/privacy_
+msgid "  Respond to requests and inquiries;"
+msgstr ""
+
+#: policy.html:207 templates/privacy_
+msgid "    Develop, operate, improve, deliver, and maintain our Services;"
+msgstr ""
+
+#: policy.html:208 templates/privacy_
+msgid "   Monitor and analyze trends and usage; "
+msgstr ""
+
+#: policy.html:209 templates/privacy_
+msgid "   Enhance the safety and security of our Services; "
+msgstr ""
+
+#: policy.html:210 templates/privacy_
+msgid ""
+"   Verify your identity and prevent fraud or other unauthorized or "
+"illegal activity; "
+msgstr ""
+
+#: policy.html:211 templates/privacy_
+msgid "  Enforce our Terms and Conditions and other usage policies;"
+msgstr ""
+
+#: policy.html:212 templates/privacy_
+msgid "   Request user feedback; "
+msgstr ""
+
+#: policy.html:213 templates/privacy_
+msgid "   Improve user experience; "
+msgstr ""
+
+#: policy.html:214 templates/privacy_
+msgid " Post customer testimonials; "
+msgstr ""
+
+#: policy.html:215 templates/privacy_
+msgid "   Deliver targeted advertising. "
+msgstr ""
+
+#: policy.html:221 templates/privacy_
+msgid "Whom Do We Share Your Data With?"
+msgstr ""
+
+#: policy.html:222 templates/privacy_
+msgid "Sharing your data for business purposes:"
+msgstr ""
+
+#: policy.html:223 templates/privacy_
+msgid "We may disclose your information to the following:"
+msgstr ""
+
+#: policy.html:225 templates/privacy_
+msgid "Our employees"
+msgstr ""
+
+#: policy.html:226 templates/privacy_
+msgid ""
+"Our professional advisers, including but not limited to financial, legal,"
+" and management advisers"
+msgstr ""
+
+#: policy.html:227 templates/privacy_
+msgid "Our corporate entities or affiliated entities"
+msgstr ""
+
+#: policy.html:228 templates/privacy_
+msgid ""
+"Our consultants, including market research entities, advertising "
+"agencies, etc."
+msgstr ""
+
+#: policy.html:229 templates/privacy_
+msgid ""
+"Any assignee or transferee of Ultimate Solutions rights against its "
+"consumers"
+msgstr ""
+
+#: policy.html:230 templates/privacy_
+msgid ""
+"Any person we enter into contractual relations with to help us deliver "
+"our Services"
+msgstr ""
+
+#: policy.html:231 templates/privacy_
+msgid ""
+"Third parties with whom we need to share information to fulfill any "
+"specific request you submit to us"
+msgstr ""
+
+#: policy.html:233 templates/privacy_
+msgid ""
+"However, we only share your data with the above-mentioned entities under "
+"the following conditions combined:"
+msgstr ""
+
+#: policy.html:235 templates/privacy_
+msgid ""
+"We are required to share this information to be able to deliver, process,"
+" develop, and enhance our Services."
+msgstr ""
+
+#: policy.html:236 templates/privacy_
+msgid "We are allowed by law to share this information."
+msgstr ""
+
+#: policy.html:237 templates/privacy_
+msgid ""
+"We limit the information we share to the extent that is necessary to "
+"fulfill the purpose outlined under (A)."
+msgstr ""
+
+#: policy.html:238 templates/privacy_
+msgid ""
+"The concerned entity agrees in writing not to disclose this information "
+"to others."
+msgstr ""
+
+#: policy.html:240 templates/privacy_
+msgid ""
+"Some of the above-mentioned employees, professional advisers, "
+"contractors, and affiliated organizations may be located outside of your "
+"home country; by using the Services, you consent to the transfer of such "
+"information to them to the extent permissible under applicable law."
+msgstr ""
+
+#: policy.html:245 templates/privacy_
+msgid "Sharing your data for legal purposes:"
+msgstr ""
+
+#: policy.html:246 templates/privacy_
+msgid ""
+"We may share information about you if required by governmental bodies, "
+"agencies, or regulators if we reasonably believe that disclosing the "
+"information is needed to:"
+msgstr ""
+
+#: policy.html:247 templates/privacy_
+msgid ""
+"(a) comply with any valid legal process, governmental request, or "
+"applicable law, rule, or regulation; (b) investigate, remedy, or enforce "
+"potential Terms and Conditions violations; (c) protect the rights, "
+"property, and safety of us, our users, or others; (d) detect and resolve "
+"any fraud or security concerns."
+msgstr ""
+
+#: policy.html:248 templates/privacy_
+msgid ""
+"This may include responding to legal requests from jurisdictions outside "
+"of the Kingdom of Saudi Arabia where we have a good faith belief that the"
+" response is required by law in that jurisdiction, affects users in that "
+"jurisdiction, and is consistent with internationally recognized "
+"standards."
+msgstr ""
+
+#: policy.html:253 templates/privacy_
+msgid "How Do We Store Your Data?"
+msgstr ""
+
+#: policy.html:254 templates/privacy_
+msgid ""
+"We strive to ensure that your information is kept safe and secure at all "
+"times. We store this data on computer servers in a controlled environment"
+" protected against unauthorized access. We maintain reasonable "
+"administrative, technical, and physical safeguards to protect against the"
+" unauthorized access, use, modiﬁcation, and disclosure of your data."
+msgstr ""
+
+#: policy.html:255 templates/privacy_
+msgid ""
+"We will retain and use your data for the period necessary to comply with "
+"our legal obligations, resolve disputes, and enforce our agreements "
+"unless a longer retention period is required or permitted by law. Once "
+"this period expires, your personal information shall be deleted. "
+"Therefore, the right to access, the right to erasure, the right to "
+"rectiﬁcation, and the right to data portability cannot be enforced after "
+"the expiration of this retention period."
+msgstr ""
+
+#: policy.html:260 templates/privacy_
+msgid "Marketing"
+msgstr ""
+
+#: policy.html:261 templates/privacy_
+msgid ""
+"Our Company would like to send you information about products and "
+"services of ours and of some carefully selected third parties that we "
+"think you might like. If you have agreed to receive marketing "
+"communication, you may always opt-out of it at a later date."
+msgstr ""
+
+#: policy.html:262 templates/privacy_
+msgid ""
+"If you do not wish to be contacted for marketing purposes, please inform "
+"us by ticking the appropriate box in the profile form or relevant "
+"application form, by sending us a written request to "
+msgstr ""
+
+#: policy.html:262 templates/privacy_
+msgid "or by calling our helpline number."
+msgstr ""
+
+#: policy.html:267 templates/privacy_
+msgid "Billing and Payments"
+msgstr ""
+
+#: policy.html:268 templates/privacy_
+msgid ""
+"In case of services requiring payment, we request credit card or other "
+"payment account information, which will be used solely for processing "
+"payments. Your purchase transaction data will be stored only as long as "
+"is necessary to complete the relevant transaction. If you choose to save "
+"your payment details for processing future payments, your ﬁnancial "
+"information will be stored in encrypted form on the secure servers of our"
+" reputable payment gateway service provider."
+msgstr ""
+
+#: policy.html:273 templates/privacy_
+msgid "What Are Your Data Protection Rights?"
+msgstr ""
+
+#: policy.html:274 templates/privacy_
+msgid ""
+"Our Company would like to make sure you are fully aware of all of your "
+"data protection rights. Every user is entitled to the following:"
+msgstr ""
+
+#: policy.html:276 templates/privacy_
+msgid "The right to access"
+msgstr ""
+
+#: policy.html:276 templates/privacy_
+msgid ""
+"You have the right to request our Company for copies of the personal data"
+" we have collected from you."
+msgstr ""
+
+#: policy.html:277 templates/privacy_
+msgid "The right to rectification"
+msgstr ""
+
+#: policy.html:277 templates/privacy_
+msgid ""
+"You have the right to request that our Company correct any information "
+"you believe is inaccurate. You also have the right to request our Company"
+" to complete the information you believe is incomplete."
+msgstr ""
+
+#: policy.html:278 templates/privacy_
+msgid "The right to erasure"
+msgstr ""
+
+#: policy.html:278 templates/privacy_
+msgid ""
+"You have the right to request that our Company erase your personal data, "
+"under certain conditions."
+msgstr ""
+
+#: policy.html:279 templates/privacy_
+msgid "The right to restrict processing"
+msgstr ""
+
+#: policy.html:279 templates/privacy_
+msgid ""
+"You have the right to request that our Company restrict the processing of"
+" your personal data, under certain conditions."
+msgstr ""
+
+#: policy.html:280 templates/privacy_
+msgid "The right to object to processing"
+msgstr ""
+
+#: policy.html:280 templates/privacy_
+msgid ""
+"You have the right to object to Our Company’s processing of your personal"
+" data, under certain conditions."
+msgstr ""
+
+#: policy.html:281 templates/privacy_
+msgid "The right to data portability"
+msgstr ""
+
+#: policy.html:281 templates/privacy_
+msgid ""
+"You have the right to request that Our Company transfer the data that we "
+"have collected to another organization, or directly to you, under certain"
+" conditions."
+msgstr ""
+
+#: policy.html:282 templates/privacy_
+msgid ""
+"If you make a request, we have one month to respond to you. If you would "
+"like to exercise any of these rights, please contact us at our email:  "
+msgstr ""
+
+#: policy.html:288 templates/privacy_
+msgid "Privacy Policies of Other Websites"
+msgstr ""
+
+#: policy.html:289 templates/privacy_
+msgid ""
+"Our Website contains links to other websites that are not owned or "
+"controlled by us. Please be aware that we are not responsible for the "
+"privacy practices of such other websites or third-parties. Our Policy "
+"applies only to our website, so if you click on a link to another "
+"website, you should read its respective privacy policy."
+msgstr ""
+
+#: policy.html:294 templates/privacy_
+msgid "Changes to Our Privacy Policy"
+msgstr ""
+
+#: policy.html:295 templates/privacy_
+msgid ""
+"We may modify or update this Policy from time to time. But when we do, "
+"we’ll let you know one way or another. Sometimes, we will let you know by"
+" revising the date at the top of the Policy that is available on our "
+"website."
+msgstr ""
+
+#: policy.html:296 templates/privacy_
+msgid ""
+"After we post such changes to our Policy, your continued use of our "
+"Services means you agree to these changes."
+msgstr ""
+
+#: policy.html:301 templates/privacy_
+msgid "How to Contact Us"
+msgstr ""
+
+#: policy.html:302 templates/privacy_
+msgid ""
+"If you have any questions about our Company’s Policy, the data we hold on"
+" you, or you would like to exercise one of your data protection rights, "
+"please do not hesitate to contact us.Email us at: "
+msgstr ""
+
+#: templates/profile.html:391 templates/profile.html:393
+#: templates/upgrade_to_enterprise_subscription.html:781
+msgid "Best Time Call"
+msgstr ""
+
+#: templates/profile.html:396
+msgid "Password change"
+msgstr ""
+
+#: templates/profile.html:398
+msgid "Current password (leave blank to leave unchanged)"
+msgstr ""
+
+#: templates/profile.html:402
+msgid "New password (leave blank to leave unchanged)"
+msgstr ""
+
+#: templates/profile.html:406
+msgid "Confirm new password"
+msgstr ""
+
+#: templates/profile.html:412
+msgid "Save Changes "
+msgstr ""
+
+#: templates/profile.html:413
+msgid "cancel_subscription&delete_account"
+msgstr ""
+
+#: templates/reset_password.html:46 templates/reset_password.html:47
+msgid "Reset Password"
+msgstr ""
+
+#: templates/reset_password.html:73
+msgid "New Password"
+msgstr ""
+
+#: templates/reset_password.html:77
+msgid "Retry Password"
+msgstr ""
+
+#: templates/reset_password.html:81 templates/sendEmail_forgetPassword.html:102
+msgid "Submit"
+msgstr ""
+
+#: templates/return_policy.html:44 templates/return_policy.html:45
+msgid "Return Policy"
+msgstr ""
+
+#: templates/return_policy.html:56
+msgid "There is no return on our products: Ultimate point of sale System"
+msgstr ""
+
+#: templates/sendEmail_forgetPassword.html:45
+#: templates/sendEmail_forgetPassword.html:46
+msgid "Forget Password"
+msgstr ""
+
+#: templates/sendEmail_forgetPassword.html:58
+msgid "Minutes To change password"
+msgstr ""
+
+#: templates/subscriptions.html:42
+msgid "Free Demo"
+msgstr ""
+
+#: templates/subscriptions.html:43 templates/subscriptions.html:404
+msgid "Create Subscription"
+msgstr ""
+
+#: templates/subscriptions.html:53
+msgid "If you want to resend your data in email please click me"
+msgstr ""
+
+#: templates/subscriptions.html:105
+msgid "password mot Compliex"
+msgstr ""
+
+#: templates/successDemoEmail2.html:178
+msgid "CashierMe Uygulamasına Hoş Geldiniz"
+msgstr ""
+
+#: templates/successDemoEmail2.html:180
+msgid "Welcome To CashierMe"
+msgstr ""
+
+#: templates/successDemoEmail2.html:183
+msgid "Sayın...."
+msgstr ""
+
+#: templates/successDemoEmail2.html:183
+msgid "Dear "
+msgstr ""
+
+#: templates/successDemoEmail2.html:185
+msgid "your "
+msgstr ""
+
+#: templates/successDemoEmail2.html:187
+msgid ""
+"hesabınız başarıyla oluşturuldu. Lütfen takip eden kullanıcı numarasını "
+"ve şifreyi kullanınız "
+msgstr ""
+
+#: templates/successDemoEmail2.html:187
+msgid ""
+"has been created successfully.Please use the following user number and "
+"password "
+msgstr ""
+
+#: templates/successDemoEmail2.html:196
+msgid "You can click on the button bellow to access application control panel"
+msgstr ""
+
+#: templates/successDemoEmail2.html:206
+msgid "Kontrol Paneli"
+msgstr ""
+
+#: templates/successDemoEmail2.html:206
+msgid "Control panel"
+msgstr ""
+
+#: templates/successDemoEmail2.html:209
+msgid ""
+"Alternatif olarak, aşağıdaki linke tıklayarak veya tarayıcınıza kopyala "
+"yapıştır yaparak da panele erişebilirsiniz"
+msgstr ""
+
+#: templates/successDemoEmail2.html:212
+msgid ""
+"Alternatively, you can click the below link or copy and paste it to you "
+"your browser"
+msgstr ""
+
+#: templates/successDemoEmail2.html:281
+msgid "Your trial version will expire in"
+msgstr ""
+
+#: templates/successDemoEmail2.html:287
+msgid "days on"
+msgstr ""
+
+#: templates/successDemoEmail2.html:311
+msgid ""
+"Planınızı ücretli bir plana dönüştürmek için lütfen aşağıdaki bağlantıya "
+"tıklayarak CashierMe portal profilinizi ziyaret edin."
+msgstr ""
+
+#: templates/successDemoEmail2.html:313
+msgid ""
+"To change your plan to a paid plan, please visit your CashierMe portal "
+"profile by clicking on the below link"
+msgstr ""
+
+#: templates/successDemoEmail2.html:345
+msgid "Then Go to Invoices 》Change plan Then follow the steps."
+msgstr ""
+
+#: templates/successDemoEmail2.html:438
+msgid ""
+"if you have questions or need help, don't hesitate to contact our support"
+" team"
+msgstr ""
+
+#: templates/successDemoEmail2.html:445
+msgid ""
+"Ultimate Solutions Corporation C.R. 4030182217 Adham Trading Center - Al "
+"Madinah Al Munawarah Rd Ar Ruwais - Saudi Arabia"
+msgstr ""
+
+#: templates/successDemoEmail2.html:454
+msgid "Terms & conditions"
+msgstr ""
+
+#: templates/successDemoEmail2.html:457
+msgid "Privacy policy "
+msgstr ""
+
+#: templates/successDemoEmail2.html:460
+msgid "Contact us"
+msgstr ""
+
+#: templates/successDemoEmail2.html:467
+msgid ""
+"This message\n"
+"                                                            was sent to "
+"info@cashierme.com if you don,t want to receive these\n"
+"                                                            emails from "
+"CASHIERME in the future you can"
+msgstr ""
+
+#: templates/successDemoEmail2.html:470
+msgid "edit your profile"
+msgstr ""
+
+#: templates/successDemoEmail2.html:470
+msgid "or"
+msgstr ""
+
+#: templates/successDemoEmail2.html:471
+msgid "unsubscribe"
+msgstr ""
+
+#: templates/successDemoEmail2.html:477
+msgid "Ultimate Solutions Corporation C.R 4030182217"
+msgstr ""
+
+#: templates/success_subscription_demo.html:29
+msgid "Your request is being processed please wait.."
+msgstr ""
+
+#: templates/success_subscription_demo.html:39
+msgid "An error occurred while executing your request, please . "
+msgstr ""
+
+#: templates/success_subscription_demo.html:39
+msgid "contact us"
+msgstr ""
+
+#: templates/terms_conditions.html:51 templates/terms_conditions.html:52
+msgid "Terms And Conditions"
+msgstr ""
+
+#: templates/terms_conditions.html:57
+msgid "Introduction"
+msgstr ""
+
+#: templates/terms_conditions.html:66 templates/terms_conditions.html:382
+msgid "Communications"
+msgstr ""
+
+#: templates/terms_conditions.html:72
+msgid "Purchases"
+msgstr ""
+
+#: templates/terms_conditions.html:82
+msgid "Contests, Sweepstakes and Promotions"
+msgstr ""
+
+#: templates/terms_conditions.html:88
+msgid "Subscriptions"
+msgstr ""
+
+#: templates/terms_conditions.html:106
+msgid "Free Changes"
+msgstr ""
+
+#: templates/terms_conditions.html:115
+msgid "Refunds"
+msgstr ""
+
+#: templates/terms_conditions.html:121
+msgid "Content"
+msgstr ""
+
+#: templates/terms_conditions.html:127
+msgid "Prohibited Uses"
+msgstr ""
+
+#: templates/terms_conditions.html:154
+msgid "Analytics"
+msgstr ""
+
+#: templates/terms_conditions.html:160
+msgid "No Use by Minors"
+msgstr ""
+
+#: templates/terms_conditions.html:166
+msgid "Accounts"
+msgstr ""
+
+#: templates/terms_conditions.html:175
+msgid "Intellectual Property"
+msgstr ""
+
+#: templates/terms_conditions.html:181
+msgid "Copyright Policy"
+msgstr ""
+
+#: templates/terms_conditions.html:189
+msgid "DMCA Notice and Procedure for Copyright Infringement Claims"
+msgstr ""
+
+#: templates/terms_conditions.html:204
+msgid "Error Reporting and Feedback"
+msgstr ""
+
+#: templates/terms_conditions.html:210
+msgid "Links to Other Web Sites"
+msgstr ""
+
+#: templates/terms_conditions.html:219
+msgid "Disclaimer of Warranty"
+msgstr ""
+
+#: templates/terms_conditions.html:228
+msgid "Limitation of Liability"
+msgstr ""
+
+#: templates/terms_conditions.html:234 templates/terms_conditions.html:240
+msgid "Termination"
+msgstr ""
+
+#: templates/terms_conditions.html:248
+msgid "Governing Law"
+msgstr ""
+
+#: templates/terms_conditions.html:255
+msgid "Changes To Service"
+msgstr ""
+
+#: templates/terms_conditions.html:261
+msgid "Amendments To Terms"
+msgstr ""
+
+#: templates/terms_conditions.html:269
+msgid "Waiver and Severability"
+msgstr ""
+
+#: templates/terms_conditions.html:276
+msgid "Acknowledgement"
+msgstr ""
+
+#: templates/terms_conditions.html:295
+msgid "OVERVIEW"
+msgstr ""
+
+#: templates/terms_conditions.html:299
+msgid ""
+"The following (Terms and Conditions) are a legal agreement between you, "
+"as a current or prospective customer of  Ultimate ٍSolutions, the user "
+"(“you,” “your”) and Ultimate Solutions, an affiliate of Ultimate "
+"Solutions, which includes [insert all sister companies/subsidiaries] "
+"(“Ultimate Solutions”, “we”, “us”, “our”), in order to govern your use of"
+" Ultimate Solutions’ services, including mobile applications, websites, "
+"software, hardware, and other products and services (collectively, the "
+"“Services”).\n"
+"                                    By singing up and creating a Cashier "
+"Me account, visiting our website and/or subscribing to one of our "
+"services, you therefore agree to be bound by the following Terms and "
+"Conditions including additional rules, regulations and policies "
+"referenced herein. These Terms and Conditions apply to all users of the "
+"website, including without limitation, users who are browsers, vendors, "
+"customers, merchants, and/or contributors of content.\n"
+"                                    Please read these Terms and "
+"Conditions carefully before accessing or using our website. If you do not"
+" agree to all the Terms and Conditions of this agreement, then you may "
+"not access the website or use any services.\n"
+"                                    Any new features or tools which are "
+"added to the current website shall also be subject to the Terms and "
+"Conditions. You can review the most current version of the Terms and "
+"Conditions at any time on this page. We reserve the right to update, "
+"change or replace any part of these Terms and Conditions by posting "
+"updates and/or changes to our website. It is your responsibility to check"
+" this page periodically for changes. Your continued use of or access to "
+"the website following the posting of any changes signifies your "
+"understanding and acceptance of those changes.\n"
+"                                    By continuing to use Ultimate "
+"Solutions Services, you agree to abide and be bound by those changes. If "
+"you do not agree to any of the aforementioned changes, you must cease "
+"your use of the Services."
+msgstr ""
+
+#: templates/terms_conditions.html:311
+msgid "Account Cancellation & Data Protection"
+msgstr ""
+
+#: templates/terms_conditions.html:313
+msgid ""
+"&#9679   ultimate Solutions reserves the right to cancel or terminate any"
+" Cashier Me.com account in violation of the Terms and Conditions as well "
+"as Privacy Policies of this agreement; in which case Ultimate Solutions "
+"also reserves the right to hold on to any personal information belonging "
+"to the customer in question in its database, for a period of one month "
+"starting from the cancellation date."
+msgstr ""
+
+#: templates/terms_conditions.html:314
+msgid ""
+" &#9679  If, however, the customer chooses, for one reason or other, to "
+"cancel or terminate their Cashier Me.com account of their own accord, "
+"Foodics will immediately disregard and remove any personal information "
+"belonging to the customer in question from its database."
+msgstr ""
+
+#: templates/terms_conditions.html:319
+msgid "اConfidentiality"
+msgstr ""
+
+#: templates/terms_conditions.html:321
+msgid ""
+" &#9679 Only you have the right to access and use your account. You are "
+"responsible for ensuring that your login information remains confidential"
+" at all times. Ultimate Solutions will assume that in case your login "
+"information is used to access the Services by a user other than yourself,"
+" the latter has the legal authority to use such credentials. If you "
+"become aware of an unauthorized login from an unknown user, you agree to "
+"notify Ultimate Solutions immediately by email at info@ Cashier Me.com. "
+"You remain liable for any activity on your account until Ultimate "
+"Solutions is notified of the violation in question, and the Corporation "
+"may therefore proceed to take appropriate action."
+msgstr ""
+
+#: templates/terms_conditions.html:327
+msgid "Data Privacy & Security"
+msgstr ""
+
+#: templates/terms_conditions.html:329
+msgid ""
+" &#9679 The privacy and security of your personal information is "
+"important to us. Ultimate Solutions Privacy Policy describes and defines "
+"the types of personal information we collect about you, and the means in "
+"which we use them, in compliance with International comparative Law. We "
+"encourage you to read the Privacy Policy carefully, as it forms a binding"
+" part of these Terms and Conditions and contains important information "
+"about your rights."
+msgstr ""
+
+#: templates/terms_conditions.html:335
+msgid "Permitted Activities"
+msgstr ""
+
+#: templates/terms_conditions.html:337
+msgid ""
+" &#9679  You will not use the Services in any way that violates "
+"Applicable International Comparative Law, these Terms and Conditions, or "
+"any other Privacy Policies."
+msgstr ""
+
+#: templates/terms_conditions.html:338
+msgid ""
+" &#9679  The information that you upload or post in connection with the "
+"Services does not infringe on anyone else’s intellectual property or "
+"proprietary rights or otherwise conflict with the law or the rights of "
+"others."
+msgstr ""
+
+#: templates/terms_conditions.html:339
+msgid ""
+" &#9679  You will not upload, post or otherwise transmit through the "
+"Services any content that contains any viruses, trojan horses, or any "
+"other harmful programs or elements."
+msgstr ""
+
+#: templates/terms_conditions.html:340
+msgid ""
+" &#9679  You will not provide false information about yourself, "
+"impersonate any other person, collect information about other users, or "
+"otherwise attempt to mislead others about your identity or the "
+"truthfulness or accuracy of the data you transmit through the Services."
+msgstr ""
+
+#: templates/terms_conditions.html:341
+msgid ""
+" &#9679  You will not damage, disable, disrupt, overburden, interfere "
+"with, or attempt to gain unauthorized access to any portion of our "
+"Services, computer systems, servers or networks, or any other person’s "
+"use and enjoyment of the Services."
+msgstr ""
+
+#: templates/terms_conditions.html:342
+msgid ""
+" &#9679   Ultimate Solutions may suspend or terminate your use of the "
+"Services at its sole discretion for any actual or suspected violation of "
+"these limitations or other applicable policies or rules referenced in "
+"these Terms and Conditions."
+msgstr ""
+
+#: templates/terms_conditions.html:343
+msgid ""
+" &#9679  You shall not republish, distribute, reproduce, duplicate, or "
+"gather any material (online and offline content including designs, copy, "
+"ideas, pictures or other) from Ultimate Solutions without accrediting the"
+" Company."
+msgstr ""
+
+#: templates/terms_conditions.html:344
+msgid ""
+" &#9679  You shall not sell, rent or sub-license material from Ultimate "
+"Solutions."
+msgstr ""
+
+#: templates/terms_conditions.html:345
+msgid ""
+" &#9679  Without prior approval and written permission, you may not "
+"create frames around our Web Pages that alter in any way the visual "
+"presentation or appearance of our Website."
+msgstr ""
+
+#: templates/terms_conditions.html:351
+msgid "User generated content"
+msgstr ""
+
+#: templates/terms_conditions.html:352
+msgid ""
+"Parts of this website offer an opportunity for users to post and exchange"
+" opinions and information in certain areas of the website. Ultimate "
+"Solutions does not filter, edit, publish or review comments prior to "
+"their presence on the website. Comments do not reflect the views and "
+"opinions of Ultimate Solutions, its agents, and/or affiliates comments "
+"reflect the views and opinions of the person who posts their views and "
+"opinions. To the extent permitted by applicable international comparative"
+" laws, Ultimate Solutions shall not be liable for any comments or "
+"liabilities, damages or expenses caused and/or suffered as a result of "
+"any use of and/or posting of and/or appearance of the comments on this "
+"website.\n"
+"                                    Ultimate Solutions reserves the right"
+" to monitor and remove any comments considered inappropriate, offensive "
+"or a breach of these Terms and Conditions.\n"
+"                                    You warrant a"
+msgstr ""
+
+#: templates/terms_conditions.html:355
+msgid "You warrant and agree to the following:"
+msgstr ""
+
+#: templates/terms_conditions.html:357
+msgid ""
+" &#9679  You are entitled to post the comments on our website and have "
+"all necessary licenses and consents to do so."
+msgstr ""
+
+#: templates/terms_conditions.html:358
+msgid ""
+" &#9679  The comments do not invade any intellectual property right, "
+"including without limitation, copyright, patent or trademark of any third"
+" party."
+msgstr ""
+
+#: templates/terms_conditions.html:359
+msgid ""
+" &#9679  The comments do not contain any defamatory, libelous, offensive,"
+" indecent or otherwise unlawful material which is an invasion of privacy."
+msgstr ""
+
+#: templates/terms_conditions.html:360
+msgid ""
+" &#9679  The comments will not be used to solicit or promote business or "
+"custom or present commercial or unlawful activities."
+msgstr ""
+
+#: templates/terms_conditions.html:361
+msgid ""
+" &#9679  You hereby grant Ultimate Solutions a non-exclusive license to "
+"use, reproduce, edit and authorize others to use, reproduce and edit any "
+"of your comments in any and all forms, formats or media."
+msgstr ""
+
+#: templates/terms_conditions.html:366
+msgid "Your privacy"
+msgstr ""
+
+#: templates/terms_conditions.html:367
+msgid "Please read the"
+msgstr ""
+
+#: templates/terms_conditions.html:367
+msgid "privacy policy."
+msgstr ""
+
+#: templates/terms_conditions.html:371
+msgid "Third-Party Content"
+msgstr ""
+
+#: templates/terms_conditions.html:373
+msgid ""
+" &#9679 Through your use of the Services, you may be presented with "
+"material provided by third parties, not owned or controlled by us, from "
+"our partners, and/or from other users of the Services, including but not "
+"limited to, links to websites or other materials, software, text, "
+"graphics, videos, images, or advertising content (collectively referred "
+"to as “Third-Party Content”)."
+msgstr ""
+
+#: templates/terms_conditions.html:374
+msgid ""
+" &#9679 All Third-Party Content and the Services are protected by "
+"Intellectual property laws. Any unauthorized use of the Services and/or "
+"Third-Party Content may result in copyright violation, trademark, and "
+"other laws. You have no rights pertaining to the Services or Third-Party "
+"Content in any shape or form, and you will not use, copy or display the "
+"Services or Third-Party Content except as permitted under these Terms and"
+" Conditions. No other use of the Services or Third-Party Content is "
+"permitted without the Company’s prior written consent. You must retain "
+"all copyright and other proprietary notices contained in the Services and"
+" Third-Party Content. You may not sell, transfer, assign, license, "
+"sublicense, or modify the Third-Party Content or reproduce, display, "
+"publicly perform, make a derivative version of, distribute, or otherwise "
+"use the Third-Party Content in any way for any public or commercial "
+"purpose, other than as permitted hereunder. If you violate any part of "
+"these Terms and Conditions, your right to access and/or use the Third-"
+"Party Content and Services will automatically be terminated."
+msgstr ""
+
+#: templates/terms_conditions.html:375
+msgid "Precautions:"
+msgstr ""
+
+#: templates/terms_conditions.html:376
+msgid ""
+" &#9679 We do not guarantee the accuracy, integrity or quality of any "
+"Third-Party Content, regardless of whether such products or services are "
+"designated as “certified,” “validated” or the like. Any interaction or "
+"exchange of information or data between you and any third-party is solely"
+" between you and such third-party. We advise you to take precautions when"
+" downloading files from any platform to protect your computer / Taplet/ "
+"Mobile from viruses and other destructive programs. If you decide to "
+"access any Third-Party Content, you fully assume the risk of doing so. "
+"Under no circumstances will Ultimate Solutions be liable for any Third-"
+"Party Content, including liability for any errors or omissions in any "
+"Third-Party Content or for any loss or damage of any kind incurred as a "
+"result of the use of or reliance on any Third-Party Content posted, "
+"emailed, linked or otherwise transmitted via the Services."
+msgstr ""
+
+#: templates/terms_conditions.html:384
+msgid ""
+" &#9679  Notices that we give Customers (other than the notice of the "
+"amendments applied to the Terms and Conditions (mentioned in the "
+"introduction above), may be provided in any number of ways, depending on "
+"the circumstances. For example, we may email or call the Customer at the "
+"convenient time set and provided by the Customer in the Ultimate "
+"Solutions Services Agreement, or we may notify Users through their "
+"dashboard or other sections on the Site. When we post said notices, we do"
+" so in the area of the Site suitable to the notice. It is the Customer’s "
+"responsibility to stay up-to-date in this regard. The Customer agrees to "
+"keep all Registration Data current and updated, which can be done by  ."
+msgstr ""
+
+#: templates/terms_conditions.html:385
+msgid ""
+" &#9679  Subject to the Privacy Policy, if the Customer sends Ultimate "
+"Solutions or posts about Ultimate Solutions Services in any public area "
+"including information, ideas, inventions, concepts, techniques or know-"
+"how (“User Submissions”), for any purpose, including the developing, "
+"manufacturing and/or marketing or products or services incorporating such"
+" information, the Customer acknowledges that Ultimate Solutions can use "
+"without limitation the User Submissions without acknowledgement or "
+"compensation to you, and Ultimate Solutions Customers waive any claim of "
+"ownership or compensation or other rights may have in relation to the "
+"User Submissions."
+msgstr ""
+
+#: templates/terms_conditions.html:392
+msgid "Closing your account"
+msgstr ""
+
+#: templates/terms_conditions.html:393
+msgid ""
+"You may close your Cashier Me.com account at any time and without cost, "
+"but you will remain liable for any outstanding Purchases as well as any "
+"fees or other charges incurred. Ultimate Solutions will not issue refunds"
+" for amounts previously incurred through our Services once you close your"
+" account.\n"
+"                                    You can close your account by "
+"contacting"
+msgstr ""
+
+#: templates/terms_conditions.html:395
+msgid ""
+"Please review our “Account Cancellation & Data Protection” rules above "
+"for further information about our practices regarding your personal "
+"information.\n"
+"                                    In certain cases, we may not allow "
+"you to close your account, for the following reasons"
+msgstr ""
+
+#: templates/terms_conditions.html:400
+msgid " &#9679  In an attempt to evade an investigation;"
+msgstr ""
+
+#: templates/terms_conditions.html:401
+msgid ""
+" &#9679  In the presence of an open or pending Purchase(s) or Payment "
+"Transactions;"
+msgstr ""
+
+#: templates/terms_conditions.html:402
+msgid ""
+" &#9679  In the event that you owe money to Ultimate Solutions due to "
+"your use of the Services."
+msgstr ""
+
+#: templates/terms_conditions.html:409
+msgid "Disclaimer"
+msgstr ""
+
+#: templates/terms_conditions.html:410
+msgid ""
+"To the maximum extent permitted by applicable international comparative "
+"law, we exclude all representations, warranties and conditions relating "
+"to our website and the use of this website. Nothing in this disclaimer "
+"will:"
+msgstr ""
+
+#: templates/terms_conditions.html:412
+msgid ""
+" &#9679  limit or exclude our or your liability for death or personal "
+"injury;"
+msgstr ""
+
+#: templates/terms_conditions.html:413
+msgid ""
+" &#9679  limit or exclude our or your liability for fraud or fraudulent "
+"misrepresentation;"
+msgstr ""
+
+#: templates/terms_conditions.html:414
+msgid ""
+" &#9679  limit any of our or your liabilities in any way that is not "
+"permitted under applicable international comparative law;"
+msgstr ""
+
+#: templates/terms_conditions.html:415
+msgid ""
+" &#9679  exclude any of our or your liabilities that may not be excluded "
+"under applicable international comparative law."
+msgstr ""
+
+#: templates/terms_conditions.html:417
+msgid ""
+"  The limitations and prohibitions of liability set in this Section and "
+"elsewhere in this disclaimer: (a) are subject to the preceding paragraph;"
+" and (b) govern all liabilities arising under the disclaimer, including "
+"those arising in contract, in tort and for breach of statutory duty.\n"
+"                                        As long as the website and the "
+"information and services on it are provided free of charge, we will not "
+"be liable for any loss or damage of any nature."
+msgstr ""
+
+#: templates/url.html:50
+msgid "Thank You"
+msgstr ""
+
+#: templates/url.html:52
+msgid ""
+"You have registered with upos, Check your email we have sent an email to "
+"confirm your registeration."
+msgstr ""
+
+#: templates/url.html:54
+msgid "Please check spam if you don't find it in the inbox"
+msgstr ""
+
+#: templates/url.html:55
+msgid "Welcome :"
+msgstr ""
+
+#: templates/url.html:56
+msgid "Thanks For Register Demo Version"
+msgstr ""
+
+#: templates/url.html:57
+msgid "Application Expires in:"
+msgstr ""
+
+#: templates/view_invoice.html:46
+msgid "Invoive "
+msgstr ""
+
+#: templates/view_invoice.html:47
+msgid "Invoice "
+msgstr ""
+

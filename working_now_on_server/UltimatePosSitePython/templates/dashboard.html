@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Cashier Me</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="icon">
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Google Fonts -->
+  <!-- Vendor CSS Files -->
+    <link href="{{ url_for('static', filename="assets/vendor/aos/aos.css") }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename="assets/vendor/bootstrap/css/bootstrap.min.css") }}" rel="stylesheet">
+    <link href="{{ url_for('static' , filename="assets/vendor/bootstrap-icons/bootstrap-icons.css")}}" rel="stylesheet">
+    <link href="{{ url_for('static' , filename="assets/vendor/boxicons/css/boxicons.min.css")}}" rel="stylesheet">
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/glightbox/css/glightbox.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/remixicon/remixicon.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="{{ url_for('static' , filename="assets/vendor/swiper/swiper-bundle.min.css")}}" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('static' , filename="assets/css/style.css")}}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Bootslander - v4.6.0
+  * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+<body>
+
+  <!-- ======= Header ======= -->
+
+  {% include 'header.html' %}
+
+
+
+  <main id="main">
+      <input type="hidden"  id="db_status" value="">
+      <input id="get_currentuser_lang" value="{{ session['language'] }}" style="display: none">
+      <!-- ======= Breadcrumbs Section ======= -->
+      <section id="contact" class="contact">
+          <div class="container" style="margin-top:50px ">
+              <div class="section-title" data-aos="fade-up">
+                  <h2>{{ gettext("Dashboard") }}</h2>
+                  <p>{{ gettext("Dashboard") }}</p>
+              </div>
+              <div class="row">
+                  <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100" >
+                      <ul style="list-style-type:none;">
+                          <li><a class="nav-link scrollto " href="/dashboard" style="font-family: Cairo">{{ gettext("Dashboard") }}</a></li>
+                          <li><a class="nav-link scrollto" href="/profile" style="font-family: Cairo">{{ gettext("Profile") }}</a></li>
+                          <li><a class="nav-link scrollto" href="/invoices" style="font-family: Cairo">{{ gettext("Invoices") }}</a></li>
+                          {% if current_user.country_code_id == 'SAU' and current_user.subscription_type == 'Enterprise' %}
+                              <li><a class="nav-link scrollto" href="/change_credit_card" style="font-family: Cairo">
+                                  {% if session['language'] == 'en' %}
+                                      {{ gettext("Change credit card") }}
+                                  {% else %}
+                                      تغيير البطاقة الائتمانية
+                                  {% endif %}
+                              </a></li>
+                          {%endif%}
+                          {% if current_user.db_status != "pending" %}
+                              <li><a class="nav-link scrollto" href="https://cpanel.cashierme.com/signin?id={{ current_user.business_name }}" style="font-family: Cairo">{{ gettext("Control Panel Access Link :") }}</a></li>
+                          {% endif %}
+                          <li><a class="nav-link scrollto " href="/logout" style="font-family: Cairo">{{ gettext("Logout") }}</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-lg-8 " data-aos="fade-left" data-aos-delay="200" style="">
+
+                      {% include 'error_message.html' %}
+
+
+{#                      <div class="col-md-7 alert-success" style="margin-bottom: 30px;border-radius: 20px;box-shadow: rgba(136, 165, 191, .48) 6px 2px 16px 0, rgba(255, 255, 255, .8) -6px -2px 16px 0;" id="waitMessage">#}
+{#                          <div class="row">#}
+{#                              <div class="col-md-12" style="text-align: center">#}
+{#                                  {{ gettext("Your request is being processed please wait..") }}#}
+{#                                  <button onclick="check_db_status()" class="btn btn-default btn-sm" style="border: 1px solid #b4b4b4">   <span class="fa fa-refresh" style="display: inline-block;"></span> </button>#}
+{#                                  <img  id="reloading_image_gif" src="static/assets/img/loading2.gif" style="width:50px">#}
+{##}
+{#                                  <span style="   position: absolute;#}
+{#                                text-align: left;#}
+{#                                margin-right: 20%;">#}
+{##}
+{#                              </span>#}
+                                  {#                         <img src="static/assets/img/progress_bar.gif"#}
+                                  {#                                  class="img-fluid animated" alt="" style="height:70px">#}
+{#                              </div>#}
+{#                          </div>#}
+{#                      </div>#}
+
+                      <p>{{ gettext("Hello") }}      <span style="font-weight: bold;font-size:20px">{{ name }}</span></p>
+
+                      <p>{{ gettext("Welcome To Application") }}  <span style="font-weight:  bold;font-size:20px"><a href="https://ultimatesolutionsportal.com/?country=sa&lang=ar">Cashier Me</a></span>   </p>
+                      <p>{{ gettext("Your Email :") }}
+                          <br/>
+                          <span style="font-weight: bold;font-size:20px">{{ email }}</span>
+                          {#                          <span><a href="/profile">{{ gettext("Edit.") }}</a></span>#}
+                      </p>
+                      <div id="registration_code" >
+                          <p id="registration">
+                              {% if session['country_code'] == "TUR" and session['language']== "tr" %}
+                                  Sicil Kodunuz
+                              {% else %}
+                                  {{ gettext("Registration Code for Application: ") }}
+                              {% endif %}
+                              <br/>
+                              <span style="font-weight: bold;font-size:20px" id="reg_code">{{ current_user.business_name }}</span>
+                              {#                          <span><a href="/profile">{{ gettext("Edit.") }}</a></span>#}
+                          </p>
+                      </div>
+                      <p>{{ gettext("POS NO") }} :
+                          <br>
+                          <span style="font-weight: bold;font-size:20px">{{ package }} {{ gettext("Point of Sale") }}</span>
+                      </p>
+
+                      <p>{{ gettext("Next Renewal Date :") }}
+                          <br/>
+                          <span style="font-weight: bold;font-size:20px" >{{ expire_date }}</span>
+                          <br>
+                          <span style="font-weight: bold;font-size:20px"></span><span style="font-weight: bold;font-size:20px" >
+                              {% if get_days < 1 %}
+                                                  0
+                                                  {% else %}
+                                                  {{ get_days }}
+                                                  {% endif %}
+
+                          </span>{{ gettext("days") }}  {{ gettext("is remmining") }}
+
+                      </p>
+                      <div class="LoginData" id="LoginData">
+                          <p >{{ gettext("Control Panel Access Link :") }}<span style="font-weight:  bold;font-size:20px"><a href="{{ url }}" target="_blank">{{ gettext("Click here!") }}</a></span>
+                          </p>
+                          <div class="row">
+                              <div class="col-md-3">
+                                  <p>{{ gettext("User No :") }}
+                                      <span style="font-weight: bold;font-size:20px">1</span>
+                                  </p>
+                                  <p style="display: inline-block;padding-top:-20px;position:absolute">{{ gettext("Password:") }}
+                                      <span style="font-weight: bold;font-size:20px"  id="customer_password">{{ current_user.password }}</span>
+                                  </p>
+                              </div>
+                              <div class="col-md-5" style="margin:10px">
+                                  {% if session['language']== "ar"%}
+                                      <img src="static/assets/img/cplogin.png"
+                                           class="img-fluid animated" alt="" style="width: 100%;margin-top: 20px;">
+                                  {% endif %}
+                                  {% if session['language'] == "en"  %}
+                                      <img src="static/assets/img/cplogin-en.png"
+                                           class="img-fluid animated" alt="" style="width: 100%;margin-top: 20px;  ">
+                                  {% endif %}
+                                  {% if session['language'] == "tr"  %}
+                                      <img src="static/assets/img/cplogin-en.png"
+                                           class="img-fluid animated" alt="" style="width: 100%;margin-top: 20px;">
+                                  {% endif %}
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <input type="text" name="reg_code" id="reg_name" value="{{ current_user.business_name }}" style="display: none">
+          <input type="text" name="user_id" id="user_id" value="{{ current_user.id }}" style="display: none">
+      </section>
+     <!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <script src="{{ url_for('static', filename="assets/js/android2.js") }}"></script>
+  <script src="{{ url_for('static', filename="assets/js/ios1.js") }}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+{#      <script>#}
+{#          function Applications() {#}
+{##}
+{#      }#}
+{#          function upgrade_db_status() {#}
+          {#const db_status = document.getElementById("db_status")#}
+{#          const user_id = document.getElementById ( "user_id" ).value;#}
+{#          const waitMessage = document.getElementById ( "waitMessage" )#}
+{#          const reg_code = document.getElementById ( "reg_code" )#}
+{#          const customer_password = document.getElementById ( "customer_password" )#}
+{#          $.ajax ( {#}
+{#          url: '/checkDbUpdated/' + user_id,#}
+{#          type: 'POST',#}
+{#          async: false,#}
+{#          success: function ( data ) {#}
+{#          if ( data[ "status" ]=="success" ) {#}
+{#          document.getElementById ( "db_status" ).value = "Activated";#}
+{#          waitMessage.style.display = "none";#}
+{#          $ ( "#LoginData" ).show ();#}
+{#          $ ( "#registration_code" ).show ();#}
+{#          customer_password.innerText = data[ "password" ];#}
+{#          reg_code.innerText = data[ "reg_code" ];#}
+{#          Android.showToast ( "" + data[ "reg_code" ] + "" );#}
+{#          window.webkit.messageHandlers.RegistrationCode.postMessage ( "" + data[ "reg_code" ] + "" );#}
+{#      } else {#}
+{#          document.getElementById ( "db_status" ).value = "pending";#}
+{#      }#}
+{#      }#}
+{#      } );#}
+{#      };#}
+{#          $( document ).ready(function() {#}
+{#              upgrade_db_status()});#}
+{##}
+{#  </script>#}
+
+
+  <script src="{{ url_for('static', filename="assets/js/dashboard.js") }}"></script>
+
+  {% extends 'footer.html' %}
+
+</body>
+</html>

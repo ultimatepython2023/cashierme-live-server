@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Cashier Me</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="icon">
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="apple-touch-icon">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Google Fonts -->
+  <!-- Vendor CSS Files -->
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/aos/aos.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" >
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/bootstrap/css/bootstrap.min.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/bootstrap-icons/bootstrap-icons.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ url_for('static' , filename="assets/vendor/boxicons/css/boxicons.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">    <link href="{{ url_for('static' , filename="assets/vendor/glightbox/css/glightbox.min.css")}}" rel="stylesheet" >
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/remixicon/remixicon.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="{{ url_for('static' , filename="assets/vendor/swiper/swiper-bundle.min.css")}}" rel="stylesheet" >
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('static' , filename="assets/css/style.css")}}" rel="stylesheet" >
+
+  <!-- =======================================================
+  * Template Name: Bootslander - v4.6.0
+  * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+{% include 'header.html' %}
+
+
+  <main id="main">
+      <input id="get_currentuser_lang" value="{{ session['language'] }}" style="display: none">
+      <!-- ======= Breadcrumbs Section ======= -->
+      <section id="details" class="details">
+          <div class="container" style="margin-top:50px">
+              <div class="section-title" data-aos="fade-up">
+                  <h2>{{ gettext("Privacy Policy") }}</h2>
+                  <p>{{ gettext("Privacy Policy")}}</p>
+              </div>
+              {% if session['country_code']== "IND" %}
+                  <div class="row content">
+                      <div class="col-md-8 " data-aos="fade-up">
+                          <p>{{ gettext("This privacy policy sets out how Ultimate Tek Solutions uses and protects any information that you give when you use this website.
+                                        Ultimate Tek Solutions is committed to ensuring that your privacy is protected. In case we ask you to provide certain information by which you can be identified when using this website, then you can be assured that it will only be used in accordance with this privacy statement.
+                                        This policy is effective from the date of updating the web page.") }}</p>
+                      </div>
+                  </div>
+                  <div class="row content">
+                      <div class="col-md-10  " data-aos="fade-up">
+                          <h3>{{ gettext("Information we collect:") }}</h3>
+                          <ul>
+                              <li>&#9679;{{ gettext(" Name and job title") }}</li>
+                              <li>&#9679;{{ gettext(" Email and mobile number.") }}</li>
+                              <li>&#9679;{{ gettext(" Demographic information such as address, postal card...etc.") }}</li>
+                              <li>&#9679;{{ gettext(" Saving your preferences with regard to our Services;") }}</li>
+                              <li>&#9679;{{ gettext(" Other information that’s related to the customer offers...") }}</li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="row content">
+                      <div class="col-md-10  " data-aos="fade-up">
+                          <h3>{{ gettext("Reasons for collecting the information:") }}</h3>
+                          <ul>
+                              <li>&#9679;{{ gettext(" Records and documentary keeping.") }}</li>
+                              <li>&#9679;{{ gettext(" To contact our customers and send them any promotional emails about offers or new products.") }}</li>
+                              <li>&#9679;{{ gettext(" Product and service improvement.") }}</li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="row content">
+                      <div class="col-md-10  " data-aos="fade-up">
+                          <h3>{{ gettext("Information security:") }}</h3>
+                          <ul>
+                              <li>&#9679;{{ gettext(" Your information is highly secured; any unauthorized access will be prevented from any sort of access to your information.") }}</li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="row content">
+                      <div class="col-md-10  " data-aos="fade-up">
+                          <h3>{{ gettext("Links:") }}</h3>
+                          <ul>
+                              <li>&#9679;{{ gettext("  This website may contain links to other website with the same interest that will allow you to visit them, please note that we do not have control over these websites, therefore we are not responsible for your privacy or protection of any information that you provide while visiting such sites.") }}</li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="row content">
+                      <div class="col-md-10  " data-aos="fade-up">
+                          <h3>{{ gettext("Information value:") }}</h3>
+                          <ul>
+                              <li>&#9679;{{ gettext("  We will not sell, distribute, share or lease your information to any third party unless we have your full authorization or we are required by the law to do so. ") }}<a href="/contact">Info@ultimatetek.in</a> </li>
+                              <li>&#9679;{{ gettext("  If the information that you shared is incorrect or incomplete then you should reach us through email as soon as possible and your information will be corrected.") }}</li>
+                          </ul>
+                      </div>
+                  </div>
+              {% else %}
+
+                  <div class="row content">
+                      <div class="col-md-8 " data-aos="fade-up">
+                          {% if session['country_code'] == "EGY" %}
+                              <p>منصة CASHIER ME هي إحدى المنتجات التابعة لشركة الحلول النهائية لتقنية المعلومات المسجلة بسجل تجاري رقم 107875 والمشار لها في هذه الوثيقة ب (الشركة , نحن , *الخاصة بنا)</p>
+                          {%else%}
+                          <p>{{ gettext("Cashier Me portal products of many products of  Ultimate Solutions Corporation C.R. 4030182217, which pointed here as (“Company”, “we”, “us”, “ours”).") }}</p>
+
+                          {%endif%}
+                          <p>{{ gettext("This privacy policy (“Policy”) will explain how we use the personal data we collect when you access our website (“Website”) and any of our services.") }}</p>
+                          <p>{{ gettext("Your privacy is important to us. If you do not agree to the terms of this Policy, please discontinue your use of our services.") }}</p>
+                      </div>
+                  </div>
+
+                  <div class="row content">
+                      <div class="col-md-10  " data-aos="fade-up">
+                          <h3>{{ gettext("What Data Do We Collect?") }}</h3>
+                          <p>{{ gettext("We collect data from you when you access our website and/or use our Ultimate Solutions cloud-based Taplet point-of-sale (POS). This includes all hardware, products, and services offered by the Company via our website, software applications, and all associated services (collectively, “Services”).") }}</p>
+                          <p style="font-weight:bold">{{ gettext("Our Company collects the following data:") }}</p>
+                          <p>{{ gettext("Information you give us directly:") }}</p>
+                          <ul>
+                              <li >&#9679;{{ gettext("   Personal identification information you knowingly give us when you create an account, publish content, make a purchase, or ﬁll any online forms, including:") }}
+                                  <br/>
+                                  <p style="margin-left:50px">{{ gettext("- Personal details such as name, country of residence, etc.") }}</p>
+                                  <p style="margin-left:50px">{{ gettext("- Contact information such as email address, address, etc.") }}</p>
+                                  <p style="margin-left:50px">{{ gettext("- Account details such as user name, user ID, password, etc.") }}</p>
+                                  <p style="margin-left:50px">{{ gettext("- Payment information such as credit card details, bank details, etc.") }}</p
+                                  ><p style="margin-left:50px">{{ gettext("- Any other materials you willingly submit to us such as articles, images, feedback, etc.") }}</p>
+                              </li>
+                              <li>&#9679;{{ gettext(" Information you give us directly that does not personally identify you, including age, gender, zip code, interests, and preferences with respect to our Services.") }}</li>
+                              <li>&#9679;{{ gettext(" Information automatically collected when you access our Services:") }}</li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="row content">
+                      <div class="col-md-10  " data-aos="fade-up">
+                          <h3>{{ gettext("Cookies") }}</h3>
+                          <p>{{ gettext("A browser cookie is a small piece of data that is stored on your device to help websites remember things about you. When you visit our Website, we collect standard Internet log information and visitor behavior information from you through cookies or similar technology. In this Policy, we say cookies (“Cookies”) to discuss all such technologies. For further information about cookies, visit allaboutcookies.org.") }}</p>
+                      </div>
+                  </div>
+                  <div class="row content">
+                      <div class="col-md-10  " data-aos="fade-up">
+                          <h3>{{ gettext("When do we collect cookies?") }}</h3>
+                          <p>{{ gettext("We collect these cookies when you access our Website and/or use any of our Services. We also collect these cookies when you interact with our Services offered through one of our partners.") }}</p>
+                      </div>
+                  </div>
+                  <div class="row content">
+                      <div class="col-md-10  " data-aos="fade-up">
+                          <h3>{{ gettext("How do we use cookies?") }}</h3>
+                          <p>{{ gettext("Our Company uses cookies in a range of ways to improve your experience on our website and offer a more intuitive and satisfying experience, including:") }}</p>
+                          <ul>
+                              <li>&#9679;{{ gettext(" Keeping you signed in;") }}</li>
+                              <li>&#9679;{{ gettext(" Protecting your data and account;") }}</li>
+                              <li>&#9679;{{ gettext(" Understanding how you use our Services;") }}</li>
+                              <li>&#9679;{{ gettext(" Saving your preferences with regard to our Services;") }}</li>
+                              <li>&#9679;{{ gettext(" Helping us see which features are most popular Counting visitors to a page;") }}</li>
+                              <li>&#9679;{{ gettext(" Keeping our Services secure") }}</li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="row content">
+                      <div class="col-md-10  " data-aos="fade-up">
+                          <h3>{{ gettext("What types of cookies do we use?") }}</h3>
+                          <p>{{ gettext("The cookies we use generally fall into one of the following categories:") }}</p>
+                          <ul>
+                              <li>&#9679;{{ gettext(" Functionality: Our Company uses these cookies so that we recognize you on our website and remember your previously-selected settings and preferences, such as language and location.") }}</li>
+                              <li>&#9679;{{ gettext(" Advertising: Our Company uses these cookies to collect information about your visit to our website, the content you viewed, and the links you followed. This means while accessing our Services, you may view ads based on your browsing patterns on our website. However, this information will not be shared with third parties for their marketing purposes.") }}</li>
+                              <li>&#9679;{{ gettext(" Security: We use these cookies to help identify and prevent security risks.") }}</li>
+                              <li>&#9679;{{ gettext(" Performance: We use these cookies to collect information about how you interact with our Services so we can improve them.") }}</li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="row content">
+                      <div class="col-md-10  " data-aos="fade-up">
+                          <h3>{{ gettext("How can you manage cookies?") }}</h3>
+                          <p>{{ gettext("Most web browsers are set to accept cookies by default. If you prefer to do so, you can usually remove or reject browser cookies through the settings on your browser or device. Keep in mind though that removing or rejecting cookies could affect the availability and functionality of our Services.") }}</p>
+                      </div>
+                  </div>
+                  <div class="row content">
+                      <div class="col-md-10  " data-aos="fade-up">
+                          <h3>{{ gettext("How Do We Collect Your Data?") }}</h3>
+                          <p>{{ gettext("You directly provide Our Company with most of the data we collect. We collect data and process data when you:") }}</p>
+                          <ul>
+                              <li>&#9679;{{ gettext(" Register online or place an order for any of our products or services.") }}</li>
+                              <li>&#9679;{{ gettext("Voluntarily complete a customer survey or provide feedback on any of our message boards or via email.") }}</li>
+                              <li>&#9679;{{ gettext(" Access our Services via your browser’s Cookies.") }}</li>
+                              <li>&#9679;{{ gettext("Interact with or register to our Services offered through our third-party affiliates. ") }}</li>
+                              <li>&#9679;{{ gettext(" Data shared by other Ultimate Solutions Partners.") }}</li>
+                              <li>&#9679;{{ gettext("Data which falls in the public domain. ") }}</li>
+                              <li>&#9679;{{ gettext("Data provided by independent third party without infringing any legal duty to preserve such data. ") }}</li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="row content">
+                      <div class="col-md-10  " data-aos="fade-up">
+                          <h3>{{ gettext("How Will We Use Your Data?") }}</h3>
+                          <p>{{ gettext("We do not collect information about you unless the law allows us to do so and unless we need this information to deliver our Services. In addition to some of the specific uses this Policy covers, Our Company collects your data in order to:") }}</p>
+                          <ul>
+                              <li>&#9679;{{ gettext("Create and manage your accounts; ") }}</li>
+                              <li>&#9679;{{ gettext(" Fulfill and manage your orders;") }}</li>
+                              <li>&#9679;{{ gettext("Deliver products and services; ") }}</li>
+                              <li>&#9679;{{ gettext(" Send administrative information, including by email;") }}</li>
+                              <li>&#9679;{{ gettext(" Send marketing and promotional communications, including by email;") }}</li>
+                              <li>&#9679;{{ gettext("  Respond to requests and inquiries;") }}</li>
+                              <li>&#9679;{{ gettext("    Develop, operate, improve, deliver, and maintain our Services;") }}</li>
+                              <li>&#9679;{{ gettext("   Monitor and analyze trends and usage; ") }}</li>
+                              <li>&#9679;{{ gettext("   Enhance the safety and security of our Services; ") }}</li>
+                              <li>&#9679;{{ gettext("   Verify your identity and prevent fraud or other unauthorized or illegal activity; ") }}</li>
+                              <li>&#9679;{{ gettext("  Enforce our Terms and Conditions and other usage policies;") }}</li>
+                              <li>&#9679;{{ gettext("   Request user feedback; ") }}</li>
+                              <li>&#9679;{{ gettext("   Improve user experience; ") }}</li>
+                              <li>&#9679;{{ gettext(" Post customer testimonials; ") }}</li>
+                              <li>&#9679;{{ gettext("   Deliver targeted advertising. ") }}</li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="row content">
+                      <div class="col-md-10  " data-aos="fade-up">
+                          <h3>{{ gettext("Whom Do We Share Your Data With?") }}</h3>
+                          <p style="font-weight: bold">{{ gettext("Sharing your data for business purposes:") }}</p>
+                          <p>{{ gettext("We may disclose your information to the following:") }}</p>
+                          <ul>
+                              <li>&#9679;{{ gettext("Our employees") }}</li>
+                              <li>&#9679;{{ gettext("Our professional advisers, including but not limited to financial, legal, and management advisers") }}</li>
+                              <li>&#9679;{{ gettext("Our corporate entities or affiliated entities") }}</li>
+                              <li>&#9679;{{ gettext("Our consultants, including market research entities, advertising agencies, etc.") }}</li>
+                              <li>&#9679;{{ gettext("Any assignee or transferee of Ultimate Solutions rights against its consumers") }}</li>
+                              <li>&#9679;{{ gettext("Any person we enter into contractual relations with to help us deliver our Services") }}</li>
+                              <li>&#9679;{{ gettext("Third parties with whom we need to share information to fulfill any specific request you submit to us") }}</li>
+                          </ul>
+                          <p>{{ gettext("However, we only share your data with the above-mentioned entities under the following conditions combined:") }}</p>
+                          <ul style="margin-left:20px">
+                              <li><span style="font-weight:bold">A.</span>{{ gettext("We are required to share this information to be able to deliver, process, develop, and enhance our Services.") }}</li>
+                              <li><span style="font-weight:bold">B.</span>{{ gettext("We are allowed by law to share this information.") }}</li>
+                              <li><span style="font-weight:bold">C.</span>{{ gettext("We limit the information we share to the extent that is necessary to fulfill the purpose outlined under (A).") }}</li>
+                              <li><span style="font-weight:bold">D.</span>{{ gettext("The concerned entity agrees in writing not to disclose this information to others.") }}</li>
+                          </ul>
+                          <p>{{ gettext("Some of the above-mentioned employees, professional advisers, contractors, and affiliated organizations may be located outside of your home country; by using the Services, you consent to the transfer of such information to them to the extent permissible under applicable law.") }}</p>
+                      </div>
+                  </div>
+                  <div class="row content">
+                      <div class="col-md-10  " data-aos="fade-up">
+                          <h3>{{ gettext("Sharing your data for legal purposes:") }}</h3>
+                          <p>{{ gettext("We may share information about you if required by governmental bodies, agencies, or regulators if we reasonably believe that disclosing the information is needed to:")}}</p>
+                          <p>{{ gettext("(a) comply with any valid legal process, governmental request, or applicable law, rule, or regulation; (b) investigate, remedy, or enforce potential Terms and Conditions violations; (c) protect the rights, property, and safety of us, our users, or others; (d) detect and resolve any fraud or security concerns.")}}</p>
+                          <p>{{ gettext("This may include responding to legal requests from jurisdictions outside of the Kingdom of Saudi Arabia where we have a good faith belief that the response is required by law in that jurisdiction, affects users in that jurisdiction, and is consistent with internationally recognized standards.")}}</p>
+                      </div>
+                  </div>
+                  <div class="row content">
+                      <div class="col-md-10  " data-aos="fade-up">
+                          <h3>{{ gettext("How Do We Store Your Data?") }}</h3>
+                          <p>{{ gettext("We strive to ensure that your information is kept safe and secure at all times. We store this data on computer servers in a controlled environment protected against unauthorized access. We maintain reasonable administrative, technical, and physical safeguards to protect against the unauthorized access, use, modiﬁcation, and disclosure of your data.")}}</p>
+                          <p>{{ gettext("We will retain and use your data for the period necessary to comply with our legal obligations, resolve disputes, and enforce our agreements unless a longer retention period is required or permitted by law. Once this period expires, your personal information shall be deleted. Therefore, the right to access, the right to erasure, the right to rectiﬁcation, and the right to data portability cannot be enforced after the expiration of this retention period.")}}</p>
+                      </div>
+                  </div>
+                  <div class="row content">
+                      <div class="col-md-10  " data-aos="fade-up">
+                          <h3>{{ gettext("Marketing") }}</h3>
+                          <p>{{ gettext("Our Company would like to send you information about products and services of ours and of some carefully selected third parties that we think you might like. If you have agreed to receive marketing communication, you may always opt-out of it at a later date.")}}</p>
+                          <p>{{ gettext("If you do not wish to be contacted for marketing purposes, please inform us by ticking the appropriate box in the profile form or relevant application form, by sending us a written request to ")}} <span><a href="https://www.info@cashierme.com ">info@cashierme.com </a>{{ gettext("or by calling our helpline number.") }}</span></p>
+                      </div>
+                  </div>
+                  <div class="row content">
+                      <div class="col-md-10  " data-aos="fade-up">
+                          <h3>{{ gettext("Billing and Payments") }}</h3>
+                          <p>{{ gettext("In case of services requiring payment, we request credit card or other payment account information, which will be used solely for processing payments. Your purchase transaction data will be stored only as long as is necessary to complete the relevant transaction. If you choose to save your payment details for processing future payments, your ﬁnancial information will be stored in encrypted form on the secure servers of our reputable payment gateway service provider.")}}</p>
+                      </div>
+                  </div>
+                  <div class="row content">
+                      <div class="col-md-10" data-aos="fade-up">
+                          <h3>{{ gettext("What Are Your Data Protection Rights?") }}</h3>
+                          <p>{{ gettext("Our Company would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:") }}</p>
+                          <ul>
+                              <li>&#9679;<span style="font-weight: bold">  {{ gettext("The right to access") }}</span> - {{ gettext("You have the right to request our Company for copies of the personal data we have collected from you.") }}</li>
+                              <li>&#9679;<span style="font-weight: bold">  {{ gettext("The right to rectification") }}</span> - {{ gettext("You have the right to request that our Company correct any information you believe is inaccurate. You also have the right to request our Company to complete the information you believe is incomplete.") }}</li>
+                              <li>&#9679;<span style="font-weight: bold">  {{ gettext("The right to erasure") }}</span> - {{ gettext("You have the right to request that our Company erase your personal data, under certain conditions.") }}</li>
+                              <li>&#9679;<span style="font-weight: bold">  {{ gettext("The right to restrict processing") }}</span> - {{ gettext("You have the right to request that our Company restrict the processing of your personal data, under certain conditions.") }}</li>
+                              <li>&#9679;<span style="font-weight: bold">  {{ gettext("The right to object to processing") }}</span> - {{ gettext("You have the right to object to Our Company’s processing of your personal data, under certain conditions.") }}</li>
+                              <li>&#9679;<span style="font-weight: bold">  {{ gettext("The right to data portability") }}</span> - {{ gettext("You have the right to request that Our Company transfer the data that we have collected to another organization, or directly to you, under certain conditions.") }}</li>
+                              <li>{{ gettext("If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us at our email:  ") }}<span><a href="https://cashierme.com">info@cashierme.com</a></span></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="row content">
+                      <div class="col-md-10  " data-aos="fade-up">
+                          <h3>{{ gettext("Privacy Policies of Other Websites") }}</h3>
+                          <p>{{ gettext("Our Website contains links to other websites that are not owned or controlled by us. Please be aware that we are not responsible for the privacy practices of such other websites or third-parties. Our Policy applies only to our website, so if you click on a link to another website, you should read its respective privacy policy.")}}</p>
+                      </div>
+                  </div>
+                  <div class="row content">
+                      <div class="col-md-10  " data-aos="fade-up">
+                          <h3>{{ gettext("Changes to Our Privacy Policy") }}</h3>
+                          <p>{{ gettext("We may modify or update this Policy from time to time. But when we do, we’ll let you know one way or another. Sometimes, we will let you know by revising the date at the top of the Policy that is available on our website.")}}</p>
+                          <p>{{ gettext("After we post such changes to our Policy, your continued use of our Services means you agree to these changes.")}}</p>
+                      </div>
+                  </div>
+                  <div class="row content">
+                      <div class="col-md-10  " data-aos="fade-up">
+                          <h3>{{ gettext("How to Contact Us") }}</h3>
+                          <p>{{ gettext("If you have any questions about our Company’s Policy, the data we hold on you, or you would like to exercise one of your data protection rights, please do not hesitate to contact us.Email us at: ")}}<span><a href="https://cashierme.com">info@cashierme.com</a></span></p>
+                      </div>
+                  </div>
+              {% endif %}
+          </div>
+      </section>
+
+
+
+              <!-- End Contact Section -->
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  {% extends 'footer.html' %}
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Cashier Me</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="icon">
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="apple-touch-icon">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Google Fonts -->
+  <!-- Vendor CSS Files -->
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/aos/aos.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" >
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/bootstrap/css/bootstrap.min.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/bootstrap-icons/bootstrap-icons.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/boxicons/css/boxicons.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/glightbox/css/glightbox.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/remixicon/remixicon.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="{{ url_for('static' , filename="assets/vendor/swiper/swiper-bundle.min.css")}}" rel="stylesheet" >
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('static' , filename="assets/css/style.css")}}" rel="stylesheet" >
+
+  <!-- =======================================================
+  * Template Name: Bootslander - v4.6.0
+  * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  {% include 'header.html' %}
+
+  <main id="main">
+      <input id="get_currentuser_lang" value="{{ session['language'] }}" style="display: none">
+      <!-- ======= Breadcrumbs Section ======= -->
+      <section id="details" class="details">
+          <div class="container" style="margin-top:50px">
+              <div class="section-title" data-aos="fade-up">
+                  <h2>{{ gettext("About Us") }}</h2>
+                  <p>{{ gettext("About Us") }}</p>
+              </div>
+
+              <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      {% if session['country_code'] == "IND" %}
+                          <h3>{{ gettext(" Ultimatetek Solutions :") }}</h3>
+                      {% elif session['country_code']  == "EGY" %}
+                          <h3>ULTIMATE  <span style="color:green">SOLUTIONS</span></h3>
+                      <p class="fst-italic">{{ gettext("is a special corporation in the production, development and marketing ERP solutions for the global market.") }}
+                      </p>
+                       {% else %}
+                      <h3>{{ gettext(" Ultimate Solutions:") }}</h3>
+                      <p class="fst-italic">{{ gettext("is a specialized corporation in the production, development and marketing ERP solutions for the global market.") }}
+                      </p>
+                      {% endif %}
+
+
+                  </div>
+              </div>
+              <hr data-aos="fade-up"/>
+              <div class="row content">
+                  <div class="col-md-8 " data-aos="fade-up">
+                      <h3>{{ gettext("Vision:") }}</h3>
+                      {% if session['country_code']== "EGY" %}
+                          <p>أن تكون حلول <span style="color:blue">Ultimate</span> <span style="color:green">Solutions</span> قوة ثقة لأصحاب الأعمال، وثقافة تميز مهني لمستخدميها.</p>
+                      {%else%}
+                      <p class="fst-italic">{{ gettext("To be the businessmen absolute trust and users culture of professional distinction.") }}
+                      {% endif %}
+
+                      </p>
+                  </div>
+              </div>
+              <hr data-aos="fade-up"/>
+              <div class="row content">
+                  <div class="col-md-8 " data-aos="fade-up">
+                      <h3>{{ gettext("Absolute Trust:") }}</h3>
+                      {% if session['country_code'] == "IND" %}
+                          <p class="fst-italic"><span style="font-weight: bold">Ultimatetek Solutions Pvt Ltd </span> {{ gettext(" Corporation was expanded due to the clients trust for meeting their needs professionally so that its solutions achieve strong administrative and organizational work for the organization. It also gives businessmen confidence in their effective success in and to make use of new opportunities.") }}
+                          </p>
+                      {% elif session['country_code']=="EGY" %}
+                       <p>توسعت <span style="color:blue">Ultimate</span> <span style="color:green">Solutions</span> بثقة عملائها في السوق، لأنها تلبي احتياجاتهم باحـترافـية ومهنية، حيث تحقق حلول  Ultimate Solutions قوة العمل الإداري والمؤسسي للمنشأة، وتضيف لأصحاب الأعمال ثقة نجاحاتهم الفاعلة والاستفادة من الفرص الجديدة.</p>
+                      {% else %}
+                          <p class="fst-italic">{{ gettext("Ultimate Solution Corporation was expanded due to the clients trust for meeting their needs professionally so that its solutions achieve strong administrative and organizational work for the organization. It also gives businessmen confidence in their effective success in and to make use of new opportunities.") }}
+                          </p>
+                      {% endif %}
+                  </div>
+              </div>
+              <hr data-aos="fade-up"/>
+              <div class="row content">
+                  <div class="col-md-8 " data-aos="fade-up">
+                      <h3>{{ gettext("Our Competencies:") }}</h3>
+                      {% if session['country_code'] == "IND" %}
+                          <p class="fst-italic">{{ gettext("Ultimatetek Solutions team work are software development experts, professional in the implementation of accounting and specialized software, specialists in market studies and  client’s requirements and competent staff specialized in services provision in different technical and assistant jobs.") }}
+                          </p>
+                      {% elif session['country_code']=="EGY" %}
+                          <p>طاقم العمل في <span style="color:blue">Ultimate</span> <span style="color:green">Solutions</span> خبراء تطوير برمجيات ومحترفي تنفيذ حلول محاسبية و متخصصة، وممارسين في دراسات السوق ومتطلبات العملاء وكفاءات متنوعة لتقديم الخدمات و الوظائف الفنية و المساعدة</p>
+                      {% else %}
+                          <p class="fst-italic">{{ gettext("Ultimate Solutions team work are software development experts, professional in the implementation of accounting and specialized software, specialists in market studies and  client’s requirements and competent staff specialized in services provision in different technical and assistant jobs.") }}
+                          </p>
+                      {% endif %}
+
+                  </div>
+              </div>
+              <hr data-aos="fade-up"/>
+              <div class="row content">
+                  <div class="col-md-8 " data-aos="fade-up">
+                      <h3>{{ gettext(" Our Ethics") }}</h3>
+                      {% if session['country_code'] == "IND" %}
+
+                          <p class="fst-italic"><span style="font-weight: bold">Ultimatetek Solutions Pvt Ltd</span>{{ gettext(" Corporation works according to professional principles and civilized moral values. Our ethics policy is translated by all of our staff in our offices, branches and agents because our moral values are personal principles, work methods and business relations") }}
+                              {% elif session['country_code']=="EGY" %}
+                              <p>تعمل <span style="color:blue">Ultimate</span> <span style="color:green">Solutions</span> وفق مبادئ مهنية وقيم أخـلاقية حضـارية، وسـياستـنا الأخــلاقـية يجسدها كل العاملين بمكاتبنا وفـروعـنا ووكلائنا، لأن قيمنا الأخـلاقية هي مبادئ شخصية وأساليب عمل وعلاقات أعمال.</p>
+
+
+                              {% else %}
+
+                          <p class="fst-italic">{{ gettext("Ultimate Solutions Corporation works according to professional principles and civilized moral values. Our ethics policy is translated by all of our staff in our offices, branches and agents because our moral values are personal principles, work methods and business relations") }}
+                      {% endif %}
+                      </p>
+                  </div>
+              </div>
+              {% if session['country_code'] == "IND" %}
+              {% else %}
+              {% endif %}
+              <hr data-aos="fade-up"/>
+              <div class="row content">
+                  <div class="col-md-8 " data-aos="fade-up">
+                      <h3>{{ gettext("Software Updates") }}</h3>
+                      {% if session['country_code'] == "IND" %}
+                          <p class="fst-italic">{{ gettext("Ultimatetek Solutions depends on in-depth studies and ongoing research about business practices in the market, quality procedures, organizations structuring, labor legislations, new technology, clients’ requests and others to be the most important resources for the development of software and release updates with new additions and work environment by the virtue of use license agreement.") }}
+                          </p>
+                      {% elif session['country_code']=="EGY" %}
+                          <p>
+                              تعتمد <span style="color:blue">Ultimate</span> <span style="color:green">Solutions</span> الدراسات المعمقة والبحث المستمر لممارسات الأعمال وإجراءات الجودة وهيكلة المؤسسات وتشريعات العـمل، وجـديـد التكـنولوجـيا واستشارات المهندسين وطلبات العملاء وغير ذلك، لتكون أهم موارد تطوير حلولها وإصدار تحديثاتها بـإضـافـات جـديدة في وظائـف الحلول وبـيـئـة عملها، ويستفيد منها العملاء وفق اتفاقية ترخيص الاستخدام وتجديداته.
+                          </p>
+                      {% else %}
+                          <p class="fst-italic">{{ gettext("Ultimate Solutions depends on in-depth studies and ongoing research about business practices in the market, quality procedures, organizations structuring, labor legislations, new technology, clients’ requests and others to be the most important resources for the development of software and release updates with new additions and work environment by the virtue of use license agreement.") }}
+                          </p>
+                      {% endif %}
+
+                  </div>
+              </div>
+              <hr data-aos="fade-up"/>
+              <div class="row content">
+                  <div class="col-md-8 " data-aos="fade-up">
+                      {% if session['country_code'] == "EGY"%}
+                      <h3>{{gettext("Our success partners")}}</h3>
+                      {%else%}
+                      <h3>{{ gettext("Our Clients:") }}</h3>
+                      {%endif%}
+
+                      {% if session['country_code'] == "IND" %}
+                          <p class="fst-italic">{{ gettext("
+                                                        Ultimatetek Solutions Corporation is proud in many of clients in different activities and business sectors.
+                                                        - Our systems are used by our clients in different sectors such as industrial production, projects, transportation, restaurants, hotels and others of specialized and service systems. In addition to their use the main business systems in financial and administrative areas.
+                                                        - Our clients are in many countries such as Saudi Arabia, Gulf countries, Egypt, Sudan, Yemen, Algeria, Turkey, Kenya, Somalia, Djibouti, China and other countries around the world.
+                                                        - Our clients carry out their business obligations in an organized method; and as a result of our systems performance they achieve quick and satisfactory outcomes which gave them an advantage in their business management and growth.
+                                                        - Our clients achieved significant shifts by using our systems to control their organizational performance, expand their business, and open many branches. Therefore, our clients’ success stories are famous in the business community.
+                                                    ") }}
+                          </p>
+                          {% elif session['country_code']=="EGY" %}
+                          <p>
+                              تفتخر <span style="color:blue">Ultimate</span> <span style="color:green">Solutions</span> بالكثير من عملائها في مختلف أنشطة وقطاعات الأعمال في العديد من البلدان .
+                             <br/>
+                              يتنوع استخدام عملائنا لمنتجات حلولنا في أعمالهم مثل مجالات الإنتاج الصناعي والمشاريع والنقل والمطاعم والفنادق وغيرها من الحلول المتخصصة والخدمية، إضافة لاستخدامهم حلول الأعمال الأساسية في المجالات المالية والإدارية. 
+                              <br/>
+                              ينتشر عملائنا بشكل واسع في العديد من الدول كالسعودية ودول الخليج العربي و مصر و السودان و اليمن و الجزائر و تركيا و كينيا و الصومال و جيبوتي و الصين و ماليزيا واندونيسيا وغيرها من دول العالم. 
+                              <br/>
+                              ينجز عملائنا التزامات عملهم بوتيرة منتظمة ويحققون بأداء حلولنا نتائج سريعة ومرضية منحتهم ميزات إضافية في إدارة أعمالهم ونموها. 
+                              <br/>
+                              حقق عملائنا تحولات كبيرة باستخدام حلولنا في ضبط أدائهم المؤسسي وتوسيع أعمالهم وتعدد فروعهم، واشتهرت فيهم قصص نجاح متداولة في مجتمع الأعمال.
+                          </p>
+                      {% else %}
+                          <p class="fst-italic">{{ gettext("
+                                                        Ultimate Solutions Corporation is proud in many of clients in different activities and business sectors.
+                                                        - Our systems are used by our clients in different sectors such as industrial production, projects, transportation, restaurants, hotels and others of specialized and service systems. In addition to their use the main business systems in financial and administrative areas.
+                                                        - Our clients are in many countries such as Saudi Arabia, Gulf countries, Egypt, Sudan, Yemen, Algeria, Turkey, Kenya, Somalia, Djibouti, China and other countries around the world.
+                                                        - Our clients carry out their business obligations in an organized method; and as a result of our systems performance they achieve quick and satisfactory outcomes which gave them an advantage in their business management and growth.
+                                                        - Our clients achieved significant shifts by using our systems to control their organizational performance, expand their business, and open many branches. Therefore, our clients’ success stories are famous in the business community.
+                                                    ") }}
+                          </p>
+                      {% endif %}
+
+                  </div>
+              </div>
+          </div>
+      </section>
+     <!-- End Contact Section -->
+  </main><!-- End #main -->
+  {% extends 'footer.html' %}
+
+</body>
+</html>

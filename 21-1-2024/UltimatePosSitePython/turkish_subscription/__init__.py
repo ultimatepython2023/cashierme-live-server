@@ -1,0 +1,8 @@
+from flask import Blueprint
+DemoToEnterprise = Blueprint('DemoToEnterprise', __name__)
+
+from turkish_subscription import enterprise_subscription
+from turkish_subscription import turkey_demo_to_enterprise
+from turkish_subscription import upgrade_monthly_to_annually
+from turkish_subscription import upgrade_point_of_sale_no
+

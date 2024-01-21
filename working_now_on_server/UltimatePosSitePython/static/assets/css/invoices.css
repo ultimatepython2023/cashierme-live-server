@@ -1,0 +1,261 @@
+.invoice {
+    box-shadow: rgba(136, 165, 191, .48) 6px 2px 16px 0, rgba(255, 255, 255, .8) -6px -2px 16px 0;
+    border-radius: 30px;
+    height: auto
+}
+
+.current-package {
+    margin: auto;
+    width: 90%;
+    height: auto
+}
+
+.pagination {
+    margin: auto;
+    width: 100%;
+    box-shadow: rgba(136, 165, 191, .48) 6px 2px 16px 0, rgba(255, 255, 255, .8) -6px -2px 16px 0;
+    border-radius: 30px
+}
+
+.current-package h3 {
+    font-weight: 700;
+    padding-top: 10px
+}
+
+#td-button {
+    text-align: left
+}
+
+.custom-models {
+    width: 100px;
+    margin: auto
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto
+}
+
+.modal-notifications {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%
+}
+
+.modal-content-notifications {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%
+}
+
+.modal-content-cancel {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: 700
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.modal-cancel {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto
+}
+
+.close-popup-cancel {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: 700
+}
+
+.alert.success {
+    background-color: #96cfb4
+}
+
+.alert.error {
+    background-color: #f8d7da
+}
+
+.alert.warning {
+    background-color: #e5eec4
+}
+
+.close-popup-cancel:hover, .close-popup-cancel:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.content_text {
+    width: 90%;
+    margin: auto;
+    padding-top: 30px
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: greenyellow;
+    border-radius: 50%;
+    display: inline-block;
+    float: left
+}
+
+.close-popup-alert:hover, .close-popup-alert:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.message {
+    width: 95%;
+    margin: auto;
+    font-size: 20px
+}
+
+#cancel_sub_button {
+    margin-bottom: 30px
+}
+
+#invoices_table {
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: rgba(136, 165, 191, .48) 6px 2px 16px 0, rgba(255, 255, 255, .8) -6px -2px 16px 0;
+    border-radius: 16px;
+    width: 100%;
+    font-size: 14px
+}
+
+#invoices_table tr:hover {
+    background-color: #96cfb4
+}
+
+#cancel_sub_button {
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, .3) 0 19px 38px, rgba(0, 0, 0, .22) 0 15px 12px
+}
+
+#myBtn {
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, .3) 0 19px 38px, rgba(0, 0, 0, .22) 0 15px 12px
+}
+
+.btn-danger {
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, .3) 0 19px 38px, rgba(0, 0, 0, .22) 0 15px 12px
+}
+
+#confirm_cancel, #cancel_subscription, #btn22_anuualy, #btn33annualy, #subscription_button_monthly, #cancel_button_monthly, #confirm_button_monthly, #AddMorePos_button, #RemoveMorePos_button, #cancel_Addpos_button, #confirm_Addpos_button, #cancel_Removepos_button, #confirm_Removepos_button, #AddMorePos_button_annualy, #RemoveMorePos_button_annualy, #subscription_button, #cancel_button, #confirm_button, #cancel_Addpos_button_annualy, #confirm_Addpos_button_annualy, #cancel_Removepos_button_annualy, #confirm_Removepos_button_annualy, #cancel_sub_button {
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, .3) 0 19px 38px, rgba(0, 0, 0, .22) 0 15px 12px
+}
+
+.buttons {
+    margin-top: 20px
+}
+
+#add_paginations {
+    margin-top: 10px
+}
+
+#add_paginations ul li {
+    display: inline;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 20px
+}
+
+#add_paginations ul li:hover {
+    color: #96cfb4;
+    font-weight: 700;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, .3) 0 19px 38px, rgba(0, 0, 0, .22) 0 15px 12px
+}
+
+.input-container {
+    display: -ms-flexbox;
+    display: flex;
+    width: 40%;
+    margin-bottom: 15px;
+    height: 50%;
+    margin-right: 10px;
+    margin-top: 13px
+}
+
+.icon {
+    padding: 10px;
+    background: #96cfb4;
+    color: #fff;
+    min-width: 50px;
+    text-align: center;
+    height: 50%;
+
+}
+
+.input-field {
+    width: 100%;
+    outline: none;
+    border: 1px solid #96cfb4
+}
+
+.invoices-span p {
+    margin-right: 250px;
+    margin-top: 20px;
+    color: red
+}
+
+textarea:focus, input:focus {
+    outline: none
+}
+
+@media (max-width: 520px) {
+    #invoices_table {
+        font-size: 8px
+    }
+}
+.renewSubscription{
+    cursor: pointer ;
+}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Cashier Me</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="icon">
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="apple-touch-icon">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+      <!-- Google Fonts -->
+
+  <!-- Vendor CSS Files -->
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/aos/aos.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" >
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/bootstrap/css/bootstrap.min.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/bootstrap-icons/bootstrap-icons.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ url_for('static' , filename="assets/vendor/boxicons/css/boxicons.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">    <link href="{{ url_for('static' , filename="assets/vendor/glightbox/css/glightbox.min.css")}}" rel="stylesheet" >
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/remixicon/remixicon.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="{{ url_for('static' , filename="assets/vendor/swiper/swiper-bundle.min.css")}}" rel="stylesheet" >
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('static' , filename="assets/css/style.css")}}" rel="stylesheet" >
+    <link href="{{ url_for('static' , filename="assets/css/help.css")}}" rel="stylesheet" >
+
+
+  <!-- =======================================================
+  * Template Name: Bootslander - v4.6.0
+  * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  {% include 'header.html' %}
+
+  <!-- End Header -->
+
+  <main id="main">
+      <br/>
+      <br/>
+      <br/>
+      <input id="get_currentuser_lang" value="{{ session['language'] }}" style="display: none">
+
+      <section id="details" class="details">
+          <div class="container">
+              <div class="section-title" data-aos="fade-up">
+                  <h2 style="color:blue;font-size: 30px;font-weight: bold">{{ gettext("Help") }}</h2>
+                  {#                  <p>{{ gettext("Help ؟") }}</p>#}
+              </div>
+
+              <div class="row content">
+                  <style>
+                      .customStyleVideo{
+                          text-align:center;
+                          width:100%;
+                          height:315px
+                      }
+                      .customTextVideo{
+                          text-align:center;
+                          color:#010483
+                      }
+                      .customEmptyVideo{
+                          text-align:center;
+                          width:100%;
+                          height:315px;
+                          background-color: #eeefef
+
+                      }
+                  </style>
+                  {% if session['country_code'] == "TUR" %}
+                      <div class="col-md-4" data-aos="fade-right" >
+                          <iframe style="" class="customStyleVideo"  src="https://www.youtube.com/embed/Vgn4m4HKJVc?rel=0&amp;autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          {% if session['language']== "tr" %}
+                              <h4 class="customTextVideo">{{ gettext("CashierMe uygulaması nedir?") }}</h4>
+                          {% elif session['language']== "en"  %}
+                              <h4 class="customTextVideo">{{ gettext("What is the CashierMe app?") }}</h4>
+                          {% elif session['language']== "ar"  %}
+                              <h4 class="customTextVideo">{{ gettext("ما هو تطبيق كاشيرمي") }}</h4>
+                          {% endif %}
+                      </div>
+                      <div class="col-md-4" data-aos="fade-right">
+                          <iframe class="customStyleVideo"  src="https://www.youtube.com/embed/KIgc9M-nYBA?rel=0&amp;autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          {% if session['language']== "tr" %}
+                              <h4 class="customTextVideo">{{ gettext("CashierMe uygulamasına nasıl kayıt olabilirim?") }}</h4>
+                          {% elif session['language']== "en"  %}
+                              <h4 class="customTextVideo">{{ gettext("How can I sign up for the CashierMe app?") }}</h4>
+                          {% elif session['language']== "ar"  %}
+                              <h4 class="customTextVideo">{{ gettext("كيف يمكنني التسجيل في تطبيق كاشيرمي؟") }}</h4>
+                          {% endif %}
+                      </div>
+                      <div class="col-md-4" data-aos="fade-right" >
+                          <iframe class="customStyleVideo"  src="https://www.youtube.com/embed/pDVuRhfdgLg?rel=0&amp;;autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          {% if session['language']== "tr" %}
+                              <h4 class="customTextVideo">{{ gettext("Hesabımla ilgili detaylara nasıl ulaşabilirim?") }}</h4>
+                          {% elif session['language']== "en"  %}
+                              <h4 class="customTextVideo">{{ gettext("How can I get details about my account?") }}</h4>
+                          {% elif session['language']== "ar"  %}
+                              <h4 class="customTextVideo">{{ gettext("كيف يمكنني الحصول على تفاصيل حول حسابي؟") }}</h4>
+                          {% endif %}
+                      </div>
+
+                      <div class="col-md-4" data-aos="fade-right" >
+                          <iframe style="" class="customStyleVideo"  src="https://www.youtube.com/embed/GhWPWFQQmUE?rel=0&amp;autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          {% if session['language']== "tr" %}
+                              <h4 class="customTextVideo">{{ gettext("Kontrol paneline nasıl giriş yapabilirim?") }}</h4>
+                          {% elif session['language']== "en"  %}
+                              <h4 class="customTextVideo">{{ gettext("How can I login to the control panel?") }}</h4>
+                          {% elif session['language']== "ar"  %}
+                              <h4 class="customTextVideo">{{ gettext("كيف يمكنني تسجيل الدخول إلى لوحة التحكم؟") }}</h4>
+                          {% endif %}
+                      </div>
+                      <div class="col-md-4" data-aos="fade-right">
+                          <iframe class="customStyleVideo"  src="https://www.youtube.com/embed/80zfVAf9p90?rel=0&amp;autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          {% if session['language']== "tr" %}
+                              <h4 class="customTextVideo">{{ gettext("Raporları nasıl görüntüleyebilirim?") }}</h4>
+                          {% elif session['language']== "en"  %}
+                              <h4 class="customTextVideo">{{ gettext("How can I view reports?") }}</h4>
+                          {% elif session['language']== "ar"  %}
+                              <h4 class="customTextVideo">{{ gettext("كيف يمكنني عرض التقارير؟") }}</h4>
+                          {% endif %}
+                      </div>
+                      <div class="col-md-4" data-aos="fade-right" >
+                          <iframe class="customStyleVideo"  src="https://www.youtube.com/embed/o6BRsf8GWjY?rel=0&amp;;autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          {% if session['language']== "tr" %}
+                              <h4 class="customTextVideo">{{ gettext("Mobil uygulamayı nasıl kullanabilirim?") }}</h4>
+                          {% elif session['language']== "en"  %}
+                              <h4 class="customTextVideo">{{ gettext("How can I use the mobile application?") }}</h4>
+                          {% elif session['language']== "ar"  %}
+                              <h4 class="customTextVideo">{{ gettext("كيف يمكنني استخدام تطبيق الهاتف المتحرك؟") }}</h4>
+                          {% endif %}
+                      </div>
+                  {% elif session['country_code']!="TUR" and session['country_code']!="IND" %}
+                      <div class="col-md-4" data-aos="fade-right" >
+                          <iframe style="" class="customStyleVideo"  src="https://www.youtube.com/embed/OwhM3WOyfhY?rel=0&amp;autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <h4 class="customTextVideo">{{ gettext("Introduction to the system") }}</h4>
+                      </div>
+                      <div class="col-md-4" data-aos="fade-right">
+                          <iframe class="customStyleVideo"  src="https://www.youtube.com/embed/9fqsrG7NVXE?rel=0&amp;autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <h4 class="customTextVideo">{{ gettext("How to subscription and register") }}</h4>
+                      </div>
+                      <div class="col-md-4" data-aos="fade-right" >
+                          <iframe class="customStyleVideo"  src="https://www.youtube.com/embed/j4ETwsSNkuA?rel=0&amp;;autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <h4 class="customTextVideo">{{ gettext("Portal Overview") }}</h4>
+                      </div>
+
+
+                      <div class="col-md-4" data-aos="fade-right" >
+                          <iframe style="" class="customStyleVideo"  src="https://www.youtube.com/embed/bUWQQwi44sY?rel=0&amp;autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <h4 class="customTextVideo">{{ gettext("Calculation of tax, discount, method of payment and suspension of the invoice") }}</h4>
+                      </div>
+                      <div class="col-md-4" data-aos="fade-right">
+                          <iframe class="customStyleVideo"  src="https://www.youtube.com/embed/LcwCPAjsMtI?rel=0&amp;autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <h4 class="customTextVideo">{{ gettext("Issuance of sales invoice") }} </h4>
+                      </div>
+                      <div class="col-md-4" data-aos="fade-right" >
+                          <iframe class="customStyleVideo"  src="https://www.youtube.com/embed/iJHCQyTHsF0?rel=0&amp;;autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <h4 class="customTextVideo">{{ gettext(" Reports from the site and the application") }} </h4>
+                      </div>
+
+                  {% elif session['country_code']=="IND" %}
+                      <div class="col-md-4" data-aos="fade-right" >
+                          <iframe style="" class="customStyleVideo"  src="https://www.youtube.com/embed/XxGB9qtLeSo?rel=0&amp;autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <h4 class="customTextVideo">{{ gettext("Introduction to the system") }}</h4>
+                      </div>
+                      <div class="col-md-4" data-aos="fade-right">
+                          <iframe class="customStyleVideo"  src="https://www.youtube.com/embed/KkqZMDwoGTM?rel=0&amp;autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <h4 class="customTextVideo">{{ gettext("An Overview of CashierMe Website") }}</h4>
+                      </div>
+                      <div class="col-md-4" data-aos="fade-right" >
+                          <iframe class="customStyleVideo"  src="https://www.youtube.com/embed/38NBrpHpchE?rel=0&amp;;autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <h4 class="customTextVideo">{{ gettext("Registration for a 60 day trail for the CashierMe Customer") }}</h4>
+                      </div>
+
+
+                      <div class="col-md-4" data-aos="fade-right" >
+                          <iframe style="" class="customStyleVideo"  src="https://www.youtube.com/embed/aBvh0dRu3D8?rel=0&amp;autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <h4 class="customTextVideo">{{ gettext("Generating Sale Reports from the CashierMe Control Pannel") }}</h4>
+                      </div>
+                      <div class="col-md-4" data-aos="fade-right">
+                          <iframe class="customStyleVideo"  src="https://www.youtube.com/embed/95CYkLmwXVs?rel=0&amp;autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <h4 class="customTextVideo">{{ gettext("Adding Company Information and Assigning Point of Sale") }} </h4>
+                      </div>
+                      <div class="col-md-4" data-aos="fade-right" >
+                          <iframe class="customStyleVideo"  src="https://www.youtube.com/embed/ZTeagR3dLbo?rel=0&amp;;autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <h4 class="customTextVideo">{{ gettext(" Interaction with Sales Tab, Generating Sales Bill & Payment options") }} </h4>
+                      </div>
+
+                  {% endif %}
+              </div>
+
+          </div>
+      </section>
+
+  </main><!-- End #main -->
+
+  {% extends 'footer.html' %}
+
+</body>
+</html>

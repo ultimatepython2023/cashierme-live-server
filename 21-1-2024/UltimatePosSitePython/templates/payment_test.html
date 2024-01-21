@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    table tr td{
+        border:1px solid black;
+
+
+    }
+</style>
+
+<form method="post" action="https://staging-gateway.revpay.com.my/payment" accept-charset="UTF-8">
+    <table>
+        <tr>
+            <td>
+                Revpay_Merchant_ID:
+            </td>
+            <td>
+                <input type="text" name="Revpay_Merchant_ID"
+                       value="MER00000000001"><br/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Payment_ID:
+            </td>
+            <td>
+                <input type="text" name="Payment_ID" value="2"><br/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Bank_Code:
+            </td>
+            <td>
+                <input type="text" name="Bank_Code" value=""><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Amount:
+            </td>
+            <td>
+                <input type="text" name="Amount" value="52.40"><br/></td>
+        </tr>
+        <tr>
+            <td>
+                Currency:
+            </td>
+            <td>
+                <input type="text" name="Currency" value="MYR"><br/></td>
+        </tr>
+        <tr>
+            <td>
+                Transaction_Description:
+            </td>
+            <td>
+                <input type="text" name="Transaction_Description"
+                       value="Order Number : Buy Power Bank"><br/></td>
+        </tr>
+        <tr>
+            <td>
+                Billing_Address:
+            </td>
+            <td>
+                <input type="text" name="Billing_Address" value=""><br/></td>
+        </tr>
+        <tr>
+            <td>
+                Shipping_Address:
+            </td>
+            <td>
+                <input type="text" name="Shipping_Address" value=""><br/></td>
+        </tr>
+        <tr>
+            <td>
+                Device_ID:
+            </td>
+            <td>
+                <input type="text" name="Device_ID" value=""><br/></td>
+        </tr>
+        <tr>
+            <td>
+                Ecomm_Marketplace:
+            </td>
+            <td>
+                <input type="text" name="Ecomm_Marketplace" value=""><br/></td>
+        </tr>
+        <tr>
+            <td>
+                Reference_Number:
+            </td>
+            <td>
+                <input type="text" name="Reference_Number"
+                       value="RF201774111"><br/>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                Promo_Code:
+            </td>
+            <td>
+                <input type="text" name="Promo_Code" value=""><br/></td>
+        </tr>
+        <tr>
+            <td>
+                Transaction_Type:
+            </td>
+            <td>
+                <input type="text" name="Transaction_Type" value=""><br/></td>
+        </tr>
+        <tr>
+            <td>
+                Customer_ID:
+            </td>
+            <td>
+                <input type="text" name="Customer_ID" value=""><br/></td>
+        </tr>
+        <tr>
+            <td>
+                Customer_Name:
+            </td>
+            <td>
+                <input type="text" name="Customer_Name" value="John Doe"><br/>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                Customer_Email:
+            </td>
+            <td>
+                <input type="text" name="Customer_Email" value="johndoe@bigcommerce.com"><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Customer_Contact:
+            </td>
+            <td>
+                <input type="text" name="Customer_Contact" value="0123456789"><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Customer_IP:
+            </td>
+            <td>
+                <input type="text" name="Customer_IP" value="121.121.118.2"><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Geo_Location:
+            </td>
+            <td>
+                <input type="text" name="Geo_Location" value="(3.1925996, 101.6590715)"><br/>
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td>
+                Card_Type:
+            </td>
+            <td>
+                <input type="text" name="Card_Type" value=""><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Card_Holder_Name:
+            </td>
+            <td>
+                <input type="text" name="Card_Holder_Name" value=""><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Funding_Pan:
+            </td>
+            <td>
+                <input type="text" name="Funding_Pan" value=""><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Funding_Exp_Date:
+            </td>
+            <td>
+                <input type="text" name="Funding_Exp_Date" value=""><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Funding_CVV:
+            </td>
+            <td>
+                <input type="text" name="Funding_CVV" value=""><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Card_Issuer_Bank_Country_Code:
+            </td>
+            <td>
+                <input type="text" name="Card_Issuer_Bank_Country_Code" value=""><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Instalment_Plan:
+            </td>
+            <td>
+                <input type="text" name="Instalment_Plan" value=""><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Instalment_Term:
+            </td>
+            <td>
+                <input type="text" name="Instalment_Term" value=""><br/>
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td>
+                Instalment_Term:
+            </td>
+            <td>
+                <input type="text" name="Token_Pan" value=""><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Instalment_Term:
+            </td>
+            <td>
+                <input type="text" name="Token_Exp_Date" value=""><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Instalment_Term:
+            </td>
+            <td>
+                <input type="text" name="Key_Index" value="1"><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Signature:
+            </td>
+            <td>
+                <input type="text" name="Signature" value="0716dc1863519f53d47a11ec603d402782222083b2178f596d210fcb93287e81412dd529fa2adddd8e0cdfa2ddf0bb5e8421f55a105196d4ee58961b253b98a1"><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Return_URL:
+            </td>
+            <td>
+                <input type="text" name="Return_URL" value="https://devwebsite.revpay.com.my/return"><br/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Submit:
+            </td>
+            <td>
+                <input value="Submit" type="submit">
+            </td>
+        </tr>
+
+    </table>
+
+
+
+</form>
+
+</body>
+</html>

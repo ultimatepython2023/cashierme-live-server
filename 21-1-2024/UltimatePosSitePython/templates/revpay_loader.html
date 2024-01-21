@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container" >
+    <img src="{{ url_for('static', filename='loading.gif') }}" class="text-center" style="margin-left:41%">
+</div>
+
+
+<form method="post" action="https://staging-gateway.revpay.com.my/payment"
+      accept-charset="UTF-8" id="myform">
+    <input type="hidden" name="Revpay_Merchant_ID" value="{{ merchant_id }}"><br/>
+    <input type="hidden" name="Payment_ID" value="2"><br/>
+    <input type="hidden" name="Bank_Code" value=""><br/>
+    <input type="hidden" name="Reference_Number" value="{{ ref_number }}"><br/>
+    <input type="hidden" name="Amount" value="{{ amount }}"><br/>
+    <input type="hidden" name="Currency" value="MYR"><br/>
+    <input type="hidden" name="Transaction_Description"
+           value="Order Number : Buy Power Bank"><br/>
+    <input type="hidden" name="Billing_Address" value=""><br/>
+    <input type="hidden" name="Shipping_Address" value=""><br/>
+    <input type="hidden" name="Device_ID" value=""><br/>
+    <input type="hidden" name="Ecomm_Marketplace" value=""><br/>
+    <input type="hidden" name="Promo_Code" value=""><br/>
+    <input type="hidden" name="Transaction_Type" value="1"><br/>
+    <input type="hidden" name="Customer_ID" value=""><br/>
+    <input type="hidden" name="Customer_Name" value="John Doe"><br/>
+    <input type="hidden" name="Customer_Email" value="johndoe@bigcommerce.com"><br/>
+    <input type="hidden" name="Customer_Contact" value="0123456789"><br/>
+    <input type="hidden" name="Customer_IP" value="121.121.118.2"><br/>
+    <input type="hidden" name="Geo_Location" value="(3.1925996, 101.6590715)"><br/>
+    <input type="hidden" name="Card_Type" value=""><br/>
+    <input type="hidden" name="Card_Holder_Name" value=""><br/>
+    <input type="hidden" name="Funding_Pan" value=""><br/>
+    <input type="hidden" name="Funding_Exp_Date" value=""><br/>
+    <input type="hidden" name="Funding_CVV" value=""><br/
+    <input type="hidden" name="Card_Issuer_Bank_Country_Code" value=""><br/>
+    <input type="hidden" name="Instalment_Plan" value=""><br/>
+    <input type="hidden" name="Instalment_Term" value=""><br/>
+    <input type="hidden" name="Token_Pan" value=""><br/>
+    <input type="hidden" name="Token_Exp_Date" value=""><br/>
+    <input type="hidden" name="Key_Index" value="1"><br/>
+    <input type="hidden" name="Signature" value="{{ signature }}"><br/>
+                        <input type="hidden" name="Return_URL"
+                               value="{{ return_url }} "><br/>
+                        <input value="Submit" type="submit" style="display: none">
+</form>
+<script>
+    document.getElementById("myform").submit()
+</script>
+</body>
+</html>
+

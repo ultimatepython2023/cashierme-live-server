@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+   <title>Cashier Me</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="icon">
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="apple-touch-icon">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <!-- Google Fonts -->
+  <!-- Vendor CSS Files -->
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/aos/aos.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" >
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/bootstrap/css/bootstrap.min.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/bootstrap-icons/bootstrap-icons.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ url_for('static' , filename="assets/vendor/boxicons/css/boxicons.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">    <link href="{{ url_for('static' , filename="assets/vendor/glightbox/css/glightbox.min.css")}}" rel="stylesheet" >
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/remixicon/remixicon.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="{{ url_for('static' , filename="assets/vendor/swiper/swiper-bundle.min.css")}}" rel="stylesheet" >
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('static' , filename="assets/css/style.css")}}" rel="stylesheet" >
+  <!-- =======================================================
+  * Template Name: Bootslander - v4.6.0
+  * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+<body>
+  <!-- ======= Header ======= -->
+  {% include 'header.html' %}
+
+  <main id="main">
+      <link href="{{ url_for('static' , filename="assets/css/style.css")}}" rel="stylesheet" >
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+
+        <input id="get_currentuser_lang" value="{{ session['language'] }}" style="display: none">
+        <div class="container">
+            <section id="features" class="features">
+                <div class="container">
+                    <div class="section-title" data-aos="fade-up">
+                        <h2>{{ gettext("Features") }}</h2>
+                        <p>{{ gettext("The Features ") }}</p>
+                    </div>
+                    <div class="row" data-aos="fade-left">
+                        <div class="col-lg-4 col-md-4 mt-4 mt-md-0">
+                            <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+                                <i class="ri-qr-code-line" style="color: #5578ff;"></i>
+                                <h3><a href="/features">{{ gettext("ُElectronic Invoice") }}</a></h3>
+                            </div>
+                            {% if session['country_code'] == "EGY" %}
+                            <p data-aos="zoom-in" data-aos-delay="250">{{ gettext("Electronic invoice support with cashier me app for point of sale management")}}</p>
+                            {%else%}
+                            <p data-aos="zoom-in" data-aos-delay="250">{{ gettext("Electronic invoice support with ultimate point of sale ") }}</p>
+                            {%endif%}
+                        </div>
+                        <div class="col-lg-4 col-md-4 mt-4 mt-md-0 ">
+                            <div class="icon-box" data-aos="zoom-in" data-aos-delay="150">
+                                <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
+                                <h3><a href="/features">{{ gettext("Live Analytic") }}</a></h3>
+                            </div>
+                            <p data-aos="zoom-in" data-aos-delay="250">{{ gettext("More accurate and flexible analytics on all your outlets") }}</p>
+                        </div>
+                        <div class="col-lg-4 col-md-4 mt-4 mt-md-0">
+                            <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
+                                <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
+                                <h3><a href="/features">{{ gettext("Multiple Outlet") }}</a></h3>
+                            </div>
+                            {% if session['country_code'] == "EGY" %}
+                            <p data-aos="zoom-in" data-aos-delay="250">{{gettext("Easily create and manage more than one outlet")}}</p>
+                            {%else%}
+                            <p data-aos="zoom-in" data-aos-delay="250">{{ gettext("Create and manage more than one outlets with ease") }}</p>
+                            {%endif%}
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row" data-aos="fade-left">
+                        <div class="col-lg-4 col-md-4 mt-4 mt-md-0">
+                            <div class="icon-box" data-aos="zoom-in" data-aos-delay="250">
+                                <i class="ri-database-2-line" style="color: #47aeff;"></i>
+                                <h3><a href="/features">{{ gettext("Cloud Enabled") }}</a></h3>
+                            </div>
+                            <p data-aos="zoom-in" data-aos-delay="250">{{ gettext("Stores your outlet data on the cloud to be accessed anywhere and anytime") }}</p>
+                        </div>
+                        <div class="col-lg-4 col-md-4 mt-4 mt-lg-0">
+                            <div class="icon-box" data-aos="zoom-in" data-aos-delay="350">
+                                <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
+                                <h3><a href="/features">{{ gettext("Detailed Reports") }}</a></h3>
+                            </div>
+                            <p data-aos="zoom-in" data-aos-delay="550">{{ gettext("Detailed reports on everything related to your points of sale") }}</p>
+                        </div>
+                        <div class="col-lg-4 col-md-4 mt-4 mt-lg-0">
+                            <div class="icon-box" data-aos="zoom-in" data-aos-delay="550">
+                                <i class="ri-base-station-line" style="color: #ff5828;"></i>
+                                <h3><a href="/features">{{ gettext("Hub for Reliability") }}</a></h3>
+                            </div>
+                            {% if session['country_code'] == "EGY" %}
+                            <p data-aos="zoom-in" data-aos-delay="550">{{gettext("Ability to work offline and activate online sync")}}</p>
+                            {%else%}
+                            <p data-aos="zoom-in" data-aos-delay="550">{{ gettext("Increase reliability and performance of multiple point-of-sale at your outlets") }}</p>
+                            {%endif%}
+
+                        </div>
+                    </div>
+                </div>
+            </section><!-- End Features Section -->
+            <section id="details" class="details">
+                <div class="container">
+                    <div class="row content">
+                        <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
+                            <h3>{{ gettext("Features That Will Help You!") }}</h3>
+                            <p class="fst-italic">{{ gettext("We've built tools that are vital for business to run efficiently and ensure you can manage your business with ease throughout time") }}
+                            </p>
+                            <ul>
+                                <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("Enterprise Support - With a single account, you are able to manage several outlets' menus, price books, and employees ") }} </li>
+                                <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("Payment Methods - User-friendly method of accepting payments from your customers") }} </li>
+                                <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("Cloud Enabled - Your outlet data is saved in the cloud and may be accessed from anywhere at any time") }} </li>
+                                <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("Built-in Tax Support - Do taxes make your head spin? Taxes are a breeze with our method") }} </li>
+                                <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("Hub for Reliability - Improve the reliability and performance of your various point-of-sale outlets") }} </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            </div>
+    </section>
+  </main>
+  <!-- ======= Footer ======= -->
+  {% extends 'footer.html' %}
+</body>
+</html>

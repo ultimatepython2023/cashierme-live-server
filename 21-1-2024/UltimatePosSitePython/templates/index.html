@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+
+    {% include 'header.html' %}
+
+</head>
+<body>
+  <section id="hero">
+      <input id="get_currentuser_lang" value="{{ session['language'] }}" style="display: none">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
+          <div data-aos="zoom-out">
+            <h1>{{ gettext("CASHIER ME ") }}
+{#                <span>{{ gettext("SMARTPHONE AND TABLET") }}</span>#}
+            </h1>
+            <h2 style="margin-top:15px;padding-top:15px">{{ gettext("Application To Manage Restaurants, Cafes and retail Stores") }}</h2>
+            <div class="text-center text-lg-start">
+              <a href="/pricing" class="btn-get-started scrollto">{{ gettext("Enjoy Your Free Trail") }}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
+            {% if session['language'] == 'ar' or session['language'] == Null %}
+                <img src="static/assets/img/Ar.webp" class="img-fluid animated" alt="">
+            {% endif %}
+            {% if session['language'] == 'en' %}
+                <img src="static/assets/img/En.webp" class="img-fluid animated" alt="" >
+            {% endif %}
+
+        </div>
+      </div>
+    </div>
+    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
+      </defs>
+
+      <g class="wave1">
+        <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)"/>
+      </g>
+      <g class="wave2">
+        <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)"/>
+      </g>
+      <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="9" fill="#fff"/>
+      </g>
+    </svg>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+      <section id="details" class="details">
+          <div class="container">
+              <div class="section-title" data-aos="fade-up">
+                  <h2>{{ gettext("Electronic Invoice") }}</h2>
+                  <p>{{ gettext("Electronic Invoice ") }}</p>
+              </div>
+              <div class="row content">
+                  <div class="col-md-4 text-center" data-aos="fade-right">
+                      {% if session['country_code'] == "SAU" %}
+                          <img src="static/assets/img/invoice.webp" class="img-fluid" alt="" style="height:400px">
+                      {% endif %}
+                      {% if session['country_code'] == "EGY"%}
+                          <img src="static/assets/img/invoice_egp.png" class="img-fluid" alt="" style="height:400px">
+                      {% endif %}
+                      {% if session['language'] == 'tr' and session['country_code'] == "TUR"%}
+                          <img src="static/assets/img/invoice-tur.png" class="img-fluid" alt="" style="height:400px">
+                      {% endif %}
+                      {% if session['country_code'] == "IND" %}
+                          <img src="static/assets/img/ind_invoice.png" class="img-fluid" alt="" style="height:400px">
+                      {% endif %}
+                      {%  if session['country_code'] == "GLB" %}
+                          <img src="static/assets/img/invoice-en.png" class="img-fluid" alt="" style="height:400px">
+                      {% endif %}
+                  </div>
+                  <div class="col-md-6 section-title pt-4" data-aos="fade-up" >
+                      {% if session['country_code'] == 'IND'%}
+                          <p >{{ gettext("The E-invoice features includes") }}</p>
+                          <ul>
+                              <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("GSTIN of supplier. ") }} </li>
+                              <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("GSTIN of the recipient.") }} </li>
+                              <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("Invoice number given by the supplier.") }} </li>
+                              <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("Date of the invoice generation.") }} </li>
+                              <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("Invoice value.") }} </li>
+                              <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("Number of line items.") }} </li>
+                              <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("Unique IRN/Hash.") }} </li>
+                          </ul>
+                      {%elif session['country_code'] == 'EGY'%}
+                          <p >{{ gettext("Electronic Invoice") }}</p>
+                          <p style="font-size: 150%; color:unset;font-weight:300" >{{ gettext("Compatible with the Egyptian Tax Authority and the electronic invoice system ") }}</p>
+                      {% else %}
+                          <p >{{ gettext("Electronic Invoice") }}</p>
+                          <p style="font-size: 150%; color:unset;font-weight:300" >{{ gettext("Compliant with the requirements of the Zakat and Tax Authority and registered in the Authority's list of electronic service providers ") }}
+                      {% endif %}
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </section>
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+                {% if session['country_code'] == "TUR" %}
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Vgn4m4HKJVc??rel=0&amp;autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                {% elif session['country_code']== "IND" %}
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XxGB9qtLeSo?rel=0&amp;autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                {% elif session['country_code'] != "IND" or session['country_code'] != "TUR" %}
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/OwhM3WOyfhY?rel=0&amp;autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                {% endif %}
+            </div>
+          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
+            <h3>{{ gettext("Cashier Me POS") }}</h3>
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
+              <div class="icon"><i class="bx bx-gift"></i></div>
+              <h4 class="title"><a href="/pricing">{{ gettext("Restaurants & Cafes  ") }}</a></h4>
+              <p class="description">{{ gettext("Managing restutations and cafes has become moe seamless and hassle and free with ultimate point of sale ") }}</p>
+            </div>
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="icon"><i class="bx bx-fingerprint"></i></div>
+                  <h4 class="title"><a href="/pricing">{{ gettext("Retail Stores") }}</a></h4>
+                  <p class="description">{{ gettext("The system is able to manage multiple branches of retail stores") }}</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      <!-- End About Section -->
+    <!-- ======= Features Section ======= -->
+      <section id="features" class="features">
+          <div class="container">
+              <div class="section-title" data-aos="fade-up">
+                  <h2>{{ gettext("Features") }}</h2>
+                  <p>{{ gettext("The Features ") }}</p>
+              </div>
+              <div class="row" data-aos="fade-left">
+                  <div class="col-lg-4 col-md-4 mt-4 mt-md-0">
+                      <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+                          <i class="ri-qr-code-line" style="color: #5578ff;"></i>
+                          <h3><a href="/home#featuers">{{ gettext("ُElectronic Invoice") }}</a></h3>
+                      </div>
+                      {% if session['country_code'] == "EGY" %}
+                          <p data-aos="zoom-in" data-aos-delay="250">{{ gettext("Electronic invoice support with cashier me app for point of sale management")}}</p>
+                      {%else%}
+                          <p data-aos="zoom-in" data-aos-delay="250">{{ gettext("Electronic invoice support with ultimate point of sale ") }}</p>
+                      {%endif%}
+                  </div>
+                  <div class="col-lg-4 col-md-4 mt-4 mt-md-0 ">
+                      <div class="icon-box" data-aos="zoom-in" data-aos-delay="150">
+                          <i class="ri-bar-chart-box-line" style="color: #5578ff;"></i>
+                          <h3><a href="/home#featuers">{{ gettext("Live Analytic") }}</a></h3>
+                      </div>
+                      <p data-aos="zoom-in" data-aos-delay="250">{{ gettext("More accurate and flexible analytics on all your outlets") }}</p>
+                  </div>
+                  <div class="col-lg-4 col-md-4 mt-4 mt-md-0">
+                      <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
+                          <i class="ri-calendar-todo-line" style="color: #e80368;"></i>
+                          <h3><a href="/home#featuers">{{ gettext("Multiple Outlet") }}</a></h3>
+                      </div>
+                      {% if session['country_code'] == "EGY" %}
+                          <p data-aos="zoom-in" data-aos-delay="250">{{gettext("Easily create and manage more than one outlet")}}</p>
+                      {%else%}
+                          <p data-aos="zoom-in" data-aos-delay="250">{{ gettext("Create and manage more than one outlets with ease") }}</p>
+                      {%endif%}
+                  </div>
+              </div>
+              <br/>
+              <div class="row" data-aos="fade-left">
+                  <div class="col-lg-4 col-md-4 mt-4 mt-md-0">
+                      <div class="icon-box" data-aos="zoom-in" data-aos-delay="250">
+                          <i class="ri-database-2-line" style="color: #47aeff;"></i>
+                          <h3><a href="/home#featuers">{{ gettext("Cloud Enabled") }}</a></h3>
+                      </div>
+                      <p data-aos="zoom-in" data-aos-delay="250">{{ gettext("Stores your outlet data on the cloud to be accessed anywhere and anytime") }}</p>
+                  </div>
+                  <div class="col-lg-4 col-md-4 mt-4 mt-lg-0">
+                      <div class="icon-box" data-aos="zoom-in" data-aos-delay="350">
+                          <i class="ri-file-list-3-line" style="color: #11dbcf;"></i>
+                          <h3><a href="/home#featuers">{{ gettext("Detailed Reports") }}</a></h3>
+                      </div>
+                      <p data-aos="zoom-in" data-aos-delay="550">{{ gettext("Detailed reports on everything related to your points of sale") }}</p>
+                  </div>
+                  <div class="col-lg-4 col-md-4 mt-4 mt-lg-0">
+                      <div class="icon-box" data-aos="zoom-in" data-aos-delay="550">
+                          <i class="ri-base-station-line" style="color: #ff5828;"></i>
+                          <h3><a href="/home#featuers">{{ gettext("Hub for Reliability") }}</a></h3>
+                      </div>
+                      {% if session['country_code'] == "EGY" %}
+                          <p data-aos="zoom-in" data-aos-delay="550">  إمكانية العمل اوفلاين و تفعيل المزامنة اونلاين لترحيل الفواتير وحفظ البيانات
+
+                          </p>
+                      {%else%}
+                          <p data-aos="zoom-in" data-aos-delay="550">{{ gettext("Increase reliability and performance of multiple point-of-sale at your outlets") }}</p>
+                      {%endif%}
+
+                  </div>
+              </div>
+          </div>
+      </section><!-- End Features Section -->
+    <!-- ======= Details Section ======= -->
+    <section id="details" class="details">
+      <div class="container">
+          <div class="row content">
+              <div class="col-md-4" data-aos="fade-right">
+                  <img src="static/assets/img/posslider.webp" class="img-fluid" alt="">
+              </div>
+              <div class="col-md-8 pt-5 order-2 order-md-1" data-aos="fade-up">
+                  <h3>{{ gettext("Features That Will Help You!") }}</h3>
+                  <p class="fst-italic">{{ gettext("We've built tools that are vital for business to run efficiently and ensure you can manage your business with ease throughout time") }}
+                  </p>
+                  <ul>
+                      {% if session['country_code'] == "EGY"%}
+                      <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("Enterprise Support - With a single account, you can manage multiple outlets and price lists ") }} </li>
+                      <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("Payment Methods - User-friendly method of accepting payments from your customers") }} </li>
+
+                      <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("Cloud Enabled - Your port data is saved on the cloud and you can access it from anywhere and at any time") }} </li>
+                      <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("Built-in Tax Support - Are taxes causing you trouble? Taxes are very easy with Cashierme") }} </li>
+                      <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("Hub for Reliability - The ability to work offline and activate offline sync to migrate invoices and save data") }} </li>
+
+                      {%else%}
+                      <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("Enterprise Support - With a single account, you are able to manage several outlets' menus, price books, and employees ") }} </li>
+                      <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("Payment Methods - User-friendly method of accepting payments from your customers") }} </li>
+                      <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("Cloud Enabled - Your outlet data is saved in the cloud and may be accessed from anywhere at any time") }} </li>
+                      <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("Built-in Tax Support - Do taxes make your head spin? Taxes are a breeze with our method") }} </li>
+                      <li><i class="bi bi-check" style="color:#1acc8d"></i>{{ gettext("Hub for Reliability - Improve the reliability and performance of your various point-of-sale outlets") }} </li>
+
+                      {%endif%}
+
+                  </ul>
+              </div>
+          </div>
+
+        <div class="row content">
+          <div class="col-md-4" data-aos="fade-right">
+              {% if session['language']== 'ar' or session['language'] == Null %}
+                  <img src="static/assets/img/Ar.webp" class="img-fluid animated" alt="">
+              {% endif %}
+              {% if session['language']== 'en' %}
+                  <img src="static/assets/img/En.webp" class="img-fluid animated" alt="">
+              {% endif %}
+          </div>
+          <div class="col-md-8 pt-4" data-aos="fade-up">
+            <h3>{{ gettext("Everything your shop needs") }}</h3>
+            <p class="fst-italic">{{ gettext("Cashier Me POS is based on a smart interface that any retail company can use without difficulty. Because it's extremely flexible, you can configure Cashier Me POS to meet your precise nee") }}
+              <ul>
+                  <li><i class="bi bi-check"></i> {{ gettext("Issue printed or electronic receipts") }}</li>
+                  <li><i class="bi bi-check"></i>{{ gettext("Keep recording sales even when offline") }} </li>
+              {% if session['country_code'] == 'EGY'%}
+                  <li><i class="bi bi-check"></i>
+                      يمكن توصيله بطابعة إيصالات وقارئ باركود ودرج الكاشير Bar code ودرج الكاشير
+
+                  </li>
+              {%else%}
+                 <li><i class="bi bi-check"></i>{{ gettext("Connect a receipt printer, barcode scanner, and cash drawer") }} </li>
+
+              {%endif%}
+          </ul>
+            </p>
+          </div>
+        </div>
+        <div class="row content">
+          <div class="col-md-4" data-aos="fade-right">
+            <img src="static/assets/img/sales.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-md-8 pt-5" data-aos="fade-up">
+            <h3>{{ gettext("Sales analytics") }}</h3>
+            <p>{{ gettext("Access your reports anytime, anywhere.") }}</p>
+            <ul>
+              <li><i class="bi bi-check"></i>{{ gettext("View revenue, average sale and profit.") }} </li>
+              <li><i class="bi bi-check"></i>{{ gettext("Determine best-selling items and categories.") }} </li>
+                <li><i class="bi bi-check"></i> {{ gettext("View complete sales history") }}</li>
+                <li><i class="bi bi-check"></i> {{ gettext("Export sales data to the spreadsheets") }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Details Section -->
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials" dir="rtl">
+      <div class="container">
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="static/assets/img/upos-footer.png" class="img-fluid animated">
+                <h2>{{ gettext('The best way to manage your business') }}</h2>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    {{ gettext("Better Service - Streamlined Operations - Simple & Intuitive - Manage Remotely - Seamless Integration - Stable & Reliable") }}
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+      <section id="contact" class="contact">
+          <div class="container">
+              <div class="section-title" data-aos="fade-up">
+                  <h2>{{ gettext("Contact") }}</h2>
+                  <p>{{ gettext("Contact Us") }}</p>
+              </div>
+              <div class="row">
+                  <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
+                      <div class="info">
+                          <div class="address">
+                              <i class="bi bi-geo-alt"></i>
+                              <h4>{{ gettext("Location:") }}</h4>
+                              {% if session['country_code'] == "SAU"  %}
+                              <p>{{ gettext("Adham Trading Center - Al Madinah Al Munawarah Rd - Ar Ruwais - Saudi Arabia") }} </p>
+                              {% endif %}
+                            {% if session['country_code'] == "MYS" or session['country_code']== "GLB"%}
+                            <p>
+                                {{ gettext("D5-15 One South, Persiaran Serdang Perdana 43300 Seri Kembangan, Selangor") }}
+                            </p>
+                            {% endif %}
+                            {% if session['country_code'] == "TUR"%}
+                            <p>
+                                {{ gettext("Ve Tic. A.Ş Şti. MALL OF İSTANBUL, THE OFFICE, KAT:14/113 ZİYA GÖKALP MAH. SÜLEYMAN DEMİREL BULVARI NO:7E BAŞAKŞEHİR") }}
+                            </p>
+                            {% endif %}
+                              {% if session['country_code'] == "IND"%}
+                            <p>
+                                {{ gettext("No.823/4, 2nd Floor, Chaitra Complex 13th Cross, 7th Block, Jayanagar west, Bangalore-560070") }}
+                            </p>
+                            {% endif %}
+                              {% if session['country_code'] == "EGY"%}
+                              <p>
+                                     40 شارع محي الدين ابو العز   الدقي - الجيزة - الدور السادس
+                              </p>
+                              {% endif %}
+                          </div>
+
+                          <div class="email">
+                              <i class="bi bi-envelope"></i>
+                              <h4>{{ gettext("Email:") }}</h4>
+                              {% if session['country_code'] == "SAU"  %}
+                                  <p>{{ gettext("info@cashierme.com") }}</p>
+                               {% endif %}
+                              {% if session['country_code'] == "MYS" or session['country_code']== "GLB"%}
+                                  <p>{{ gettext("info@ultimate-kl.com") }}</p>
+                              {% endif %}
+                              {% if session['country_code'] == "TUR"%}
+                                  <p>{{ gettext("info.tr@cashierme.com") }}</p>
+                              {% endif %}
+                             {% if session['country_code'] == "IND"%}
+                                 <p>{{ gettext("info@ultimatetek.in") }}</p>
+                             {% endif %}
+                              {% if session['country_code'] == "EGY"%}
+                              <p>marketing@ultimate-eg.net</p>
+                              {% endif %}
+
+                          </div>
+
+                          <div class="phone">
+                              <i class="bi bi-phone"></i>
+                              <h4>{{ gettext("Call:") }}</h4>
+                               {% if session['country_code'] == "SAU"  %}
+                                   <p>{{ gettext("+ 966126523216 "  ) }}</p>
+                               {% endif %}
+                              {% if session['country_code'] == "MYS" or session['country_code']== "GLB"%}
+                                  <p>{{ gettext("+603 8940 6975"  ) }}</p>
+                              {% endif %}
+                              {% if session['country_code'] == "TUR"%}
+                                  <p>{{ gettext("+902128032598 , +905059999337 "  ) }}</p>
+                              {% endif %}
+                             {% if session['country_code'] == "IND"%}
+                                 <p>{{ gettext("+91 9901947050, +91 80 26711618"  ) }}</p>
+                             {% endif %}
+                              {% if session['country_code'] == "EGY"%}
+                              <p>01017298882</p>
+                              <p>01018686629</p>
+                              {% endif %}
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
+                      <form action="/send_email" method="post">
+                          <div class="alert alert-success" role="alert" id="success_send" style="display:none">Your message has been sent Successfully</div>
+                          <div class="alert alert-danger" role="alert" id="failed_send" style="display:none">can,t send your message now please try again </div>
+                          <div class="row">
+                              <div class="col-md-6 form-group">
+                                  <input type="text" name="name" class="form-control" id="name" placeholder="{{ gettext("Your Name") }}" required>
+                              </div>
+                              <div class="col-md-6 form-group mt-3 mt-md-0">
+                                  <input type="email" class="form-control" name="email" id="email" placeholder="{{ gettext("Your Email") }}" required>
+                              </div>
+                          </div>
+                          <div class="form-group mt-3">
+                              <input type="text" class="form-control" name="subject" id="subject" placeholder="{{ gettext("Subject") }}" required>
+                          </div>
+                          <div class="form-group mt-3">
+                              <textarea class="form-control" name="message" id="message" rows="5" placeholder="{{ gettext("Message") }}" required></textarea>
+                          </div>
+                          <br/>
+                          {{ recaptcha }}
+                          <div class="text-center"><button type="button" onclick="submit_end_email()" class="btn btn-success">{{ gettext("Send Message") }}</button>  <img id="dasdadadfdsfdsfsdf" src="static/assets/img/Hourglass.gif" style="display:none"></div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </section>
+  </main><!-- End #main -->
+  {% extends 'footer.html' %}
+</body>
+</html>

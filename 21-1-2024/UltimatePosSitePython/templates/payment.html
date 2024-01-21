@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Cashier Me</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="icon">
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="apple-touch-icon">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <!-- Google Fonts -->
+  <!-- Vendor CSS Files -->
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/aos/aos.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" >
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/bootstrap/css/bootstrap.min.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/bootstrap-icons/bootstrap-icons.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ url_for('static' , filename="assets/vendor/boxicons/css/boxicons.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">    <link href="{{ url_for('static' , filename="assets/vendor/glightbox/css/glightbox.min.css")}}" rel="stylesheet" >
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/remixicon/remixicon.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="{{ url_for('static' , filename="assets/vendor/swiper/swiper-bundle.min.css")}}" rel="stylesheet" >
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('static' , filename="assets/css/style.css")}}" rel="stylesheet" >
+
+  <!-- =======================================================
+  * Template Name: Bootslander - v4.6.0
+  * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+{% include 'header.html' %}
+
+
+  <main id="main">
+      <input id="get_currentuser_lang" value="{{ session['language'] }}" style="display: none">
+      <!-- ======= Breadcrumbs Section ======= -->
+      <section id="details" class="details">
+          <div class="container" style="margin-top:50px">
+              <div class="section-title" data-aos="fade-up">
+                  <h2>Payment</h2>
+                  <p>Payment</p>
+              </div>
+              <div class="text-center" style="padding-top: 90px">
+                  <button id="rzp-button1" class="btn btn-success">Payment now</button>
+                  <input type="hidden" id="customer_name" value="{{ customer_name }}">
+                  <input type="hidden" id="amount" value="{{ payment.amount }}">
+                  <input type="hidden" id="order_id" value="{{ payment.id }}">
+                  <input type="hidden" id="type" value="{{payment_type }}">
+              </div>
+          </div>
+      </section>
+        <div class="col-lg-12" id="divBlockLoader" style=" position:fixed;
+           display:none;
+
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            text-align: center;
+            opacity: 0.7;
+            z-index: 99;
+            background-color:#eff0f5
+            ">
+    <img  id="loading-image" src="{{ url_for("static", filename="assets/img/loading2.gif") }}" style="position: relative;
+
+                                                                                       margin-top:300px;
+                                                                                      width:200px;
+                                                                                      text-align: center;"/>
+</div>
+     <!-- End Contact Section -->
+  </main><!-- End #main -->
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="{{ url_for('static', filename="assets/js/payment.js") }}"></script>
+    <!-- ======= Footer ======= -->
+  {% extends 'footer.html' %}
+
+</body>
+</html>

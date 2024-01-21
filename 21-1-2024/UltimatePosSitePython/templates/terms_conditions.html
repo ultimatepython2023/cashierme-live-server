@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Cashier Me</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="icon">
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="apple-touch-icon">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Google Fonts -->
+  <!-- Vendor CSS Files -->
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/aos/aos.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" >
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/bootstrap/css/bootstrap.min.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/bootstrap-icons/bootstrap-icons.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ url_for('static' , filename="assets/vendor/boxicons/css/boxicons.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">    <link href="{{ url_for('static' , filename="assets/vendor/glightbox/css/glightbox.min.css")}}" rel="stylesheet" >
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/remixicon/remixicon.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="{{ url_for('static' , filename="assets/vendor/swiper/swiper-bundle.min.css")}}" rel="stylesheet" >
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('static' , filename="assets/css/style.css")}}" rel="stylesheet" >
+
+  <!-- =======================================================
+  * Template Name: Bootslander - v4.6.0
+  * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+
+  {% include 'header.html' %}
+  <style>
+      .font-bold{
+          font-weight: bold;
+      }
+  </style>
+
+
+  <main id="main">
+      <input id="get_currentuser_lang" value="{{ session['language'] }}" style="display: none">
+      <section id="details" class="details">
+          <div class="container" style="margin-top:50px">
+              <div class="section-title" data-aos="fade-up">
+                  <h2>{{ gettext("Terms And Conditions") }}</h2>
+                  <p>{{ gettext("Terms And Conditions") }}</p>
+              </div>
+           {% if session['country_code'] == "IND" %}
+                <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Introduction") }}</h3>
+                      <p>Welcome to<span class="font-bold"> Ultimatetek Solutions Pvt Ltd </span>(“Company”, “we”, “our”, “us”)!These Terms of Service (“Terms”, “Terms of Service”) govern your use of our website located <span class="font-bold"> www.cashierme.com </span>(together or individually “Service”) operated <span class="font-bold">Ultimatetek Solutions Pvt Ltd</span></p>
+                      <p>Our Privacy Policy also governs your use of our Service and explains how we collect, safeguard and disclose information that results from your use of our web pages.</p>
+                      <p>Your agreement with us includes these Terms and our Privacy Policy (“Agreements”). You acknowledge that you have read and understood Agreements, and agree to be bound of them.</p>
+                      <p>If you do not agree with (or cannot comply with) Agreements, then you may not use the Service, but please let us know by emailing at<span class="font-bold"> info@ultimatetek.in </span>so we can try to find a solution. These Terms apply to all visitors, users and others who wish to access or use Service. 2. Communications</p>
+                  </div>
+              </div>
+                 <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Communications") }}</h3>
+                      <p>By using our Service, you agree to subscribe to newsletters, marketing or promotional materials and other information we may send. However, you may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or by emailing at info@ultimatetek.in.</p>
+                  </div>
+              </div>
+                 <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Purchases") }}</h3>
+                      <p>If you wish to purchase any product or service made available through Service (“Purchase”), you may be asked to supply certain information relevant to your Purchase including but not limited to, your credit or debit card number, the expiration date of your card, your billing address, and your shipping information.</p>
+                      <p>You represent and warrant that: (i) you have the legal right to use any card(s) or other payment method(s) in connection with any Purchase; and that (ii) the information you supply to us is true, correct and complete.</p>
+                      <p>We may employ the use of third-party services for the purpose of facilitating payment and the completion of Purchases. By submitting your information, you grant us the right to provide the information to these third parties subject to our Privacy Policy.</p>
+                      <p>We reserve the right to refuse or cancel your order at any time for reasons including but not limited to: product or service availability, errors in the description or price of the product or service, error in your order or other reasons.</p>
+                      <p>We reserve the right to refuse or cancel your order if fraud or an unauthorized or illegal transaction is suspected.</p>
+                  </div>
+              </div>
+               <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Contests, Sweepstakes and Promotions") }}</h3>
+                     <p>Any contests, sweepstakes or other promotions (collectively, “Promotions”) made available through Service may be governed by rules that are separate from these Terms of Service. If you participate in any Promotions, please review the applicable rules as well as our Privacy Policy. If the rules for a Promotion conflict with these Terms of Service, Promotion rules will apply.</p>
+                  </div>
+              </div>
+                <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Subscriptions") }}</h3>
+                     <p>Some parts of Service are billed on a subscription basis ("Subscription(s)"). You will be billed in advance on a recurring and periodic basis ("Billing Cycle"). Billing cycles will be set depending on the type of subscription plan you select when purchasing a Subscription.</p>
+                      <p>At the end of each Billing Cycle, your Subscription will automatically renew under the exact same conditions unless you cancel it or Ultimate Tek Solutions Pvt Ltd cancels it. You may cancel your Subscription renewal either through your online account management page or by contacting info@ultimatetek.in customer support team.</p>
+                      <p>A valid payment method is required to process the payment for your subscription. You shall provide Ultimatetek Solutions Pvt Ltd with accurate and complete billing information that may include but not limited to full name, address, state, postal or zip code, telephone number, and a valid payment method information. By submitting such payment information, you automatically authorize Ultimate Tek Solutions Pvt Ltd to charge all Subscription fees incurred through your account to any such payment instruments.</p>
+                      <p>Should automatic billing fail to occur for any reason, Ultimatetek Solutions Pvt Ltd reserves the right to terminate your access to the Service with immediate effect.</p>
+                  </div>
+              </div>
+                  <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Free Trial") }}</h3>
+                     <p>Ultimatetek Solutions Pvt Ltd may, at its sole discretion, offer a Subscription with a free trial for a limited period of time ("Free Trial").</p>
+                     <p>You may be required to enter your billing information in order to sign up for Free Trial.</p>
+                     <p>If you do enter your billing information when signing up for Free Trial, you will not be charged by Ultimatetek Solutions Pvt Ltd until Free Trial has expired. On the last day of Free Trial period, unless you cancelled your Subscription, you will be automatically charged the applicable Subscription fees for the type of Subscription you have selected.</p>
+                     <p>At any time and without notice, Ultimatetek Solutions Pvt Ltd reserves the right to (i) modify Terms of Service of Free Trial offer, or (ii) cancel such Free Trial offer.</p>
+                  </div>
+              </div>
+               <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Free Changes") }}</h3>
+                     <p>Ultimatetek Solutions Pvt Ltd may, at its sole discretion, offer a Subscription with a free trial for a limited period of time ("Free Trial").</p>
+                     <p>You may be required to enter your billing information in order to sign up for Free Trial.</p>
+                     <p>If you do enter your billing information when signing up for Free Trial, you will not be charged by Ultimatetek Solutions Pvt Ltd until Free Trial has expired. On the last day of Free Trial period, unless you cancelled your Subscription, you will be automatically charged the applicable Subscription fees for the type of Subscription you have selected.</p>
+                     <p>At any time and without notice, Ultimatetek Solutions Pvt Ltd reserves the right to (i) modify Terms of Service of Free Trial offer, or (ii) cancel such Free Trial offer.</p>
+                  </div>
+              </div>
+               <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Refunds") }}</h3>
+                      <p>We do not issue refunds for the services once they are activated. The customer with their sole discretion shall should they choose opt to register for the services after the successful completion of the trial period.</p>
+                  </div>
+              </div>
+                  <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Content") }}</h3>
+                      <p>Content found on or through this Service are the property of Ultimatetek Solutions Pvt Ltd or used with permission. You may not distribute, modify, transmit, reuse, download, repost, copy, or use said Content, whether in whole or in part, for commercial purposes or for personal gain, without express advance written permission from us.</p>
+                  </div>
+              </div>
+                 <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Prohibited Uses") }}</h3>
+                      <p>You may use Service only for lawful purposes and in accordance with Terms. You agree not to use Service:</p>
+                        <ul>
+                          <li><p>0.1. In any way that violates any applicable national or international law or regulation.</p></li>
+                          <li><p>0.2. For the purpose of exploiting, harming, or attempting to exploit or harm minors in any way by exposing them to inappropriate content or otherwise.</p></li>
+                          <li><p>0.3. To transmit, or procure the sending of, any advertising or promotional material, including any “junk mail”, “chain letter,” “spam,” or any other similar solicitation.</p></li>
+                          <li><p>0.4. To impersonate or attempt to impersonate Company, a Company employee, another user, or any other person or entity.</p></li>
+                          <li><p>0.5. In any way that infringes upon the rights of others, or in any way is illegal, threatening, fraudulent, or harmful, or in connection with any unlawful, illegal, fraudulent, or harmful purpose or activity.</p></li>
+                          <li><p>0.6. To engage in any other conduct that restricts or inhibits anyone’s use or enjoyment of Service, or which, as determined by us, may harm or offend Company or users of Service or expose them to liability.</p></li>
+
+                        </ul>
+                      <p>Additionally, you agree not to:</p>
+                            <ul>
+                          <li><p>0.1. Use Service in any manner that could disable, overburden, damage, or impair Service or interfere with any other party’s use of Service, including their ability to engage in real time activities through Service.</p></li>
+                          <li><p>0.2. Use any robot, spider, or other automatic device, process, or means to access Service for any purpose, including monitoring or copying any of the material on Service.</p></li>
+                          <li><p>0.3. Use any manual process to monitor or copy any of the material on Service or for any other unauthorized purpose without our prior written consent.</p></li>
+                          <li><p>0.4. Use any device, software, or routine that interferes with the proper working of Service.</p></li>
+                          <li><p>0.5. Introduce any viruses, trojan horses, worms, logic bombs, or other material which is malicious or technologically harmful.</p></li>
+                          <li><p>0.6. Attempt to gain unauthorized access to, interfere with, damage, or disrupt any parts of Service, the server on which Service is stored, or any server, computer, or database connected to Service.</p></li>
+                          <li><p>0.7. Attack Service via a denial-of-service attack or a distributed denial-of-service attack.</p></li>
+                          <li><p>0.8. Take any action that may damage or falsify Company rating.</p></li>
+                          <li><p>0.9. Otherwise attempt to interfere with the proper working of Service.</p></li>
+                        </ul>
+                  </div>
+              </div>
+                  <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Analytics") }}</h3>
+                      <p>We may use third-party Service Providers to monitor and analyze the use of our Service.</p>
+                  </div>
+              </div>
+                   <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("No Use by Minors") }}</h3>
+                      <p>Service is intended only for access and use by individuals at least eighteen (18) years old. By accessing or using Service, you warrant and represent that you are at least eighteen (18) years of age and with the full authority, right, and capacity to enter into this agreement and abide by all of the terms and conditions of Terms. If you are not at least eighteen (18) years old, you are prohibited from both the access and usage of Service.</p>
+                  </div>
+              </div>
+               <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Accounts") }}</h3>
+                      <p>When you create an account with us, you guarantee that you are above the age of 18, and that the information you provide us is accurate, complete, and current at all times. Inaccurate, incomplete, or obsolete information may result in the immediate termination of your account on Service.</p>
+                      <p>You are responsible for maintaining the confidentiality of your account and password, including but not limited to the restriction of access to your computer and/or account. You agree to accept responsibility for any and all activities or actions that occur under your account and/or password, whether your password is with our Service or a third-party service. You must notify us immediately upon becoming aware of any breach of security or unauthorized use of your account.</p>
+                      <p>You may not use as a username the name of another person or entity or that is not lawfully available for use, a name or trademark that is subject to any rights of another person or entity other than you, without appropriate authorization. You may not use as a username any name that is offensive, vulgar or obscene.</p>
+                      <p>We reserve the right to refuse service, terminate accounts, remove or edit content, or cancel orders in our sole discretion.</p>
+                  </div>
+              </div>
+                <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Intellectual Property") }}</h3>
+                      <p>Service and its original content (excluding Content provided by users), features and functionality are and will remain the exclusive property of Ultimate Tek Solutions Pvt Ltd and its licensors. Service is protected by copyright, trademark, and other laws of and foreign countries. Our trademarks may not be used in connection with any product or service without the prior written consent of Ultimate Tek Solutions Pvt Ltd.</p>
+                  </div>
+              </div>
+                <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Copyright Policy") }}</h3>
+                        <p>We respect the intellectual property rights of others. It is our policy to respond to any claim that Content posted on Service infringes on the copyright or other intellectual property rights (“Infringement”) of any person or entity.</p>
+                        <p>If you are a copyright owner, or authorized on behalf of one, and you believe that the copyrighted work has been copied in a way that constitutes copyright infringement, please submit your claim via email to info@ultimatetek.in, with the subject line: “Copyright Infringement” and include in your claim a detailed description of the alleged Infringement as detailed below, under “DMCA Notice and Procedure for Copyright Infringement Claims”</p>
+                        <p>You may be held accountable for damages (including costs and attorneys’ fees) for misrepresentation or bad-faith claims on the infringement of any Content found on and/or through Service on your copyright.</p>
+                  </div>
+              </div>
+               <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("DMCA Notice and Procedure for Copyright Infringement Claims") }}</h3>
+                      <p>You may submit a notification pursuant to the Digital Millennium Copyright Act (DMCA) by providing our Copyright Agent with the following information in writing (see 17 U.S.C 512(c)(3) for further detail):</p>
+                      <ul>
+                          <li><p>0.1. an electronic or physical signature of the person authorized to act on behalf of the owner of the copyright’s interest;</p></li>
+                          <li><p>0.2. a description of the copyrighted work that you claim has been infringed, including the URL (i.e., web page address) of the location where the copyrighted work exists or a copy of the copyrighted work;</p></li>
+                          <li><p>0.3. identification of the URL or other specific location on Service where the material that you claim is infringing is located;</p></li>
+                          <li><p>0.4. your address, telephone number, and email address;</p></li>
+                          <li><p>0.5. a statement by you that you have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law;</p></li>
+                          <li><p>0.6. a statement by you, made under penalty of perjury, that the above information in your notice is accurate and that you are the copyright owner or authorized to act on the copyright owner’s behalf.</p></li>
+                        </ul>
+                      <p>You can contact our Copyright Agent via email at info@ultimatetek.in.</p>
+                  </div>
+              </div>
+               <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Error Reporting and Feedback") }}</h3>
+                      <p>You may provide us either directly at info@ultimatetek.in or via third party sites and tools with information and feedback concerning errors, suggestions for improvements, ideas, problems, complaints, and other matters related to our Service (“Feedback”). You acknowledge and agree that: (i) you shall not retain, acquire or assert any intellectual property right or other right, title or interest in or to the Feedback; (ii) Company may have development ideas similar to the Feedback; (iii) Feedback does not contain confidential information or proprietary information from you or any third party; and (iv) Company is not under any obligation of confidentiality with respect to the Feedback. In the event the transfer of the ownership to the Feedback is not possible due to applicable mandatory laws, you grant Company and its affiliates an exclusive, transferable, irrevocable, free-of-charge, sub-licensable, unlimited and perpetual right to use (including copy, modify, create derivative works, publish, distribute and commercialize) Feedback in any manner and for any purpose.</p>
+                  </div>
+              </div>
+               <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Links to Other Web Sites") }}</h3>
+                      <p>Our Service does not contain links to third party web sites or services that are not owned or controlled by Ultimatetek Solutions Pvt Ltd.</p>
+                      <p>Ultimatetek Solutions Pvt Ltd has no control over, and assumes no responsibility for the content, privacy policies, or practices of any third-party web sites or services. We do not warrant the offerings of any of these entities/individuals or their websites.</p>
+                       <p>YOU ACKNOWLEDGE AND AGREE THAT COMPANY SHALL NOT BE RESPONSIBLE OR LIABLE, DIRECTLY OR INDIRECTLY, FOR ANY DAMAGE OR LOSS CAUSED OR ALLEGED TO BE CAUSED BY OR IN CONNECTION WITH USE OF OR RELIANCE ON ANY SUCH CONTENT, GOODS OR SERVICES AVAILABLE ON OR THROUGH ANY SUCH THIRD-PARTY WEB SITES OR SERVICES.</p>
+                      <p>WE STRONGLY ADVISE YOU TO READ THE TERMS OF SERVICE AND PRIVACY POLICIES OF ANY THIRD-PARTY WEB SITES OR SERVICES THAT YOU VISIT.</p>
+                  </div>
+              </div>
+               <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Disclaimer of Warranty") }}</h3>
+                     <p>THESE SERVICES ARE PROVIDED BY COMPANY ON AN “AS IS” AND “AS AVAILABLE” BASIS. COMPANY MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, AS TO THE OPERATION OF THEIR SERVICES, OR THE INFORMATION, CONTENT OR MATERIALS INCLUDED THEREIN. YOU EXPRESSLY AGREE THAT YOUR USE OF THESE SERVICES, THEIR CONTENT, AND ANY SERVICES OR ITEMS OBTAINED FROM US IS AT YOUR SOLE RISK.</p>
+                     <p>NEITHER COMPANY NOR ANY PERSON ASSOCIATED WITH COMPANY MAKES ANY WARRANTY OR REPRESENTATION WITH RESPECT TO THE COMPLETENESS, SECURITY, RELIABILITY, QUALITY, ACCURACY, OR AVAILABILITY OF THE SERVICES. WITHOUT LIMITING THE FOREGOING, NEITHER COMPANY NOR ANYONE ASSOCIATED WITH COMPANY REPRESENTS OR WARRANTS THAT THE SERVICES, THEIR CONTENT, OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE SERVICES WILL BE ACCURATE, RELIABLE, ERROR-FREE, OR UNINTERRUPTED, THAT DEFECTS WILL BE CORRECTED, THAT THE SERVICES OR THE SERVER THAT MAKES IT AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS OR THAT THE SERVICES OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE SERVICES WILL OTHERWISE MEET YOUR NEEDS OR EXPECTATIONS.</p>
+                     <p>COMPANY HEREBY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, STATUTORY, OR OTHERWISE, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT, AND FITNESS FOR PARTICULAR PURPOSE.</p>
+                     <p>THE FOREGOING DOES NOT AFFECT ANY WARRANTIES WHICH CANNOT BE EXCLUDED OR LIMITED UNDER APPLICABLE LAW.</p>
+                  </div>
+              </div>
+               <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Limitation of Liability") }}</h3>
+                      <p>EXCEPT AS PROHIBITED BY LAW, YOU WILL HOLD US AND OUR OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS HARMLESS FOR ANY INDIRECT, PUNITIVE, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGE, HOWEVER IT ARISES (INCLUDING ATTORNEYS’ FEES AND ALL RELATED COSTS AND EXPENSES OF LITIGATION AND ARBITRATION, OR AT TRIAL OR ON APPEAL, IF ANY, WHETHER OR NOT LITIGATION OR ARBITRATION IS INSTITUTED), WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE, OR OTHER TORTIOUS ACTION, OR ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT, INCLUDING WITHOUT LIMITATION ANY CLAIM FOR PERSONAL INJURY OR PROPERTY DAMAGE, ARISING FROM THIS AGREEMENT AND ANY VIOLATION BY YOU OF ANY FEDERAL, STATE, OR LOCAL LAWS, STATUTES, RULES, OR REGULATIONS, EVEN IF COMPANY HAS BEEN PREVIOUSLY ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. EXCEPT AS PROHIBITED BY LAW, IF THERE IS LIABILITY FOUND ON THE PART OF COMPANY, IT WILL BE LIMITED TO THE AMOUNT PAID FOR THE PRODUCTS AND/OR SERVICES, AND UNDER NO CIRCUMSTANCES WILL THERE BE CONSEQUENTIAL OR PUNITIVE DAMAGES. SOME STATES DO NOT ALLOW THE EXCLUSION OR LIMITATION OF PUNITIVE, INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE PRIOR LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.</p>
+                  </div>
+              </div>
+               <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Termination") }}</h3>
+                      <p>We may terminate or suspend your account and bar access to Service immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of Terms.</p>
+                  </div>
+              </div>
+                 <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Termination") }}</h3>
+                      <p>We may terminate or suspend your account and bar access to Service immediately, without prior notice or liability, under our sole discretion, for any reason whatsoever and without limitation, including but not limited to a breach of Terms.</p>
+                      <p>If you wish to terminate your account, you may simply discontinue using Service.</p>
+                      <p>All provisions of Terms which by their nature should survive termination shall survive termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity and limitations of liability.</p>
+                  </div>
+              </div>
+                    <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Governing Law") }}</h3>
+                      <p>These Terms shall be governed and construed in accordance with the laws of Karnataka - India, which governing law applies to agreement without regard to its conflict of law provisions.</p>
+                      <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Service and supersede and replace any prior agreements we might have had between us regarding Service.</p>
+                  </div>
+              </div>
+               <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Changes To Service") }}</h3>
+                      <p>We reserve the right to withdraw or amend our Service, and any service or material we provide via Service, in our sole discretion without notice. We will not be liable if for any reason all or any part of Service is unavailable at any time or for any period. From time to time, we may restrict access to some parts of Service, or the entire Service, to users, including registered users.</p>
+                  </div>
+              </div>
+               <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Amendments To Terms") }}</h3>
+                      <p>We may amend Terms at any time by posting the amended terms on this site. It is your responsibility to review these Terms periodically.</p>
+                      <p>Your continued use of the Platform following the posting of revised Terms means that you accept and agree to the changes. You are expected to check this page frequently so you are aware of any changes, as they are binding on you.</p>
+                      <p>By continuing to access or use our Service after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you are no longer authorized to use Service.</p>
+                  </div>
+              </div>
+               <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Waiver and Severability") }}</h3>
+                    <p>No waiver by Company of any term or condition set forth in Terms shall be deemed a further or continuing waiver of such term or condition or a waiver of any other term or condition, and any failure of Company to assert a right or provision under Terms shall not constitute a waiver of such right or provision.</p>
+                    <p>If any provision of Terms is held by a court or other tribunal of competent jurisdiction to be invalid, illegal or unenforceable for any reason, such provision shall be eliminated or limited to the minimum extent such that the remaining provisions of Terms will continue in full force and effect.</p>
+                  </div>
+              </div>
+               <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Acknowledgement") }}</h3>
+                      <p>BY USING SERVICE OR OTHER SERVICES PROVIDED BY US, YOU ACKNOWLEDGE THAT YOU HAVE READ THESE TERMS OF SERVICE AND AGREE TO BE BOUND BY THEM.</p>
+                  </div>
+              </div>
+                 <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Contact Us") }}</h3>
+                      <p>Please send your feedback, comments, requests for technical support by email<span class="font-bold">info@ultimatetek.in</span>.</p>
+                  </div>
+              </div>
+          {% endif %}
+
+              {% if session['country_code'] != "IND" %}
+
+              {#              <div class="text-center">#}
+              {#                  <h1  data-aos="fade-up" style="color:#010483;font-weight:bold">بسم الله الرحمن الرحيم</h1>#}
+              {#              </div>#}
+              <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("OVERVIEW") }}</h3>
+                      {% if session['country_code']== "EGY" %}
+                          <p>إن جزء (الشروط والأحكام) هو اتفاق قانوني بينك، كعميل حالي أو محتمل (وسيُشار إليك هنا بـالمستخدم* أو *أنت*)، وبين شركة الحلول النهائية لتقنية المعلومات(Ultimate Solutions)، وسيُشار إليها هنا بـ*الحلول النهائية* أو *نحن*، من أجل تنظيم استخدامك لخدمات شركة الحلول النهائية بما فيها تطبيقات الجوال والمواقع الإلكترونية والبرمجيات والأجهزة والمنتجات والخدمات الأخرى (وسيُشار إليها هنا إجمالاً بـ*الخدمات*). من خلال تسجيلك وإنشائك لحساب cashierme و/أو زيارتك لموقعنا الإلكتروني و/أو اشتراكك في إحدى خدماتنا، فإنك بذلك توافق على الالتزام بالشروط والأحكام التالية بما في ذلك القواعد واللوائح والسياسات الإضافية المشار إليها هنا. تنطبق هذه الشروط والأحكام على جميع مستخدمي موقع الويب، بما في ذلك، على سبيل المثال لا الحصر، المتصفحين و/أو البائعين و/أو العملاء و/أو التجار و/أو المساهمين في المحتوى.الرجاء قراءة هذه الشروط والأحكام بعناية قبل الولوج إلى موقعنا الإلكتروني أو استخدامه. إذا كنت لا توافق على جميع شروط وأحكام هذا الاتفاق، فلن يمكنك الولوج إلى موقع الويب الخاص بنا أو استخدام أي من خدماتنا.أي أدوات أو ميزات جديدة تضاف إلى موقعنا الإلكتروني الحالي ستخضع إلى هذه الشروط والأحكام. ويمكنك مراجعة أحدث إصدار من الشروط والأحكام في أي وقت من خلال هذه الصفحة. كما أننا نحتفظ بالحق في تحديث أو تغيير أو استبدال أي جزء من مجموعة الشروط والأحكام هذه عن طريق نشر التحديثات و/أو التغييرات على موقعنا. وتقع على عاتقك مسؤولية مراجعة هذه الصفحة بشكل دوري لمعرفة التغييرات. إن استمرارك في استخدام أو الولوج إلى موقع الويب بعد نشر أي تغييرات يدل على فهمك وقبولك لهذه التغييرات.واستمرارك في استخدام خدمات الحلول النهائية يعني موافقتك على التقيد بهذه التغييرات والالتزام بها. وإذا كنت لا توافق على أي من التغييرات المذكورة</p>
+                          {% else %}
+                          <p>{{ gettext("The following (Terms and Conditions) are a legal agreement between you, as a current or prospective customer of  Ultimate ٍSolutions, the user (“you,” “your”) and Ultimate Solutions, an affiliate of Ultimate Solutions, which includes [insert all sister companies/subsidiaries] (“Ultimate Solutions”, “we”, “us”, “our”), in order to govern your use of Ultimate Solutions’ services, including mobile applications, websites, software, hardware, and other products and services (collectively, the “Services”).
+                                    By singing up and creating a Cashier Me account, visiting our website and/or subscribing to one of our services, you therefore agree to be bound by the following Terms and Conditions including additional rules, regulations and policies referenced herein. These Terms and Conditions apply to all users of the website, including without limitation, users who are browsers, vendors, customers, merchants, and/or contributors of content.
+                                    Please read these Terms and Conditions carefully before accessing or using our website. If you do not agree to all the Terms and Conditions of this agreement, then you may not access the website or use any services.
+                                    Any new features or tools which are added to the current website shall also be subject to the Terms and Conditions. You can review the most current version of the Terms and Conditions at any time on this page. We reserve the right to update, change or replace any part of these Terms and Conditions by posting updates and/or changes to our website. It is your responsibility to check this page periodically for changes. Your continued use of or access to the website following the posting of any changes signifies your understanding and acceptance of those changes.
+                                    By continuing to use Ultimate Solutions Services, you agree to abide and be bound by those changes. If you do not agree to any of the aforementioned changes, you must cease your use of the Services.") }}</p>
+                          {% endif %}
+
+                  </div>
+              </div>
+
+              <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Account Cancellation & Data Protection") }}</h3>
+                      <ul>
+                          <li><p>{{ gettext("&#9679   ultimate Solutions reserves the right to cancel or terminate any Cashier Me.com account in violation of the Terms and Conditions as well as Privacy Policies of this agreement; in which case Ultimate Solutions also reserves the right to hold on to any personal information belonging to the customer in question in its database, for a period of one month starting from the cancellation date.") }}</p></li>
+                          <li><p>{{ gettext(" &#9679  If, however, the customer chooses, for one reason or other, to cancel or terminate their Cashier Me.com account of their own accord, Foodics will immediately disregard and remove any personal information belonging to the customer in question from its database.") }}</p></li>
+                      </ul>
+                  </div>
+              </div>  <div class="row content">
+              <div class="col-md-8  " data-aos="fade-up">
+                  <h3>{{ gettext("اConfidentiality") }}</h3>
+                  <ul>
+                      <li><p>{{ gettext(" &#9679 Only you have the right to access and use your account. You are responsible for ensuring that your login information remains confidential at all times. Ultimate Solutions will assume that in case your login information is used to access the Services by a user other than yourself, the latter has the legal authority to use such credentials. If you become aware of an unauthorized login from an unknown user, you agree to notify Ultimate Solutions immediately by email at info@ Cashier Me.com. You remain liable for any activity on your account until Ultimate Solutions is notified of the violation in question, and the Corporation may therefore proceed to take appropriate action.") }}</p></li>
+                  </ul>
+              </div>
+             </div>
+              <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Data Privacy & Security") }}</h3>
+                      <ul>
+                          <li><p>{{ gettext(" &#9679 The privacy and security of your personal information is important to us. Ultimate Solutions Privacy Policy describes and defines the types of personal information we collect about you, and the means in which we use them, in compliance with International comparative Law. We encourage you to read the Privacy Policy carefully, as it forms a binding part of these Terms and Conditions and contains important information about your rights.") }}</p></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Permitted Activities") }}</h3>
+                      <ul>
+                          <li><p>{{ gettext(" &#9679  You will not use the Services in any way that violates Applicable International Comparative Law, these Terms and Conditions, or any other Privacy Policies.") }}</p></li>
+                          <li><p>{{ gettext(" &#9679  The information that you upload or post in connection with the Services does not infringe on anyone else’s intellectual property or proprietary rights or otherwise conflict with the law or the rights of others.") }}</p></li>
+                          <li><p>{{ gettext(" &#9679  You will not upload, post or otherwise transmit through the Services any content that contains any viruses, trojan horses, or any other harmful programs or elements.") }}</p></li>
+                          <li><p>{{ gettext(" &#9679  You will not provide false information about yourself, impersonate any other person, collect information about other users, or otherwise attempt to mislead others about your identity or the truthfulness or accuracy of the data you transmit through the Services.") }}</p></li>
+                          <li><p>{{ gettext(" &#9679  You will not damage, disable, disrupt, overburden, interfere with, or attempt to gain unauthorized access to any portion of our Services, computer systems, servers or networks, or any other person’s use and enjoyment of the Services.") }}</p></li>
+                          <li><p>{{ gettext(" &#9679   Ultimate Solutions may suspend or terminate your use of the Services at its sole discretion for any actual or suspected violation of these limitations or other applicable policies or rules referenced in these Terms and Conditions.") }}</p></li>
+                          <li><p>{{ gettext(" &#9679  You shall not republish, distribute, reproduce, duplicate, or gather any material (online and offline content including designs, copy, ideas, pictures or other) from Ultimate Solutions without accrediting the Company.") }}</p></li>
+                          <li><p>{{ gettext(" &#9679  You shall not sell, rent or sub-license material from Ultimate Solutions.") }}</p></li>
+                          <li><p>{{ gettext(" &#9679  Without prior approval and written permission, you may not create frames around our Web Pages that alter in any way the visual presentation or appearance of our Website.") }}</p></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("User generated content") }}</h3>
+                      <p>{{ gettext("Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. Ultimate Solutions does not filter, edit, publish or review comments prior to their presence on the website. Comments do not reflect the views and opinions of Ultimate Solutions, its agents, and/or affiliates comments reflect the views and opinions of the person who posts their views and opinions. To the extent permitted by applicable international comparative laws, Ultimate Solutions shall not be liable for any comments or liabilities, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the comments on this website.
+                                    Ultimate Solutions reserves the right to monitor and remove any comments considered inappropriate, offensive or a breach of these Terms and Conditions.
+                                    You warrant a") }}</p>
+                      <h3>{{ gettext("You warrant and agree to the following:") }}</h3>
+                      <ul>
+                          <li><p>{{ gettext(" &#9679  You are entitled to post the comments on our website and have all necessary licenses and consents to do so.") }}</p></li>
+                          <li><p>{{ gettext(" &#9679  The comments do not invade any intellectual property right, including without limitation, copyright, patent or trademark of any third party.") }}</p></li>
+                          <li><p>{{ gettext(" &#9679  The comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful material which is an invasion of privacy.") }}</p></li>
+                          <li><p>{{ gettext(" &#9679  The comments will not be used to solicit or promote business or custom or present commercial or unlawful activities.") }}</p></li>
+                          <li><p>{{ gettext(" &#9679  You hereby grant Ultimate Solutions a non-exclusive license to use, reproduce, edit and authorize others to use, reproduce and edit any of your comments in any and all forms, formats or media.") }}</p></li>
+                      </ul>
+                  </div>
+              </div>              <div class="row content">
+              <div class="col-md-8  " data-aos="fade-up">
+                  <h3>{{ gettext("Your privacy") }}</h3>
+                  <p>{{ gettext("Please read the") }}><span><a href="/privacy_policy">{{ gettext("privacy policy.") }}</a></span></p>
+              </div>
+              </div>              <div class="row content">
+              <div class="col-md-8  " data-aos="fade-up">
+                  <h3>{{ gettext("Third-Party Content") }}</h3>
+                  <ul>
+                      <li><p>{{ gettext(" &#9679 Through your use of the Services, you may be presented with material provided by third parties, not owned or controlled by us, from our partners, and/or from other users of the Services, including but not limited to, links to websites or other materials, software, text, graphics, videos, images, or advertising content (collectively referred to as “Third-Party Content”).") }}</p></li>
+                      <li><p>{{ gettext(" &#9679 All Third-Party Content and the Services are protected by Intellectual property laws. Any unauthorized use of the Services and/or Third-Party Content may result in copyright violation, trademark, and other laws. You have no rights pertaining to the Services or Third-Party Content in any shape or form, and you will not use, copy or display the Services or Third-Party Content except as permitted under these Terms and Conditions. No other use of the Services or Third-Party Content is permitted without the Company’s prior written consent. You must retain all copyright and other proprietary notices contained in the Services and Third-Party Content. You may not sell, transfer, assign, license, sublicense, or modify the Third-Party Content or reproduce, display, publicly perform, make a derivative version of, distribute, or otherwise use the Third-Party Content in any way for any public or commercial purpose, other than as permitted hereunder. If you violate any part of these Terms and Conditions, your right to access and/or use the Third-Party Content and Services will automatically be terminated.") }}</p></li>
+                      <h3>{{ gettext("Precautions:") }}</h3>
+                      <li><p>{{ gettext(" &#9679 We do not guarantee the accuracy, integrity or quality of any Third-Party Content, regardless of whether such products or services are designated as “certified,” “validated” or the like. Any interaction or exchange of information or data between you and any third-party is solely between you and such third-party. We advise you to take precautions when downloading files from any platform to protect your computer / Taplet/ Mobile from viruses and other destructive programs. If you decide to access any Third-Party Content, you fully assume the risk of doing so. Under no circumstances will Ultimate Solutions be liable for any Third-Party Content, including liability for any errors or omissions in any Third-Party Content or for any loss or damage of any kind incurred as a result of the use of or reliance on any Third-Party Content posted, emailed, linked or otherwise transmitted via the Services.") }}</p></li>
+                  </ul>
+              </div>
+              </div>
+              <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Communications") }}</h3>
+                      <ul>
+                          <li><p>{{ gettext(" &#9679  Notices that we give Customers (other than the notice of the amendments applied to the Terms and Conditions (mentioned in the introduction above), may be provided in any number of ways, depending on the circumstances. For example, we may email or call the Customer at the convenient time set and provided by the Customer in the Ultimate Solutions Services Agreement, or we may notify Users through their dashboard or other sections on the Site. When we post said notices, we do so in the area of the Site suitable to the notice. It is the Customer’s responsibility to stay up-to-date in this regard. The Customer agrees to keep all Registration Data current and updated, which can be done by  .") }}<span><a href="https://cashierme.com" >info@cashierme.com .</a></span></p></li>
+                          <li><p>{{ gettext(" &#9679  Subject to the Privacy Policy, if the Customer sends Ultimate Solutions or posts about Ultimate Solutions Services in any public area including information, ideas, inventions, concepts, techniques or know-how (“User Submissions”), for any purpose, including the developing, manufacturing and/or marketing or products or services incorporating such information, the Customer acknowledges that Ultimate Solutions can use without limitation the User Submissions without acknowledgement or compensation to you, and Ultimate Solutions Customers waive any claim of ownership or compensation or other rights may have in relation to the User Submissions.") }}</p></li>
+                      </ul>
+
+                  </div>
+              </div>
+              <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Closing your account") }}</h3>
+                      <p>{{ gettext("You may close your Cashier Me.com account at any time and without cost, but you will remain liable for any outstanding Purchases as well as any fees or other charges incurred. Ultimate Solutions will not issue refunds for amounts previously incurred through our Services once you close your account.
+                                    You can close your account by contacting") }} <span><a href="https://cashierme.com"> info@cashierme.com. </a> </span>
+                      <p>{{ gettext("Please review our “Account Cancellation & Data Protection” rules above for further information about our practices regarding your personal information.
+                                    In certain cases, we may not allow you to close your account, for the following reasons") }}</p>
+                      </p>
+
+                      <ul>
+                          <li><p>{{ gettext(" &#9679  In an attempt to evade an investigation;") }}</p></li>
+                          <li><p>{{ gettext(" &#9679  In the presence of an open or pending Purchase(s) or Payment Transactions;") }}</p></li>
+                          <li><p>{{ gettext(" &#9679  In the event that you owe money to Ultimate Solutions due to your use of the Services.") }}</p></li>
+
+                      </ul>
+                  </div>
+              </div>
+              <div class="row content">
+                  <div class="col-md-8  " data-aos="fade-up">
+                      <h3>{{ gettext("Disclaimer") }}</h3>
+                      <p>{{ gettext("To the maximum extent permitted by applicable international comparative law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will:") }}</p>
+                      <ul>
+                          <li><p>{{ gettext(" &#9679  limit or exclude our or your liability for death or personal injury;") }}</p></li>
+                          <li><p>{{ gettext(" &#9679  limit or exclude our or your liability for fraud or fraudulent misrepresentation;") }}</p></li>
+                          <li><p>{{ gettext(" &#9679  limit any of our or your liabilities in any way that is not permitted under applicable international comparative law;") }}</p></li>
+                          <li><p>{{ gettext(" &#9679  exclude any of our or your liabilities that may not be excluded under applicable international comparative law.") }}</p></li>
+                      </ul>
+                      <li><p>{{ gettext("  The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including those arising in contract, in tort and for breach of statutory duty.
+                                        As long as the website and the information and services on it are provided free of charge, we will not be liable for any loss or damage of any nature.") }}</p></li>
+                  </div>
+              </div>
+              {% endif %}
+          </div>
+      </section>
+
+
+
+              <!-- ======= Breadcrumbs Section ======= -->
+
+              <!-- End Contact Section -->
+  </main><!-- End #main -->
+  <!-- ======= Footer ======= -->
+  {% extends 'footer.html' %}
+</body>
+</html>

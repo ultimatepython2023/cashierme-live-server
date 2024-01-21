@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>invoices</title>
+</head>
+<body style="font-family:Cairo">
+
+<img src="https://www.ultimatedokkan.com/static/assets/img/upos.png">
+<table class="table"
+       style="font-family: Cairo, sans-serif;border-collapse: collapse;width: 100%;font-size:8px;">
+    <tbody>
+    <td style="border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px">
+        <h3 class="text-center">{{ gettext("Billing Information") }}</h3>
+        <p>{{ gettext("Name:") }}{{ name }}</p>
+        <p>{{ gettext("Address:") }}{{ address }} - {{ city }} </p>
+        <p>{{ gettext("Country:") }}{{ country }}</p>
+        <p>{{ gettext("Zip/code:") }}{{ zip }}</p>
+    </td>
+
+    <td style="border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;">
+        <h3 style="margin-top:-50px">{{ gettext("Payment Details") }}</h3>
+        <p>{{ gettext("Invoice Number:") }}{{ invoice_num }}</p>
+        <p>{{ gettext("Date:") }}{{ invoice_date.strftime("%Y-%m-%d") }}</p>
+    </td>
+    <td style="border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px">
+
+        <img src="https://chart.googleapis.com/chart?chs=100x100&cht=qr&chl={{ img_data }}&choe=UTF-8"
+             title="Link to Google.com">
+    </td>
+    </tbody>
+</table>
+
+
+<table class="table" style="font-family:Cairo; width: 75%;font-size:6px">
+    <thead>
+    <tr class="text-center" style="font-size:6px">
+        <th style="border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px">{{ gettext("POS NO") }}</th>
+        <th style="border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px">{{ gettext("Company") }}</th>
+        <th style="border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px">{{ gettext("Domain") }}</th>
+        <th style="border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px">{{ gettext("Subscription Type") }}</th>
+        <th style="border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px">{{ gettext("Expiration") }}</th>
+        <th style="border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px">{{ gettext("Price") }}</th>
+    </tr>
+    </thead>
+    <tbody class="text-center" style="font-family: Cairo, sans-serif;
+        border-collapse: collapse;
+        width: 100%;">
+    <tr>
+        <td style="border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px">
+            {{ package }}
+        </td>
+        <td style="border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px">
+            {{ company }}
+        </td>
+        <td style="border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px">
+            {{ domain }}
+        </td>
+        <td style="border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px">
+            {% if subscription == 'yearly' %}{{ gettext("Anuualy") }}{% endif %}{% if subscription == 'Monthly' %}{{ gettext("Monthly") }}{% endif %}
+        </td>
+        <td style="border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px">
+            {{ expire.strftime("%Y-%m-%d") }}
+        </td>
+        <td style="border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px">
+            <span style="font-size:10px">
+                  {% if session['country_code'] == "SAU" %}
+                      {{ gettext("SAR") }}
+                  {% endif %}
+                  {% if session['country_code'] == "TUR" %}
+                      {{ gettext("TL") }}
+                  {% endif %}
+                  {% if session['country_code'] == "MYS" %}
+                      {{ gettext("MYR") }}
+                  {% endif %}
+                  {% if session['country_code'] == "IND" %}
+                      {{ gettext("INR") }}
+                   {% endif %}
+                {% if session['country_code'] == "GLB" %}
+                    {{ gettext("USD") }}
+                {% endif %}
+                 {% if session['country_code'] == "EGY" %}
+                    {{ gettext("EGP") }}
+                {% endif %}
+            </span>{{ price }}
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<div class="total" style="text-align: right">
+    <p>{{ gettext("Subtotal :") }}<span style="font-size:10px">
+
+           {% if session['country_code'] == "SAU"  %}
+                                      {{ gettext("SAR") }}
+                                  {% endif %}
+                                  {% if session['country_code'] == "TUR" %}
+                                      {{ gettext("TL") }}
+                                  {% endif %}
+                                  {% if session['country_code'] == "MYS" %}
+                                      {{ gettext("MYR") }}
+                                  {% endif %}
+                                  {% if session['country_code'] == "IND" %}
+                                      {{ gettext("INR") }}
+                                   {% endif %}
+                                    {% if session['country_code'] == "GLB" %}
+                                        {{ gettext("USD") }}
+                                    {% endif %}
+                                    {% if session['country_code'] == "EGY" %}
+                                                {{ gettext("EGP") }}
+                                            {% endif %}
+
+    </span>{{ price }}</p>
+    <h3>{{ gettext("Total :") }}<span
+            style="font-size:16px">     {% if session['country_code'] == "SAU"  %}
+                                      {{ gettext("SAR") }}
+                                  {% endif %}
+                                  {% if session['country_code'] == "TUR" %}
+                                      {{ gettext("TL") }}
+                                  {% endif %}
+                                  {% if session['country_code'] == "MYS" %}
+                                      {{ gettext("MYR") }}
+                                  {% endif %}
+                                  {% if session['country_code'] == "IND" %}
+                                      {{ gettext("INR") }}
+                                   {% endif %}
+                                    {% if session['country_code'] == "GLB" %}
+                                        {{ gettext("USD") }}
+                                    {% endif %}
+                                    {% if session['country_code'] == "EGY" %}
+                                                {{ gettext("EGP") }}
+                                            {% endif %}
+    </span>{{ price }}<span
+            style="font-size:16px">{{ gettext("Tax included") }}</span></h3>
+</div>
+
+<h3 style="background-color:#007aff;font-family:Cairo">{{ gettext("Login Information") }}</h3>
+<table class="table">
+    <thead>
+    <tr class="text-center">
+        <th style="border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px">{{ gettext("User No") }}</th>
+        <th style="border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px">{{ gettext("Password") }}</th>
+        <th style="border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px">{{ gettext("Application Code") }}</th>
+        <th style="border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px">{{ gettext("Link") }}</th>
+    </tr>
+    </thead>
+    <tbody class="text-center">
+
+    <tr>
+        <td style="border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px">
+            <p>1</p>
+        </td>
+        <td style="border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px">
+            {{ password }}
+        </td>
+        <td style="border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px">
+            {{ database_fullname }}
+        </td>
+        <td style="border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px">
+            <a href="{{ domain }}">{{ domain }}</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

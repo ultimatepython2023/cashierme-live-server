@@ -1,0 +1,218 @@
+{% block payment_bopup %}
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --hue: 240;
+  --first-color: hsl(var(--hue), 16%, 18%);
+  --first-color-alt: hsl(var(--hue), 16%, 12%);
+  --title-color: hsl(var(--hue), 8%, 15%);
+  --text-color: hsl(var(--hue), 8%, 35%);
+  --body-color: hsl(var(--hue), 100%, 99%);
+  --paymentContainer-color: #FFF;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --big-font-size: 1.5rem;
+  --normal-font-size: .938rem;
+
+  /*========== z index ==========*/
+  --z-paymentModal: 1000;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 1.75rem;
+    --normal-font-size: 1rem;
+  }
+}
+
+/*=============== BASE ===============*/
+
+
+
+
+/*=============== paymentModal ===============*/
+.paymentContainer{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.paymentModal{
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.paymentModal__button{
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #FFF;
+  padding: 1rem 1.25rem;
+  border-radius: .5rem;
+  transition: .3s;
+}
+
+.paymentModal__button:hover{
+  background-color: var(--first-color-alt);
+}
+
+.paymentModal__paymentContainer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsla(var(--hue), 18%, 75%, .8);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: flex-end;
+  overflow: hidden;
+  transition: all .3s;
+  z-index: var(--z-paymentModal);
+  visibility: hidden;
+  opacity: 0;
+
+  /*=== Effect 3 ===*/
+  /* perspective: 1000px; */
+}
+
+.paymentModal__content{
+  position: relative;
+  background-color: var(--paymentContainer-color);
+  text-align: center;
+  padding: 3rem 2rem 2rem;
+  border-radius: 1rem 1rem 0 0;
+  transition: all .3s;
+
+  /*=== Effect 1 ===*/
+  transform: translateY(10%);
+
+  /*=== Effect 2 ===*/
+  /* transform: scale(.5) translateY(10%); */
+
+  /*=== Effect 3 ===*/
+  /* transform: rotateX(65deg) scale(.75) translateY(10%);
+  transform-origin: 50% 100%; */
+}
+
+.paymentModal__img{
+  width: 150px;
+  margin-bottom: .75rem;
+}
+
+.paymentModal__close{
+  display: inline-flex;
+  background-color: var(--first-color);
+  border-radius: .25rem;
+  color: #FFF;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.paymentModal__title{
+  font-size: var(--big-font-size);
+  color: var(--title-color);
+  font-weight: 500;
+}
+
+.paymentModal__description{
+  margin-bottom: 1.5rem;
+}
+
+.paymentModal__button-width{
+  width: 90%;
+}
+
+.paymentModal__button-link{
+  display: block;
+  margin: 1rem auto 0;
+  background-color: transparent;
+  color: var(--first-color);
+  font-weight: 500;
+}
+
+/* Show paymentModal */
+.show-paymentModal{
+  visibility: visible;
+  opacity: 1;
+}
+
+.show-paymentModal .paymentModal__content{
+  /*=== Effect 1 ===*/
+  transform: translateY(0);
+
+  /*=== Effect 2 ===*/
+  /* transform: scale(1) translateY(0); */
+
+  /*=== Effect 3 ===*/
+  /* transform: rotateX(0) scale(1) translateY(0); */
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (min-width: 576px){
+  .paymentModal__content{
+    margin: auto;
+    width: 380px;
+    border-radius: 1.25rem;
+  }
+
+  .paymentModal__img{
+    width: 170px;
+  }
+}
+    </style>
+
+    <section class="paymentModal paymentContainer">
+            <button class="paymentModal__button" id="open-paymentModal">
+                Open paymentModal
+            </button>
+
+            <div class="paymentModal__paymentContainer" id="paymentModal-paymentContainer">
+                <div class="paymentModal__content">
+                    <div class="paymentModal__close close-paymentModal" title="Close">
+                        <i class='bx bx-x'></i>
+                    </div>
+                    <h1 class="paymentModal__title">Cashierme</h1>
+                    
+
+                    <button class="paymentModal__button paymentModal__button-width">
+                        View status
+                    </button>
+
+                    <button class="paymentModal__button-link close-paymentModal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </section>
+    <script>
+    /*=============== SHOW paymentModal ===============*/
+const showpaymentModal = (openButton, paymentModalContent) =>{
+    const openBtn = document.getElementById(openButton),
+    paymentModalpaymentContainer = document.getElementById(paymentModalContent)
+
+    if(openBtn && paymentModalpaymentContainer){
+        openBtn.addEventListener('click', ()=>{
+            paymentModalpaymentContainer.classList.add('show-paymentModal')
+        })
+    }
+}
+showpaymentModal('open-paymentModal','paymentModal-paymentContainer')
+
+/*=============== CLOSE paymentModal ===============*/
+const closeBtn = document.querySelectorAll('.close-paymentModal')
+
+function closepaymentModal(){
+    const paymentModalpaymentContainer = document.getElementById('paymentModal-paymentContainer')
+    paymentModalpaymentContainer.classList.remove('show-paymentModal')
+}
+closeBtn.forEach(c => c.addEventListener('click', closepaymentModal))
+    </script>
+{% endblock %}
+

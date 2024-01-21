@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Cashier Me</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="icon">
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="apple-touch-icon">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <!-- Google Fonts -->
+  <!-- Vendor CSS Files -->
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/aos/aos.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" >
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/bootstrap/css/bootstrap.min.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/bootstrap-icons/bootstrap-icons.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="{{ url_for('static' , filename="assets/vendor/boxicons/css/boxicons.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">    <link href="{{ url_for('static' , filename="assets/vendor/glightbox/css/glightbox.min.css")}}" rel="stylesheet" >
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/remixicon/remixicon.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="{{ url_for('static' , filename="assets/vendor/swiper/swiper-bundle.min.css")}}" rel="stylesheet" >
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('static' , filename="assets/css/style.css")}}" rel="stylesheet" >
+  <!-- =======================================================
+  * Template Name: Bootslander - v4.6.0
+  * Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="logo">
+        <img src="static/assets/img/logo.png" class="img-fluid animated" alt="">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+    </div>
+  </header><!-- End Header -->
+  <main id="main">
+      <link href="{{ url_for('static' , filename="assets/css/style.css")}}" rel="stylesheet" >
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+        <input id="get_currentuser_lang" value="{{ session['language'] }}" style="display: none">
+        <div class="container">
+          <div class="row">
+                  <img src="static/assets/img/true.png" style="width: 500px; height: 500px">
+              <div style="width:500px;height:500px;margin-top:50px;margin-left: 100px">
+                  <h1 style="color:darkgreen;font-family: Cairo;">{{ gettext("Thank You") }} </h1>
+                  <p>
+                      {{ gettext("You have registered with upos, Check your email we have sent an email to confirm your registeration.") }}
+                  </p>
+                  <p style="color:red">{{ gettext("Please check spam if you don't find it in the inbox") }}</p>
+                  <p>{{ gettext("Welcome :") }} {{ customer_name }}</p>
+                  <p>{{ gettext("Thanks For Register Demo Version") }}</p>
+                  <p>{{ gettext("Application Expires in:") }} <span style="font-weight: bold;">{{ expire_db }}</span></p>
+                  <p>{{ gettext("Registration Code for Application: ") }}</p>
+                  <input name="reg_code" id="reg_name" value="{{ get_code }}" style="display: none">
+                  <p><span style="font-weight: bold;">{{ get_code }}</span></p>
+                  <p id="db_name" style="display:none">{{ db_name }}</p>
+                  <p>{{ gettext("To login to your UltimateDokkan account:") }}<a href="{{ url }}" >{{ url }}</a></p>
+
+                  <br/>
+                  <p>{{ gettext("To login to your UPOS control panel:") }}<a href="/firstCsLogin/{{ email }}">{{ gettext("Click here!") }}</a></p>
+              </div>
+          </div>
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+  </main><!-- End #main -->
+  <!-- ======= Footer ======= -->
+<!-- End Footer -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename="assets/js/main.js") }}"></script>
+{#  <script src="{{ url_for('static', filename="assets/js/android2.js") }}"></script>#}
+{#  <script src="{{ url_for('static', filename="assets/js/ios1.js") }}"></script>#}
+
+</body>
+</html>

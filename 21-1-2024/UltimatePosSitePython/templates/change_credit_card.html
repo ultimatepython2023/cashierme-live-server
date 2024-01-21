@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Cashier Me</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="icon">
+    <link href="{{ url_for('static', filename="assets/img/upos.png") }}" rel="apple-touch-icon">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <!-- Google Fonts -->
+    <!-- Vendor CSS Files -->
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/aos/aos.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'" >
+    <link rel="preload" href="{{ url_for('static', filename="assets/vendor/bootstrap/css/bootstrap.min.css") }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/bootstrap-icons/bootstrap-icons.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/boxicons/css/boxicons.min.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">    <link href="{{ url_for('static' , filename="assets/vendor/glightbox/css/glightbox.min.css")}}" rel="stylesheet" >
+    <link rel="preload" href="{{ url_for('static' , filename="assets/vendor/remixicon/remixicon.css")}}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="{{ url_for('static' , filename="assets/vendor/swiper/swiper-bundle.min.css")}}" rel="stylesheet" >
+    <!-- Template Main CSS File -->
+    <link href="{{ url_for('static' , filename="assets/css/style.css")}}" rel="stylesheet" >
+
+    <!-- =======================================================
+     Template Name: Bootslander - v4.6.0
+     Template URL: https://bootstrapmade.com/bootslander-free-bootstrap-landing-page-template/
+     Author: BootstrapMade.com
+     License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+
+{% include 'header.html' %}
+
+
+<main id="main">
+    <input id="get_currentuser_lang" value="{{ session['language'] }}" style="display: none">
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container" style="margin-top:50px ">
+            <div class="section-title" data-aos="fade-up">
+                <h2>{{ gettext("Profile") }}</h2>
+                <p>{{ gettext("Profile") }}</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100" >
+                    <ul style="list-style-type:none;">
+                        <li><a class="nav-link scrollto " href="/dashboard" style="font-family: Cairo">{{ gettext("Dashboard") }}</a></li>
+                        <li><a class="nav-link scrollto" href="/profile" style="font-family: Cairo">{{ gettext("Profile") }}</a></li>
+                        <li><a class="nav-link scrollto" href="/invoices" style="font-family: Cairo">{{ gettext("Invoices") }}</a></li>
+
+                        {% if current_user.country_code_id == 'SAU' and current_user.subscription_type == 'Enterprise' %}
+                            <li><a class="nav-link scrollto" href="/change_credit_card" style="font-family: Cairo">
+                                {% if session['language'] == 'en' %}
+                                {{ gettext("Change credit card") }}
+                                    {% else %}
+                                    تغيير البطاقة الائتمانية
+                                    {% endif %}
+                            </a></li>
+                        {%endif%}
+                        {% if current_user.db_status != "pending" %}
+                            <li><a class="nav-link scrollto" href="https://cpanel.cashierme.com/signin?id={{ current_user.business_name }}" style="font-family: Cairo">{{ gettext("Control Panel Access Link :") }}</a></li>
+                        {% endif %}
+                        <li><a class="nav-link scrollto " href="/dashboard" style="font-family: Cairo">{{ gettext("Logout") }}</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="200">
+                    {% if message_success %}
+                        <div class="alert alert-success">{{gettext('Your Process has been successfully')}}</div>
+                    {% endif %}
+
+                    {% if alert_message %}
+                        <div class="alert alert-danger">{{ alert_message }}</div>
+                    {% endif %}
+
+                    <div class="card-body">
+
+                        <div class="text-right">
+
+                            <div class="row">
+                                <div class="col-md-">
+                                    <p > <span class="font-weight-bold">{{ gettext('Name') }}</span>: {{ current_user.name }}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-">
+                                    <p> <span class="font-weight-bold">{{ gettext('Country') }}</span> : {{ current_user.Country }}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-">
+                                    <p> <span class="font-weight-bold">
+                                          {% if session['language'] == 'en' %}
+                                              {{ gettext("Current Card") }}
+                                          {% else %}
+البطاقة الحالية
+
+                                          {% endif %}
+
+                                    </span> :{{ 'XXXX XXXX XXXX XXXX' }}</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="text-left">
+                            <div class="text-right change-card-class-main">
+                                {% if current_user.country_code_id == 'SAU' %}
+                                    <form method="post" action="/change_card_form_site">
+                                        <button type="submit" class="btn btn-success" >
+                                            {% if session['language'] == 'en' %}
+                                                {{ gettext("Change ") }}
+                                            {% else %}
+                                                تغيير
+                                            {% endif %}
+
+                                        </button>
+                                    </form>
+                                {%endif%}
+                            </div>
+
+                            <img src="{{ url_for('static', filename='assets/img/c1.png')}}" style="width:50%" />
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+        </div>
+        </div>
+    </section>
+    <!-- End Contact Section -->
+</main><!-- End #main -->
+{% extends 'footer.html' %}
+</body>
+</html>
